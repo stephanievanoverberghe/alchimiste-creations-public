@@ -1,0 +1,138 @@
+@layer base {
+html {
+  background: var(--color-bg-main);
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg-main);
+  color: var(--color-text-default);
+  font-family: var(--font-sans);
+  font-size: var(--text-body-small);
+  font-weight: 400;
+  line-height: var(--text-body-small--line-height);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Les balises héritent de l'échelle de tokens/typography.css :
+   une seule source de vérité, partagée avec les classes text-*. */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: var(--text-h1);
+  letter-spacing: var(--text-h1--letter-spacing);
+  line-height: var(--text-h1--line-height);
+}
+
+h2 {
+  font-size: var(--text-h2);
+  letter-spacing: var(--text-h2--letter-spacing);
+  line-height: var(--text-h2--line-height);
+}
+
+h3 {
+  font-size: var(--text-h3);
+  line-height: var(--text-h3--line-height);
+}
+
+h4 {
+  font-size: var(--text-h4);
+  line-height: var(--text-h4--line-height);
+}
+
+p {
+  font-size: var(--text-body);
+  line-height: var(--text-body--line-height);
+}
+
+small {
+  font-size: var(--text-caption);
+  letter-spacing: var(--text-caption--letter-spacing);
+  line-height: var(--text-caption--line-height);
+}
+
+strong {
+  @apply font-semibold;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button:not(:disabled),
+select:not(:disabled) {
+  cursor: pointer;
+}
+
+button:disabled,
+input:disabled,
+textarea:disabled,
+select:disabled {
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  opacity: 1;
+}
+
+input,
+textarea,
+select {
+  background: var(--color-surface-default);
+}
+
+textarea {
+  resize: vertical;
+}
+
+select option {
+  background: var(--color-surface-default);
+  color: var(--color-text-default);
+}
+
+select option:disabled {
+  color: var(--color-text-disabled);
+}
+
+img,
+svg {
+  height: auto;
+}
+
+svg {
+  flex-shrink: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 4px rgba(255, 193, 159, 0.22);
+}
+
+[data-focus-ring="none"]:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+}

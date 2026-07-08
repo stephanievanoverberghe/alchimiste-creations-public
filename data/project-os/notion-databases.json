@@ -1,0 +1,470 @@
+[
+  {
+    "id": "db_clients",
+    "name": "Clients",
+    "role": "Fiche stable client",
+    "keyProperties": [
+      "Nom",
+      "Statut",
+      "Contact principal",
+      "Email",
+      "Dossier Drive"
+    ],
+    "relations": [
+      "db_opportunities",
+      "db_projects",
+      "db_documents",
+      "db_maintenance"
+    ],
+    "views": [
+      "Tous",
+      "Clients actifs",
+      "À relancer",
+      "Archives"
+    ]
+  },
+  {
+    "id": "db_opportunities",
+    "name": "Opportunités",
+    "role": "CRM commercial avant projet",
+    "keyProperties": [
+      "Titre",
+      "Client",
+      "Source",
+      "Statut",
+      "Type demande",
+      "Type confirmé",
+      "Budget",
+      "Prochaine action",
+      "Date relance"
+    ],
+    "relations": [
+      "db_clients",
+      "db_projects",
+      "db_documents",
+      "db_decisions"
+    ],
+    "views": [
+      "Pipeline CRM",
+      "À qualifier",
+      "Devis",
+      "Relances",
+      "Converties"
+    ]
+  },
+  {
+    "id": "db_projects",
+    "name": "Projets",
+    "role": "Centre opérationnel",
+    "keyProperties": [
+      "ID projet",
+      "Nom",
+      "Client",
+      "Type projet",
+      "Statut",
+      "Phase actuelle",
+      "Lot actuel",
+      "Prochaine action",
+      "Dossier Drive",
+      "Repo GitHub"
+    ],
+    "relations": [
+      "db_clients",
+      "db_lots",
+      "db_phases",
+      "db_tasks",
+      "db_deliverables",
+      "db_validations",
+      "db_documents",
+      "db_blockers"
+    ],
+    "views": [
+      "Production active",
+      "Bloques",
+      "En validation",
+      "À livrer",
+      "Par client",
+      "Timeline"
+    ]
+  },
+  {
+    "id": "db_lots",
+    "name": "Lots",
+    "role": "Blocs de travail standards ou instancies",
+    "keyProperties": [
+      "Nom",
+      "Ordre",
+      "Projet",
+      "Lot type",
+      "Statut",
+      "Definition of Done"
+    ],
+    "relations": [
+      "db_projects",
+      "db_phases",
+      "db_tasks",
+      "db_deliverables",
+      "db_validations"
+    ],
+    "views": [
+      "Par projet",
+      "Lots en cours",
+      "Par lot standard"
+    ]
+  },
+  {
+    "id": "db_phases",
+    "name": "Phases",
+    "role": "Étapes séquentielles avec gate de sortie",
+    "keyProperties": [
+      "Nom",
+      "Ordre",
+      "Projet",
+      "Lot",
+      "Statut",
+      "Prêt pour suite",
+      "Gate sortie"
+    ],
+    "relations": [
+      "db_projects",
+      "db_lots",
+      "db_tasks",
+      "db_deliverables",
+      "db_validations",
+      "db_blockers"
+    ],
+    "views": [
+      "Phase actuelle",
+      "À valider",
+      "Prêtes pour suite",
+      "Bloquees"
+    ]
+  },
+  {
+    "id": "db_deliverables",
+    "name": "Livrables",
+    "role": "Résultats attendus ou remis",
+    "keyProperties": [
+      "Nom",
+      "Projet",
+      "Lot",
+      "Phase",
+      "Type",
+      "Statut",
+      "Obligatoire",
+      "Lien Drive",
+      "Visible client"
+    ],
+    "relations": [
+      "db_projects",
+      "db_phases",
+      "db_tasks",
+      "db_validations",
+      "db_documents"
+    ],
+    "views": [
+      "À produire",
+      "À valider",
+      "À corriger",
+      "Livrés",
+      "Par projet"
+    ]
+  },
+  {
+    "id": "db_tasks",
+    "name": "Taches",
+    "role": "Actions quotidiennes",
+    "keyProperties": [
+      "Titre",
+      "Projet",
+      "Phase",
+      "Livrable",
+      "Statut",
+      "Priorité",
+      "Échéance",
+      "Bloquante",
+      "Visible client"
+    ],
+    "relations": [
+      "db_projects",
+      "db_lots",
+      "db_phases",
+      "db_deliverables",
+      "db_blockers"
+    ],
+    "views": [
+      "Aujourd'hui",
+      "Cette semaine",
+      "En attente client",
+      "Bloquees",
+      "Par projet"
+    ]
+  },
+  {
+    "id": "db_validations",
+    "name": "Validations",
+    "role": "Preuves d'accord ou de correction",
+    "keyProperties": [
+      "Objet",
+      "Projet",
+      "Phase",
+      "Type",
+      "Statut",
+      "Validateur",
+      "Date demande",
+      "Preuve",
+      "Bloquante"
+    ],
+    "relations": [
+      "db_projects",
+      "db_phases",
+      "db_deliverables",
+      "db_documents"
+    ],
+    "views": [
+      "À demander",
+      "En attente client",
+      "À traiter",
+      "Bloquantes",
+      "Validees"
+    ]
+  },
+  {
+    "id": "db_document_templates",
+    "name": "Documents types",
+    "role": "Modèles réutilisables",
+    "keyProperties": [
+      "Document",
+      "Categorie",
+      "Lot",
+      "Phase",
+      "Usage",
+      "Format",
+      "Lien Drive",
+      "Statut"
+    ],
+    "relations": [
+      "db_deliverables",
+      "db_project_types"
+    ],
+    "views": [
+      "Par lot",
+      "Par phase",
+      "Par type projet",
+      "À créer",
+      "Prêts"
+    ]
+  },
+  {
+    "id": "db_documents",
+    "name": "Documents réels",
+    "role": "Fichiers client/projet générés, liés ou envoyés",
+    "keyProperties": [
+      "Nom",
+      "Projet",
+      "Client",
+      "Type",
+      "Statut",
+      "Lien Drive",
+      "Document type source",
+      "Version",
+      "Visibilite"
+    ],
+    "relations": [
+      "db_clients",
+      "db_projects",
+      "db_deliverables",
+      "db_validations"
+    ],
+    "views": [
+      "Par projet",
+      "Documents client",
+      "Documents internes",
+      "À relire",
+      "Envoyes"
+    ]
+  },
+  {
+    "id": "db_code_architectures",
+    "name": "Architectures techniques",
+    "role": "Catalogue des starters et choix techniques",
+    "keyProperties": [
+      "Nom",
+      "Type projet",
+      "Starter",
+      "Stack",
+      "Statut",
+      "Checklist setup",
+      "Checklist QA"
+    ],
+    "relations": [
+      "db_projects",
+      "db_project_types",
+      "db_checklists"
+    ],
+    "views": [
+      "Starters actifs",
+      "Par type projet",
+      "À maintenir"
+    ]
+  },
+  {
+    "id": "db_checklists",
+    "name": "Checklists",
+    "role": "Controles réutilisables",
+    "keyProperties": [
+      "Nom",
+      "Type",
+      "Lot",
+      "Phase",
+      "Projet type",
+      "Version",
+      "Statut"
+    ],
+    "relations": [
+      "db_lots",
+      "db_phases",
+      "db_project_types"
+    ],
+    "views": [
+      "Par phase",
+      "Par lot",
+      "Qualité",
+      "Techniques"
+    ]
+  },
+  {
+    "id": "db_meetings",
+    "name": "Réunions / comptes rendus",
+    "role": "Traces d'échanges structures",
+    "keyProperties": [
+      "Titre",
+      "Client",
+      "Projet",
+      "Type",
+      "Date",
+      "Actions",
+      "Décisions",
+      "Lien Drive"
+    ],
+    "relations": [
+      "db_clients",
+      "db_projects",
+      "db_decisions",
+      "db_tasks"
+    ],
+    "views": [
+      "À préparer",
+      "À envoyer",
+      "Par projet"
+    ]
+  },
+  {
+    "id": "db_decisions",
+    "name": "Décisions",
+    "role": "Arbitrages dates",
+    "keyProperties": [
+      "Décision",
+      "Projet",
+      "Type",
+      "Statut",
+      "Date",
+      "Decideur",
+      "Impact",
+      "Preuve"
+    ],
+    "relations": [
+      "db_projects",
+      "db_validations",
+      "db_meetings"
+    ],
+    "views": [
+      "Ouvertes",
+      "Client",
+      "Techniques"
+    ]
+  },
+  {
+    "id": "db_blockers",
+    "name": "Blocages / risques",
+    "role": "Éléments empêchant ou risquant d'empêcher la suite",
+    "keyProperties": [
+      "Titre",
+      "Projet",
+      "Phase",
+      "Type",
+      "Gravité",
+      "Statut",
+      "Cause",
+      "Responsable",
+      "Prochaine action",
+      "Date relance"
+    ],
+    "relations": [
+      "db_projects",
+      "db_phases",
+      "db_tasks"
+    ],
+    "views": [
+      "Actifs",
+      "À relancer",
+      "Risques forts",
+      "Resolus"
+    ]
+  },
+  {
+    "id": "db_resources",
+    "name": "Ressources / accès",
+    "role": "Liens, comptes, accès et assets",
+    "keyProperties": [
+      "Nom",
+      "Client",
+      "Projet",
+      "Type",
+      "Statut",
+      "Sensibilité",
+      "Lien",
+      "Ou stocke"
+    ],
+    "relations": [
+      "db_clients",
+      "db_projects",
+      "db_tasks"
+    ],
+    "views": [
+      "Demandes",
+      "Reçus",
+      "Sensibles",
+      "Par projet"
+    ]
+  },
+  {
+    "id": "db_maintenance",
+    "name": "Maintenance / tickets",
+    "role": "Post-livraison et evolutions",
+    "keyProperties": [
+      "Ticket",
+      "Client",
+      "Projet",
+      "Type",
+      "Priorité",
+      "Statut",
+      "Impact",
+      "Échéance",
+      "Devis nécessaire"
+    ],
+    "relations": [
+      "db_clients",
+      "db_projects",
+      "db_tasks",
+      "db_documents"
+    ],
+    "views": [
+      "Nouveaux",
+      "Urgents",
+      "En attente client",
+      "Resolus",
+      "À facturer"
+    ]
+  }
+]

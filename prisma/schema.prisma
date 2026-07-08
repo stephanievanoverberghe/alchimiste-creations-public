@@ -1,0 +1,1386 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum UserRole {
+  SUPER_ADMIN
+  ADMIN
+  PROJECT_MANAGER
+  CLIENT_OWNER
+  CLIENT_MEMBER
+  LEAD
+  CLIENT
+}
+
+enum ClientAccountType {
+  PERSON
+  COMPANY
+  BRAND
+  ORGANIZATION
+}
+
+enum ClientAccountStatus {
+  LEAD
+  QUALIFIED_PROSPECT
+  ACTIVE_CLIENT
+  FORMER_CLIENT
+  SUSPENDED
+  ARCHIVED
+}
+
+enum ContactStatus {
+  NEW
+  ACTIVE
+  TO_VERIFY
+  ARCHIVED
+}
+
+enum AccountMembershipRole {
+  OWNER
+  MEMBER
+  BILLING
+  CONTACT
+}
+
+enum InvitationStatus {
+  PENDING
+  ACCEPTED
+  EXPIRED
+  REVOKED
+}
+
+enum ProjectRequestSource {
+  PROJECT_FORM
+  MANUAL
+}
+
+enum EmailStatus {
+  NOT_SENT
+  SENT
+  FAILED
+  SKIPPED
+}
+
+enum OpportunityStatus {
+  NOUVEAU
+  A_QUALIFIER
+  APPEL_A_PLANIFIER
+  APPEL_PREVU
+  CADRAGE_A_PRODUIRE
+  PROPOSITION_A_ENVOYER
+  DEVIS_ENVOYE
+  NEGOCIATION_AJUSTEMENT
+  RELANCE_A_FAIRE
+  ACCEPTE
+  REFUSE
+  PERDU_SANS_SUITE
+  ARCHIVE
+}
+
+enum OpportunityPhase {
+  LEAD
+  OPPORTUNITE
+  DEVIS
+  CLIENT
+  POST_PROJET
+  ARCHIVE
+}
+
+enum OpportunityPriority {
+  LOW
+  NORMAL
+  HIGH
+  URGENT
+}
+
+enum OpportunityFit {
+  UNKNOWN
+  LOW
+  MEDIUM
+  HIGH
+  EXCELLENT
+}
+
+enum ProjectStatus {
+  PREPARATION
+  EN_COURS
+  EN_VALIDATION
+  LIVRE
+  CLOTURE
+  ARCHIVE
+}
+
+enum ProjectStage {
+  CADRAGE
+  UX
+  UI
+  CONTENUS
+  DEVELOPPEMENT
+  QA
+  LIVRAISON
+}
+
+enum ProjectItemStatus {
+  TODO
+  IN_PROGRESS
+  DONE
+  SKIPPED
+}
+
+enum ProjectGateStatus {
+  PENDING
+  VALIDATED
+  REFUSED
+  NOT_APPLICABLE
+}
+
+enum ProjectValidationStatus {
+  PENDING
+  APPROVED
+  CHANGES_REQUESTED
+  NOT_APPLICABLE
+}
+
+enum FinancialDocumentType {
+  QUOTE
+  DEPOSIT_INVOICE
+  BALANCE_INVOICE
+  MAINTENANCE_INVOICE
+  CREDIT_NOTE
+}
+
+enum FinancialDocumentStatus {
+  DRAFT
+  SENT
+  ACCEPTED
+  REFUSED
+  TO_INVOICE
+  ISSUED
+  PAID
+  LATE
+  CANCELLED
+}
+
+enum RealDocumentType {
+  PROPOSAL
+  CONTRACT
+  BRIEF
+  DELIVERABLE
+  ASSET
+  REPORT
+  HANDOVER
+  OTHER
+}
+
+enum RealDocumentStatus {
+  DRAFT
+  REFERENCED
+  SHARED
+  SENT
+  APPROVED
+  ARCHIVED
+}
+
+enum DocumentHandling {
+  IN_APP
+  COMPOSED
+  FILE_LINK
+}
+
+enum ClientPortalAccessStatus {
+  ACTIVE
+  REVOKED
+}
+
+enum ConversationScope {
+  PROJECT
+  PROJECT_REQUEST
+  OPPORTUNITY
+}
+
+enum ConversationVisibility {
+  CLIENT_VISIBLE
+  INTERNAL
+}
+
+enum MessageAuthorRole {
+  ADMIN
+  CLIENT
+  SYSTEM
+}
+
+enum QuestionnaireStatus {
+  DRAFT
+  SENT
+  IN_PROGRESS
+  COMPLETED
+  ARCHIVED
+}
+
+enum QuestionType {
+  TEXT
+  LONG_TEXT
+  URL
+  EMAIL
+  DATE
+  FILE_LINK
+}
+
+enum QuestionnaireAnswerStatus {
+  DRAFT
+  SUBMITTED
+}
+
+enum TimelineEventKind {
+  PROJECT
+  MESSAGE
+  QUESTIONNAIRE
+  DOCUMENT
+  VALIDATION
+  DECISION
+  STATUS_CHANGE
+  CLIENT_ACTION
+  INTERNAL_NOTE
+}
+
+enum TimelineEventVisibility {
+  ADMIN_ONLY
+  CLIENT_VISIBLE
+}
+
+enum NotificationPriority {
+  LOW
+  NORMAL
+  HIGH
+  URGENT
+}
+
+enum NotificationStatus {
+  UNREAD
+  READ
+  ARCHIVED
+}
+
+enum MediaAssetStatus {
+  ACTIVE
+  ARCHIVED
+}
+
+enum MediaAssetUsage {
+  GENERAL
+  OFFER
+  OFFER_FAMILY
+  REALISATION
+  PROJECT
+  DOCUMENT
+}
+
+enum PortfolioProjectKind {
+  CLIENT
+  DEMO
+  REFONTE
+  CONCEPT
+}
+
+enum PortfolioPublicationStatus {
+  DRAFT
+  STANDBY
+  PUBLISHED
+  ARCHIVED
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  passwordHash  String?   @db.Text
+  passwordSetAt DateTime?
+  lastLoginAt   DateTime?
+  failedLoginAttempts Int @default(0)
+  lockedUntil   DateTime?
+  role          UserRole  @default(CLIENT_OWNER)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts Account[]
+  sessions Session[]
+  contacts Contact[]
+  accountMemberships AccountMembership[]
+  clientPortalAccesses ClientPortalAccess[]
+  sentInvitations Invitation[] @relation("InvitationInvitedBy")
+  auditLogs AuditLog[] @relation("AuditLogActor")
+  createdConversations Conversation[] @relation("ConversationCreatedBy")
+  messages Message[]
+  questionnaireAnswers QuestionnaireAnswer[]
+  timelineEvents TimelineEvent[] @relation("TimelineEventActor")
+  notifications Notification[]
+  mediaAssets MediaAsset[] @relation("MediaAssetCreatedBy")
+  sharedRealDocumentVersions RealDocumentVersion[] @relation("RealDocumentVersionSharedBy")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model VerificationToken {
+  identifier String
+  token      String
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model ClientAccount {
+  id             String              @id @default(cuid())
+  name           String
+  type           ClientAccountType   @default(PERSON)
+  status         ClientAccountStatus @default(LEAD)
+  companyName    String?
+  brandName      String?
+  billingEmail   String?
+  billingAddress String?             @db.Text
+  source         String?
+  notes          String?             @db.Text
+  createdAt      DateTime            @default(now())
+  updatedAt      DateTime            @updatedAt
+
+  contacts     Contact[]
+  memberships  AccountMembership[]
+  invitations  Invitation[]
+  projectRequests ProjectRequest[]
+  opportunities Opportunity[]
+
+  @@index([status, updatedAt])
+  @@index([type])
+}
+
+model Contact {
+  id                String        @id @default(cuid())
+  clientAccountId   String
+  userId            String?
+  email             String
+  firstName         String?
+  lastName          String?
+  phone             String?
+  organizationName  String?
+  roleInProject     String?
+  website           String?
+  status            ContactStatus @default(NEW)
+  source            String?
+  notes             String?       @db.Text
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  clientAccount ClientAccount @relation(fields: [clientAccountId], references: [id], onDelete: Cascade)
+  user          User?         @relation(fields: [userId], references: [id], onDelete: SetNull)
+  projectRequests ProjectRequest[]
+  opportunities Opportunity[]
+
+  @@unique([clientAccountId, email])
+  @@index([email])
+  @@index([userId])
+  @@index([status])
+}
+
+model AccountMembership {
+  id              String                @id @default(cuid())
+  clientAccountId String
+  userId          String
+  role            AccountMembershipRole @default(MEMBER)
+  isPrimary       Boolean               @default(false)
+  createdAt       DateTime              @default(now())
+  updatedAt       DateTime              @updatedAt
+
+  clientAccount ClientAccount @relation(fields: [clientAccountId], references: [id], onDelete: Cascade)
+  user          User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([clientAccountId, userId])
+  @@index([userId, role])
+  @@index([clientAccountId, role])
+}
+
+model Invitation {
+  id              String           @id @default(cuid())
+  email           String
+  tokenHash       String           @unique
+  targetRole      UserRole         @default(CLIENT_OWNER)
+  status          InvitationStatus @default(PENDING)
+  clientAccountId String?
+  invitedByUserId String?
+  expiresAt       DateTime
+  acceptedAt      DateTime?
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  clientAccount ClientAccount? @relation(fields: [clientAccountId], references: [id], onDelete: SetNull)
+  invitedBy     User?          @relation("InvitationInvitedBy", fields: [invitedByUserId], references: [id], onDelete: SetNull)
+
+  @@index([email, status])
+  @@index([clientAccountId])
+  @@index([invitedByUserId])
+  @@index([expiresAt])
+}
+
+model AuditLog {
+  id          String   @id @default(cuid())
+  actorUserId String?
+  action      String
+  entityType  String
+  entityId    String?
+  metadata    Json?
+  createdAt   DateTime @default(now())
+
+  actor User? @relation("AuditLogActor", fields: [actorUserId], references: [id], onDelete: SetNull)
+
+  @@index([actorUserId, createdAt])
+  @@index([entityType, entityId])
+  @@index([action, createdAt])
+}
+
+model OfferFamily {
+  id           String   @id @default(cuid())
+  slug         String   @unique
+  name         String
+  badge        String?
+  eyebrow      String?
+  title        String?
+  description  String?
+  publicHref   String?
+  imageSrc     String?
+  imageTablet  String?
+  imageDesktop String?
+  imageAlt     String?
+  isActive     Boolean  @default(true)
+  sortOrder    Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  offers Offer[]
+
+  @@index([isActive, sortOrder])
+}
+
+model Offer {
+  id                 String   @id @default(cuid())
+  slug               String   @unique
+  name               String
+  family             String
+  familyId           String?
+  imageSrc           String?
+  imageAlt           String?
+  startingPriceCents Int?
+  startingPriceLabel String?
+  publicHref         String?
+  isActive           Boolean  @default(true)
+  sortOrder          Int      @default(0)
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  familyRecord       OfferFamily? @relation(fields: [familyId], references: [id], onDelete: SetNull)
+  opportunities      Opportunity[]
+  projects           Project[]
+  financialDocuments FinancialDocument[]
+  portfolioProjects  PortfolioProject[]
+
+  @@index([family])
+  @@index([familyId])
+  @@index([isActive, sortOrder])
+}
+
+model MediaAsset {
+  id              String           @id @default(cuid())
+  publicId        String           @unique
+  secureUrl       String
+  format          String?
+  width           Int?
+  height          Int?
+  bytes           Int?
+  folder          String?
+  alt             String?
+  title           String?
+  tags            String[]         @default([])
+  usage           MediaAssetUsage  @default(GENERAL)
+  status          MediaAssetStatus @default(ACTIVE)
+  createdByUserId String?
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  createdBy User? @relation("MediaAssetCreatedBy", fields: [createdByUserId], references: [id], onDelete: SetNull)
+
+  @@index([status, usage, createdAt])
+  @@index([folder])
+  @@index([createdByUserId])
+}
+
+model PortfolioProject {
+  id                String                     @id @default(cuid())
+  slug              String                     @unique
+  title             String
+  shortDescription  String                     @db.Text
+  status            String?
+  kind              PortfolioProjectKind       @default(DEMO)
+  typeLabel         String?
+  publicationStatus PortfolioPublicationStatus @default(DRAFT)
+  isFeatured        Boolean                    @default(false)
+  sortOrder         Int                        @default(0)
+  coverImageUrl     String?
+  heroImageUrl      String?
+  imageAlt          String?
+  contextTitle      String?
+  contextDescription String?                   @db.Text
+  objectives        String[]                   @default([])
+  proofs            String[]                   @default([])
+  tags              String[]                   @default([])
+  highlights        String[]                   @default([])
+  websiteUrl        String?
+  publicHref        String?
+  relatedOfferId    String?
+  createdAt         DateTime                   @default(now())
+  updatedAt         DateTime                   @updatedAt
+
+  relatedOffer Offer? @relation(fields: [relatedOfferId], references: [id], onDelete: SetNull)
+
+  @@index([publicationStatus, sortOrder])
+  @@index([kind])
+  @@index([relatedOfferId])
+  @@index([isFeatured, sortOrder])
+}
+
+model ProjectType {
+  id                      String   @id @default(cuid())
+  slug                    String   @unique
+  projectOsId             String?  @unique
+  name                    String
+  templateId              String?
+  publicLabel             String?
+  recommendedArchitecture String?
+  isActive                Boolean  @default(true)
+  sortOrder               Int      @default(0)
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt
+
+  opportunities Opportunity[]
+  projects      Project[]
+
+  @@index([isActive, sortOrder])
+}
+
+model ProjectRequest {
+  id               String               @id @default(cuid())
+  source           ProjectRequestSource @default(PROJECT_FORM)
+  requestId        String               @unique
+  projectTypeRaw   String
+  projectTypeLabel String?
+  fullName         String
+  email            String
+  projectName      String?
+  website          String?
+  description      String               @db.Text
+  objective        String               @db.Text
+  maturity         String
+  budget           String?
+  deadline         String?
+  constraints      String?              @db.Text
+  attachmentUrl    String?              @db.Text
+  attachmentName   String?
+  consent          Boolean              @default(true)
+  clientAccountId  String?
+  contactId        String?
+  payloadSnapshot  Json
+  emailProviderId  String?
+  emailStatus      EmailStatus          @default(NOT_SENT)
+  createdAt        DateTime             @default(now())
+
+  clientAccount ClientAccount? @relation(fields: [clientAccountId], references: [id], onDelete: SetNull)
+  contact       Contact?       @relation(fields: [contactId], references: [id], onDelete: SetNull)
+  opportunity Opportunity?
+  conversations Conversation[]
+  questionnaires Questionnaire[]
+  timelineEvents TimelineEvent[]
+
+  @@index([email])
+  @@index([createdAt])
+  @@index([clientAccountId])
+  @@index([contactId])
+}
+
+model Opportunity {
+  id                   String              @id @default(cuid())
+  title                String
+  status               OpportunityStatus   @default(NOUVEAU)
+  phase                OpportunityPhase    @default(LEAD)
+  prospectName         String
+  prospectEmail        String
+  phone                String?
+  organizationName     String?
+  source               String?
+  conversionChannel    String?
+  rawNeed              String?             @db.Text
+  objective            String?             @db.Text
+  notes                String?             @db.Text
+  maturity             String?
+  estimatedBudgetRange String?
+  estimatedValueCents  Int?
+  probability          Int?
+  urgency              String?
+  priority             OpportunityPriority @default(NORMAL)
+  fit                  OpportunityFit      @default(UNKNOWN)
+  qualificationScore   Int?
+  decisionExpected     DateTime?
+  mainObjection        String?
+  nextGate             String?
+  nextAction           String?
+  nextFollowUpAt       DateTime?
+  lastContactAt        DateTime?
+  commercialBlocker    String?
+  lostReason           String?
+  readyToConvert       Boolean             @default(false)
+  commercialScopeUrl   String?
+  proposalUrl          String?
+  proposalSentAt       DateTime?
+  quoteUrl             String?
+  quoteSentAt          DateTime?
+  quoteAcceptedAt      DateTime?
+  depositRequestedAt   DateTime?
+  depositReceivedAt    DateTime?
+  depositAmountCents   Int?
+  conversionExceptionReason String?            @db.Text
+  commercialDriveUrl   String?
+  projectRequestId     String?             @unique
+  clientAccountId      String?
+  contactId            String?
+  offerId              String?
+  projectTypeId        String?
+  createdAt            DateTime            @default(now())
+  updatedAt            DateTime            @updatedAt
+
+  projectRequest     ProjectRequest?     @relation(fields: [projectRequestId], references: [id], onDelete: SetNull)
+  clientAccount      ClientAccount?      @relation(fields: [clientAccountId], references: [id], onDelete: SetNull)
+  contact            Contact?            @relation(fields: [contactId], references: [id], onDelete: SetNull)
+  offer              Offer?              @relation(fields: [offerId], references: [id], onDelete: SetNull)
+  projectType        ProjectType?        @relation(fields: [projectTypeId], references: [id], onDelete: SetNull)
+  convertedProject   Project?
+  financialDocuments FinancialDocument[]
+  realDocuments      RealDocument[]
+  conversations      Conversation[]
+  questionnaires     Questionnaire[]
+  timelineEvents     TimelineEvent[]
+  notifications      Notification[]
+
+  @@index([status, phase])
+  @@index([nextFollowUpAt])
+  @@index([prospectEmail])
+  @@index([clientAccountId])
+  @@index([contactId])
+  @@index([offerId])
+  @@index([projectTypeId])
+}
+
+model Project {
+  id               String        @id @default(cuid())
+  name             String
+  status           ProjectStatus @default(PREPARATION)
+  stage            ProjectStage  @default(CADRAGE)
+  opportunityId    String        @unique
+  projectTypeId    String?
+  offerId          String?
+  driveFolderUrl   String?
+  githubRepoUrl    String?
+  targetDate       DateTime?
+  startedAt        DateTime?
+  nextAction       String?
+  notes            String?       @db.Text
+  hasActiveBlocker Boolean       @default(false)
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  opportunity        Opportunity         @relation(fields: [opportunityId], references: [id], onDelete: Restrict)
+  projectType        ProjectType?        @relation(fields: [projectTypeId], references: [id], onDelete: SetNull)
+  offer              Offer?              @relation(fields: [offerId], references: [id], onDelete: SetNull)
+  financialDocuments FinancialDocument[]
+  lots               ProjectLot[]
+  phases             ProjectPhase[]
+  deliverables       Deliverable[]
+  tasks              ProjectTask[]
+  actions            ProjectAction[]
+  gates              ProjectGate[]
+  validations        Validation[]
+  projectOsGenerations ProjectOsGeneration[]
+  playbookInstance   PlaybookInstance?
+  realDocuments      RealDocument[]
+  clientPortalAccesses ClientPortalAccess[]
+  conversations      Conversation[]
+  questionnaires     Questionnaire[]
+  timelineEvents     TimelineEvent[]
+  notifications      Notification[]
+
+  @@index([status, stage])
+  @@index([offerId])
+  @@index([projectTypeId])
+}
+
+model ClientPortalAccess {
+  id        String                   @id @default(cuid())
+  userId    String
+  projectId String
+  status    ClientPortalAccessStatus @default(ACTIVE)
+  createdAt DateTime                 @default(now())
+  updatedAt DateTime                 @updatedAt
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, projectId])
+  @@index([projectId, status])
+  @@index([userId, status])
+}
+
+model ProjectLot {
+  id          String   @id @default(cuid())
+  projectId   String
+  key         String
+  name        String
+  description String?  @db.Text
+  status      ProjectItemStatus @default(TODO)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  project Project        @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  phases  ProjectPhase[]
+
+  @@unique([projectId, key])
+  @@index([projectId, sortOrder])
+}
+
+model ProjectPhase {
+  id          String    @id @default(cuid())
+  projectId   String
+  lotId       String?
+  key         String
+  name        String
+  description String?   @db.Text
+  status      ProjectItemStatus @default(TODO)
+  startsAt    DateTime?
+  endsAt      DateTime?
+  sortOrder   Int       @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  project      Project       @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  lot          ProjectLot?   @relation(fields: [lotId], references: [id], onDelete: SetNull)
+  deliverables Deliverable[]
+  tasks        ProjectTask[]
+  actions      ProjectAction[]
+  gates        ProjectGate[]
+
+  @@unique([projectId, key])
+  @@index([projectId, sortOrder])
+  @@index([lotId])
+}
+
+model Deliverable {
+  id              String       @id @default(cuid())
+  projectId       String
+  phaseId         String?
+  key             String
+  name            String
+  description     String?      @db.Text
+  status          ProjectItemStatus @default(TODO)
+  isClientVisible Boolean      @default(false)
+  documentUrl     String?
+  sortOrder       Int          @default(0)
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  project     Project      @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  phase       ProjectPhase? @relation(fields: [phaseId], references: [id], onDelete: SetNull)
+  validations Validation[]
+  realDocuments RealDocument[]
+
+  @@unique([projectId, key])
+  @@index([projectId, sortOrder])
+  @@index([phaseId])
+}
+
+model ProjectTask {
+  id              String        @id @default(cuid())
+  projectId       String
+  phaseId         String?
+  key             String
+  title           String
+  description     String?       @db.Text
+  status          ProjectItemStatus @default(TODO)
+  ownerRole       String?
+  dueAt           DateTime?
+  isClientVisible Boolean       @default(false)
+  sortOrder       Int           @default(0)
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  project Project       @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  phase   ProjectPhase? @relation(fields: [phaseId], references: [id], onDelete: SetNull)
+
+  @@unique([projectId, key])
+  @@index([projectId, sortOrder])
+  @@index([phaseId])
+}
+
+model ProjectGate {
+  id              String    @id @default(cuid())
+  projectId       String
+  phaseId         String?
+  key             String
+  title           String
+  description     String?   @db.Text
+  type            String?
+  objectType      String?
+  status          ProjectGateStatus @default(PENDING)
+  isClientVisible Boolean   @default(false)
+  required        Boolean   @default(true)
+  proofRequired   Boolean   @default(false)
+  sortOrder       Int       @default(0)
+  sourceTemplateKey String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  project Project       @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  phase   ProjectPhase? @relation(fields: [phaseId], references: [id], onDelete: SetNull)
+
+  @@unique([projectId, key])
+  @@index([projectId, sortOrder])
+  @@index([phaseId])
+  @@index([type, status])
+}
+
+model ProjectAction {
+  id              String    @id @default(cuid())
+  projectId       String
+  phaseId         String?
+  key             String
+  title           String
+  description     String?   @db.Text
+  status          ProjectItemStatus @default(TODO)
+  ownerRole       String?
+  isBlocking      Boolean   @default(false)
+  isClientVisible Boolean   @default(false)
+  dueAt           DateTime?
+  sortOrder       Int       @default(0)
+  sourceTemplateKey String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  project Project       @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  phase   ProjectPhase? @relation(fields: [phaseId], references: [id], onDelete: SetNull)
+
+  @@unique([projectId, key])
+  @@index([projectId, sortOrder])
+  @@index([phaseId])
+  @@index([ownerRole, status])
+}
+
+model Validation {
+  id              String       @id @default(cuid())
+  projectId       String
+  deliverableId   String?
+  realDocumentId  String?
+  key             String
+  type            String       @default("INTERNAL")
+  status          ProjectValidationStatus @default(PENDING)
+  title           String
+  description     String?      @db.Text
+  requestedAt     DateTime?
+  respondedAt     DateTime?
+  responseComment String?      @db.Text
+  isClientVisible Boolean      @default(false)
+  sortOrder       Int          @default(0)
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  project      Project       @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  deliverable  Deliverable?  @relation(fields: [deliverableId], references: [id], onDelete: SetNull)
+  realDocument RealDocument? @relation(fields: [realDocumentId], references: [id], onDelete: SetNull)
+
+  @@unique([projectId, key])
+  @@index([projectId, sortOrder])
+  @@index([deliverableId])
+  @@index([realDocumentId])
+  @@index([type, status])
+}
+
+model ProjectOsGeneration {
+  id         String   @id @default(cuid())
+  projectId  String
+  templateId String?
+  status     String   @default("COMPLETED")
+  summary    Json?
+  createdAt  DateTime @default(now())
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId, createdAt])
+}
+
+model PlaybookTemplate {
+  id               String   @id @default(cuid())
+  key              String   @unique
+  name             String
+  sourceProjectOsId String? @unique
+  sourceTemplateId String?
+  status           String   @default("ACTIVE")
+  priority         String   @default("PRIORITY")
+  description      String?  @db.Text
+  sortOrder        Int      @default(0)
+  sourceSnapshot   Json?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  phases       PlaybookPhaseTemplate[]
+  gates        PlaybookGateTemplate[]
+  actions      PlaybookActionTemplate[]
+  deliverables PlaybookDeliverableTemplate[]
+  documents    PlaybookDocumentTemplate[]
+  modules      PlaybookModuleTemplate[]
+  instances    PlaybookInstance[]
+
+  @@index([status, priority, sortOrder])
+}
+
+model PlaybookModuleTemplate {
+  id             String   @id @default(cuid())
+  playbookId     String
+  key            String
+  name           String
+  description    String?  @db.Text
+  isDefault      Boolean  @default(false)
+  sortOrder      Int      @default(0)
+  sourceSnapshot Json?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  playbook PlaybookTemplate @relation(fields: [playbookId], references: [id], onDelete: Cascade)
+
+  @@unique([playbookId, key])
+  @@index([playbookId, sortOrder])
+}
+
+model PlaybookInstance {
+  id                 String   @id @default(cuid())
+  projectId          String   @unique
+  playbookTemplateId String
+  status             String   @default("APPLIED")
+  appliedAt          DateTime @default(now())
+  appliedByUserId    String?
+  scopeSnapshot      Json?
+  generationSummary  Json?
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  project          Project          @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  playbookTemplate PlaybookTemplate @relation(fields: [playbookTemplateId], references: [id], onDelete: Restrict)
+
+  @@index([playbookTemplateId])
+  @@index([status, appliedAt])
+}
+
+model PlaybookPhaseTemplate {
+  id             String   @id @default(cuid())
+  playbookId     String
+  key            String
+  name           String
+  description    String?  @db.Text
+  sourceLotKey   String?
+  moduleKey      String?
+  sortOrder      Int      @default(0)
+  sourceSnapshot Json?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  playbook PlaybookTemplate @relation(fields: [playbookId], references: [id], onDelete: Cascade)
+
+  @@unique([playbookId, key])
+  @@index([playbookId, sortOrder])
+  @@index([sourceLotKey])
+  @@index([moduleKey])
+}
+
+model PlaybookGateTemplate {
+  id             String   @id @default(cuid())
+  playbookId     String
+  key            String
+  name           String
+  type           String?
+  objectType     String?
+  required       Boolean  @default(true)
+  unblocks       Json?
+  proofRequired  Boolean  @default(false)
+  moduleKey      String?
+  sortOrder      Int      @default(0)
+  sourceSnapshot Json?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  playbook PlaybookTemplate @relation(fields: [playbookId], references: [id], onDelete: Cascade)
+
+  @@unique([playbookId, key])
+  @@index([playbookId, sortOrder])
+  @@index([type])
+  @@index([moduleKey])
+}
+
+model PlaybookActionTemplate {
+  id             String   @id @default(cuid())
+  playbookId     String
+  key            String
+  title          String
+  description    String?  @db.Text
+  sourcePhaseKey String?
+  ownerRole      String?
+  isBlocking     Boolean  @default(false)
+  moduleKey      String?
+  sortOrder      Int      @default(0)
+  sourceSnapshot Json?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  playbook PlaybookTemplate @relation(fields: [playbookId], references: [id], onDelete: Cascade)
+
+  @@unique([playbookId, key])
+  @@index([playbookId, sortOrder])
+  @@index([sourcePhaseKey])
+  @@index([moduleKey])
+}
+
+model PlaybookDeliverableTemplate {
+  id                String   @id @default(cuid())
+  playbookId        String
+  key               String
+  name              String
+  description       String?  @db.Text
+  category          String?
+  sourcePhaseKey    String?
+  documentTemplateKey String?
+  isRequired        Boolean  @default(true)
+  isClientVisible   Boolean  @default(false)
+  moduleKey         String?
+  sortOrder         Int      @default(0)
+  sourceSnapshot    Json?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  playbook PlaybookTemplate @relation(fields: [playbookId], references: [id], onDelete: Cascade)
+
+  @@unique([playbookId, key])
+  @@index([playbookId, sortOrder])
+  @@index([sourcePhaseKey])
+  @@index([moduleKey])
+}
+
+model PlaybookDocumentTemplate {
+  id                  String   @id @default(cuid())
+  playbookId          String
+  key                 String
+  name                String
+  category            String?
+  usage               String?  @db.Text
+  recommendedFormat   String?
+  recommendedDrivePath String?
+  visibility          String?
+  status              String?
+  sourcePhaseKey      String?
+  producesDeliverableKey String?
+  moduleKey           String?
+  handling            DocumentHandling @default(FILE_LINK)
+  sortOrder           Int      @default(0)
+  sourceSnapshot      Json?
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  playbook PlaybookTemplate @relation(fields: [playbookId], references: [id], onDelete: Cascade)
+
+  @@unique([playbookId, key])
+  @@index([playbookId, sortOrder])
+  @@index([sourcePhaseKey])
+  @@index([visibility])
+  @@index([moduleKey])
+  @@index([handling])
+}
+
+model DocumentModel {
+  id               String           @id @default(cuid())
+  key              String           @unique
+  name             String
+  description      String?          @db.Text
+  category         String?
+  realDocumentType RealDocumentType @default(OTHER)
+  sections         Json
+  isActive         Boolean          @default(true)
+  sortOrder        Int              @default(0)
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+
+  @@index([isActive, sortOrder])
+}
+
+model RealDocument {
+  id              String             @id @default(cuid())
+  reference       String             @unique
+  type            RealDocumentType
+  status          RealDocumentStatus @default(REFERENCED)
+  title           String
+  clientName      String
+  documentUrl     String?
+  contentJson     Json?
+  documentModelKey String?
+  currentVersion  Int                @default(0)
+  notes           String?            @db.Text
+  isClientVisible Boolean            @default(false)
+  opportunityId   String?
+  projectId       String
+  deliverableId   String?
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+
+  opportunity Opportunity? @relation(fields: [opportunityId], references: [id], onDelete: SetNull)
+  project     Project      @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  deliverable Deliverable? @relation(fields: [deliverableId], references: [id], onDelete: SetNull)
+  versions    RealDocumentVersion[]
+  validations Validation[]
+
+  @@index([type, status])
+  @@index([projectId])
+  @@index([opportunityId])
+  @@index([deliverableId])
+  @@index([documentModelKey])
+}
+
+model RealDocumentVersion {
+  id              String   @id @default(cuid())
+  realDocumentId  String
+  version         Int
+  contentSnapshot Json
+  sharedAt        DateTime @default(now())
+  sharedByUserId  String?
+
+  realDocument RealDocument @relation(fields: [realDocumentId], references: [id], onDelete: Cascade)
+  sharedBy     User?        @relation("RealDocumentVersionSharedBy", fields: [sharedByUserId], references: [id], onDelete: SetNull)
+
+  @@unique([realDocumentId, version])
+  @@index([realDocumentId, sharedAt])
+  @@index([sharedByUserId])
+}
+
+model FinancialDocument {
+  id             String                  @id @default(cuid())
+  reference      String                  @unique
+  type           FinancialDocumentType
+  status         FinancialDocumentStatus @default(DRAFT)
+  clientName     String
+  amountCents    Int?
+  depositPercent Int?
+  issuedAt       DateTime?
+  dueAt          DateTime?
+  paidAt         DateTime?
+  documentUrl    String?
+  notes          String?                 @db.Text
+  offerId        String?
+  opportunityId  String?
+  projectId      String?
+  createdAt      DateTime                @default(now())
+  updatedAt      DateTime                @updatedAt
+
+  offer       Offer?       @relation(fields: [offerId], references: [id], onDelete: SetNull)
+  opportunity Opportunity? @relation(fields: [opportunityId], references: [id], onDelete: SetNull)
+  project     Project?     @relation(fields: [projectId], references: [id], onDelete: SetNull)
+
+  @@index([type, status])
+  @@index([dueAt])
+  @@index([offerId])
+  @@index([opportunityId])
+  @@index([projectId])
+}
+
+model Conversation {
+  id               String                 @id @default(cuid())
+  scope            ConversationScope      @default(PROJECT)
+  visibility       ConversationVisibility @default(CLIENT_VISIBLE)
+  title            String
+  projectId        String?
+  projectRequestId String?
+  opportunityId    String?
+  createdByUserId  String?
+  createdAt        DateTime               @default(now())
+  updatedAt        DateTime               @updatedAt
+
+  project        Project?        @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectRequest ProjectRequest? @relation(fields: [projectRequestId], references: [id], onDelete: Cascade)
+  opportunity    Opportunity?    @relation(fields: [opportunityId], references: [id], onDelete: Cascade)
+  createdBy      User?           @relation("ConversationCreatedBy", fields: [createdByUserId], references: [id], onDelete: SetNull)
+  messages       Message[]
+
+  @@index([projectId, visibility, updatedAt])
+  @@index([projectRequestId, visibility, updatedAt])
+  @@index([opportunityId, visibility, updatedAt])
+  @@index([createdByUserId])
+}
+
+model Message {
+  id             String            @id @default(cuid())
+  conversationId String
+  authorUserId   String?
+  authorName     String?
+  authorRole     MessageAuthorRole @default(CLIENT)
+  body           String            @db.Text
+  isClientVisible Boolean          @default(true)
+  internalNote   Boolean           @default(false)
+  createdAt      DateTime          @default(now())
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  author       User?        @relation(fields: [authorUserId], references: [id], onDelete: SetNull)
+
+  @@index([conversationId, createdAt])
+  @@index([authorUserId, createdAt])
+  @@index([isClientVisible, internalNote])
+}
+
+model Questionnaire {
+  id               String              @id @default(cuid())
+  title            String
+  description      String?             @db.Text
+  status           QuestionnaireStatus @default(DRAFT)
+  isClientVisible  Boolean             @default(false)
+  projectId        String?
+  projectRequestId String?
+  opportunityId    String?
+  dueAt            DateTime?
+  createdAt        DateTime            @default(now())
+  updatedAt        DateTime            @updatedAt
+
+  project        Project?        @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectRequest ProjectRequest? @relation(fields: [projectRequestId], references: [id], onDelete: Cascade)
+  opportunity    Opportunity?    @relation(fields: [opportunityId], references: [id], onDelete: Cascade)
+  questions      QuestionnaireQuestion[]
+
+  @@index([projectId, status, updatedAt])
+  @@index([projectRequestId, status, updatedAt])
+  @@index([opportunityId, status, updatedAt])
+  @@index([isClientVisible, status])
+}
+
+model QuestionnaireQuestion {
+  id              String       @id @default(cuid())
+  questionnaireId String
+  key             String
+  label           String
+  helpText        String?      @db.Text
+  type            QuestionType @default(LONG_TEXT)
+  required        Boolean      @default(false)
+  sortOrder       Int          @default(0)
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  questionnaire Questionnaire @relation(fields: [questionnaireId], references: [id], onDelete: Cascade)
+  answers       QuestionnaireAnswer[]
+
+  @@unique([questionnaireId, key])
+  @@index([questionnaireId, sortOrder])
+}
+
+model QuestionnaireAnswer {
+  id          String                    @id @default(cuid())
+  questionId  String
+  authorUserId String?
+  value       String                    @db.Text
+  status      QuestionnaireAnswerStatus @default(SUBMITTED)
+  createdAt   DateTime                  @default(now())
+  updatedAt   DateTime                  @updatedAt
+
+  question QuestionnaireQuestion @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  author   User?                 @relation(fields: [authorUserId], references: [id], onDelete: SetNull)
+
+  @@index([questionId, createdAt])
+  @@index([authorUserId, createdAt])
+  @@index([status])
+}
+
+model TimelineEvent {
+  id               String                  @id @default(cuid())
+  kind             TimelineEventKind
+  title            String
+  description      String?                 @db.Text
+  visibility       TimelineEventVisibility @default(ADMIN_ONLY)
+  projectId        String?
+  projectRequestId String?
+  opportunityId    String?
+  actorUserId      String?
+  metadata         Json?
+  happenedAt       DateTime                @default(now())
+  createdAt        DateTime                @default(now())
+
+  project        Project?        @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectRequest ProjectRequest? @relation(fields: [projectRequestId], references: [id], onDelete: Cascade)
+  opportunity    Opportunity?    @relation(fields: [opportunityId], references: [id], onDelete: Cascade)
+  actor          User?           @relation("TimelineEventActor", fields: [actorUserId], references: [id], onDelete: SetNull)
+
+  @@index([projectId, visibility, happenedAt])
+  @@index([projectRequestId, visibility, happenedAt])
+  @@index([opportunityId, visibility, happenedAt])
+  @@index([actorUserId, happenedAt])
+  @@index([kind, happenedAt])
+}
+
+model Notification {
+  id              String               @id @default(cuid())
+  recipientUserId String
+  projectId       String?
+  opportunityId   String?
+  title           String
+  body            String?              @db.Text
+  priority        NotificationPriority @default(NORMAL)
+  status          NotificationStatus   @default(UNREAD)
+  actionHref      String?
+  readAt          DateTime?
+  createdAt       DateTime             @default(now())
+
+  recipient   User         @relation(fields: [recipientUserId], references: [id], onDelete: Cascade)
+  project     Project?     @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  opportunity Opportunity? @relation(fields: [opportunityId], references: [id], onDelete: Cascade)
+
+  @@index([recipientUserId, status, createdAt])
+  @@index([projectId, createdAt])
+  @@index([opportunityId, createdAt])
+  @@index([priority, status])
+}

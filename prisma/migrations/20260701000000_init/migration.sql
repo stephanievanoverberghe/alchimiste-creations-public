@@ -1,0 +1,2 @@
+-- Initial Prisma/Neon baseline.
+-- Business tables are intentionally added in later CRM sprints.

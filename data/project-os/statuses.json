@@ -1,0 +1,782 @@
+{
+  "opportunities": [
+    {
+      "id": "opp_nouvelle",
+      "label": "Nouvelle",
+      "description": "Demande reçue, non analysee.",
+      "order": 1,
+      "category": "open",
+      "color": "gray",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "opp_a_qualifier",
+      "label": "À qualifier",
+      "description": "Analyse ou appel nécessaire.",
+      "order": 2,
+      "category": "open",
+      "color": "yellow",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "opp_infos_demandees",
+      "label": "Infos demandees",
+      "description": "Attente d'informations prospect.",
+      "order": 3,
+      "category": "waiting",
+      "color": "orange",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "opp_devis_a_preparer",
+      "label": "Devis à préparer",
+      "description": "Qualification suffisante pour chiffrage.",
+      "order": 4,
+      "category": "active",
+      "color": "blue",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "opp_devis_envoye",
+      "label": "Devis envoyé",
+      "description": "Attente décision client.",
+      "order": 5,
+      "category": "waiting",
+      "color": "purple",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "opp_acceptee",
+      "label": "Acceptee",
+      "description": "Devis accepté, conversion possible.",
+      "order": 6,
+      "category": "won",
+      "color": "green",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "opp_convertie",
+      "label": "Convertie",
+      "description": "Projet créé.",
+      "order": 7,
+      "category": "won",
+      "color": "green",
+      "final": true,
+      "blocking": false
+    },
+    {
+      "id": "opp_refusee",
+      "label": "Refusee",
+      "description": "Opportunité perdue ou refusée.",
+      "order": 8,
+      "category": "closed",
+      "color": "red",
+      "final": true,
+      "blocking": false
+    },
+    {
+      "id": "opp_archivee",
+      "label": "Archivee",
+      "description": "Opportunité sans action active.",
+      "order": 9,
+      "category": "closed",
+      "color": "gray",
+      "final": true,
+      "blocking": false
+    }
+  ],
+  "projects": [
+    {
+      "id": "project_pre_lancement",
+      "label": "Pre-lancement",
+      "description": "Projet créé, préparation en cours.",
+      "order": 1,
+      "category": "open",
+      "color": "gray",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "project_pret_demarrer",
+      "label": "Prêt à démarrer",
+      "description": "Gate 0 validé.",
+      "order": 2,
+      "category": "ready",
+      "color": "blue",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "project_en_cours",
+      "label": "En cours",
+      "description": "Production active.",
+      "order": 3,
+      "category": "active",
+      "color": "yellow",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "project_attente_client",
+      "label": "En attente client",
+      "description": "Action client nécessaire.",
+      "order": 4,
+      "category": "waiting",
+      "color": "orange",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "project_bloque",
+      "label": "Bloque",
+      "description": "Blocage actif empêche la suite.",
+      "order": 5,
+      "category": "blocked",
+      "color": "red",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "project_validation",
+      "label": "En validation",
+      "description": "Validation interne ou client en attente.",
+      "order": 6,
+      "category": "waiting",
+      "color": "purple",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "project_livre",
+      "label": "Livré",
+      "description": "Livraison faite, clôturé non terminée.",
+      "order": 7,
+      "category": "delivered",
+      "color": "green",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "project_cloture",
+      "label": "Clôturé",
+      "description": "Projet terminé, archivé et RETEX fait.",
+      "order": 8,
+      "category": "closed",
+      "color": "green",
+      "final": true,
+      "blocking": false
+    },
+    {
+      "id": "project_annule",
+      "label": "Annule",
+      "description": "Projet arrete.",
+      "order": 9,
+      "category": "closed",
+      "color": "red",
+      "final": true,
+      "blocking": false
+    }
+  ],
+  "lots": [
+    {
+      "id": "lot_a_preparer",
+      "label": "À préparer",
+      "description": "Lot non démarré.",
+      "order": 1,
+      "category": "open",
+      "color": "gray",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "lot_en_cours",
+      "label": "En cours",
+      "description": "Travail actif.",
+      "order": 2,
+      "category": "active",
+      "color": "yellow",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "lot_attente",
+      "label": "En attente",
+      "description": "Dependance externe.",
+      "order": 3,
+      "category": "waiting",
+      "color": "orange",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "lot_validation",
+      "label": "En validation",
+      "description": "Validation attendue.",
+      "order": 4,
+      "category": "waiting",
+      "color": "purple",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "lot_termine",
+      "label": "Terminé",
+      "description": "Definition of Done respectee.",
+      "order": 5,
+      "category": "closed",
+      "color": "green",
+      "final": true,
+      "blocking": false
+    },
+    {
+      "id": "lot_bloque",
+      "label": "Bloque",
+      "description": "Blocage actif.",
+      "order": 6,
+      "category": "blocked",
+      "color": "red",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "lot_ignore",
+      "label": "Ignore",
+      "description": "Non applicable au projet.",
+      "order": 7,
+      "category": "closed",
+      "color": "gray",
+      "final": true,
+      "blocking": false
+    }
+  ],
+  "phases": [
+    {
+      "id": "phase_non_commencee",
+      "label": "Non commencée",
+      "description": "Phase pas encore ouverte.",
+      "order": 1,
+      "category": "open",
+      "color": "gray",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "phase_a_preparer",
+      "label": "À préparer",
+      "description": "Préparation nécessaire avant execution.",
+      "order": 2,
+      "category": "open",
+      "color": "blue",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "phase_en_cours",
+      "label": "En cours",
+      "description": "Phase active.",
+      "order": 3,
+      "category": "active",
+      "color": "yellow",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "phase_attente_client",
+      "label": "En attente client",
+      "description": "Action client requise.",
+      "order": 4,
+      "category": "waiting",
+      "color": "orange",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "phase_bloquee",
+      "label": "Bloquee",
+      "description": "Blocage empêche la suite.",
+      "order": 5,
+      "category": "blocked",
+      "color": "red",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "phase_en_validation",
+      "label": "En validation",
+      "description": "Validation requise.",
+      "order": 6,
+      "category": "waiting",
+      "color": "purple",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "phase_terminee",
+      "label": "Terminee",
+      "description": "DoD et gates respectes.",
+      "order": 7,
+      "category": "closed",
+      "color": "green",
+      "final": true,
+      "blocking": false
+    },
+    {
+      "id": "phase_ignoree",
+      "label": "Ignoree",
+      "description": "Non applicable.",
+      "order": 8,
+      "category": "closed",
+      "color": "gray",
+      "final": true,
+      "blocking": false
+    }
+  ],
+  "deliverables": [
+    {
+      "id": "deliverable_a_produire",
+      "label": "À produire",
+      "description": "Livrable prevu non démarré.",
+      "order": 1,
+      "category": "open",
+      "color": "gray",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "deliverable_en_cours",
+      "label": "En cours",
+      "description": "Production en cours.",
+      "order": 2,
+      "category": "active",
+      "color": "yellow",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "deliverable_pret_interne",
+      "label": "Prêt interne",
+      "description": "Prêt pour relecture interne.",
+      "order": 3,
+      "category": "ready",
+      "color": "blue",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "deliverable_envoye_validation",
+      "label": "Envoyé validation",
+      "description": "Soumis au client ou validateur.",
+      "order": 4,
+      "category": "waiting",
+      "color": "purple",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "deliverable_a_corriger",
+      "label": "À corriger",
+      "description": "Corrections demandees.",
+      "order": 5,
+      "category": "active",
+      "color": "orange",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "deliverable_valide",
+      "label": "Validé",
+      "description": "Accord obtenu.",
+      "order": 6,
+      "category": "validated",
+      "color": "green",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "deliverable_livre_final",
+      "label": "Livré final",
+      "description": "Version finale remise.",
+      "order": 7,
+      "category": "closed",
+      "color": "green",
+      "final": true,
+      "blocking": false
+    },
+    {
+      "id": "deliverable_archive",
+      "label": "Archivé",
+      "description": "Conserve sans action active.",
+      "order": 8,
+      "category": "closed",
+      "color": "gray",
+      "final": true,
+      "blocking": false
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task_a_faire",
+      "label": "À faire",
+      "description": "Action planifiee.",
+      "order": 1,
+      "category": "open",
+      "color": "gray",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "task_aujourdhui",
+      "label": "Aujourd'hui",
+      "description": "Action prioritaire du jour.",
+      "order": 2,
+      "category": "active",
+      "color": "blue",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "task_en_cours",
+      "label": "En cours",
+      "description": "Action démarrée.",
+      "order": 3,
+      "category": "active",
+      "color": "yellow",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "task_attente_client",
+      "label": "En attente client",
+      "description": "Client doit agir.",
+      "order": 4,
+      "category": "waiting",
+      "color": "orange",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "task_a_valider",
+      "label": "À valider",
+      "description": "Controle ou accord nécessaire.",
+      "order": 5,
+      "category": "waiting",
+      "color": "purple",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "task_terminee",
+      "label": "Terminee",
+      "description": "Action faite.",
+      "order": 6,
+      "category": "closed",
+      "color": "green",
+      "final": true,
+      "blocking": false
+    },
+    {
+      "id": "task_bloquee",
+      "label": "Bloquee",
+      "description": "Action impossible sans résolution.",
+      "order": 7,
+      "category": "blocked",
+      "color": "red",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "task_annulee",
+      "label": "Annulee",
+      "description": "Action abandonnee.",
+      "order": 8,
+      "category": "closed",
+      "color": "gray",
+      "final": true,
+      "blocking": false
+    }
+  ],
+  "validations": [
+    {
+      "id": "validation_a_preparer",
+      "label": "À préparer",
+      "description": "Demande de validation à formaliser.",
+      "order": 1,
+      "category": "open",
+      "color": "gray",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "validation_demandee",
+      "label": "Demandee",
+      "description": "Validation envoyée.",
+      "order": 2,
+      "category": "waiting",
+      "color": "blue",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "validation_en_attente",
+      "label": "En attente",
+      "description": "Réponse attendue.",
+      "order": 3,
+      "category": "waiting",
+      "color": "orange",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "validation_validee",
+      "label": "Validée",
+      "description": "Accord obtenu.",
+      "order": 4,
+      "category": "closed",
+      "color": "green",
+      "final": true,
+      "blocking": false
+    },
+    {
+      "id": "validation_a_corriger",
+      "label": "À corriger",
+      "description": "Correction demandee.",
+      "order": 5,
+      "category": "active",
+      "color": "yellow",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "validation_refusee",
+      "label": "Refusee",
+      "description": "Validation refusée.",
+      "order": 6,
+      "category": "blocked",
+      "color": "red",
+      "final": true,
+      "blocking": true
+    },
+    {
+      "id": "validation_annulee",
+      "label": "Annulee",
+      "description": "Validation retirée.",
+      "order": 7,
+      "category": "closed",
+      "color": "gray",
+      "final": true,
+      "blocking": false
+    }
+  ],
+  "documents": [
+    {
+      "id": "document_a_creer",
+      "label": "À créer",
+      "description": "Modèle ou document non rédigé.",
+      "order": 1,
+      "category": "open",
+      "color": "gray",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "document_brouillon",
+      "label": "Brouillon",
+      "description": "Redaction en cours.",
+      "order": 2,
+      "category": "active",
+      "color": "yellow",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "document_a_relire",
+      "label": "À relire",
+      "description": "Controle nécessaire.",
+      "order": 3,
+      "category": "waiting",
+      "color": "orange",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "document_pret",
+      "label": "Prêt",
+      "description": "Prêt à utiliser ou envoyer.",
+      "order": 4,
+      "category": "ready",
+      "color": "green",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "document_envoye",
+      "label": "Envoyé",
+      "description": "Envoyé au client.",
+      "order": 5,
+      "category": "delivered",
+      "color": "blue",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "document_remplace",
+      "label": "Remplace",
+      "description": "Version remplacée par une autre.",
+      "order": 6,
+      "category": "closed",
+      "color": "gray",
+      "final": true,
+      "blocking": false
+    },
+    {
+      "id": "document_archive",
+      "label": "Archivé",
+      "description": "Conserve sans usage actif.",
+      "order": 7,
+      "category": "closed",
+      "color": "gray",
+      "final": true,
+      "blocking": false
+    }
+  ],
+  "blockers": [
+    {
+      "id": "blocker_identifie",
+      "label": "Identifié",
+      "description": "Risque ou blocage note.",
+      "order": 1,
+      "category": "open",
+      "color": "yellow",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "blocker_actif",
+      "label": "Actif",
+      "description": "Empêche la suite.",
+      "order": 2,
+      "category": "blocked",
+      "color": "red",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "blocker_en_traitement",
+      "label": "En traitement",
+      "description": "Action de résolution en cours.",
+      "order": 3,
+      "category": "active",
+      "color": "orange",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "blocker_resolu",
+      "label": "Résolue",
+      "description": "Cause levée.",
+      "order": 4,
+      "category": "closed",
+      "color": "green",
+      "final": true,
+      "blocking": false
+    },
+    {
+      "id": "blocker_accepte",
+      "label": "Accepte",
+      "description": "Risque accepté et documenté.",
+      "order": 5,
+      "category": "closed",
+      "color": "gray",
+      "final": true,
+      "blocking": false
+    }
+  ],
+  "maintenance": [
+    {
+      "id": "maintenance_nouveau",
+      "label": "Nouveau",
+      "description": "Ticket reçu.",
+      "order": 1,
+      "category": "open",
+      "color": "gray",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "maintenance_a_qualifier",
+      "label": "À qualifier",
+      "description": "Impact et périmètre à clarifier.",
+      "order": 2,
+      "category": "open",
+      "color": "yellow",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "maintenance_planifie",
+      "label": "Planifie",
+      "description": "Action planifiee.",
+      "order": 3,
+      "category": "ready",
+      "color": "blue",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "maintenance_en_cours",
+      "label": "En cours",
+      "description": "Traitement actif.",
+      "order": 4,
+      "category": "active",
+      "color": "orange",
+      "final": false,
+      "blocking": false
+    },
+    {
+      "id": "maintenance_attente_client",
+      "label": "En attente client",
+      "description": "Info ou validation client requise.",
+      "order": 5,
+      "category": "waiting",
+      "color": "purple",
+      "final": false,
+      "blocking": true
+    },
+    {
+      "id": "maintenance_resolu",
+      "label": "Résolue",
+      "description": "Ticket traite.",
+      "order": 6,
+      "category": "closed",
+      "color": "green",
+      "final": true,
+      "blocking": false
+    },
+    {
+      "id": "maintenance_facture",
+      "label": "Facture",
+      "description": "Ticket traite et facturé si applicable.",
+      "order": 7,
+      "category": "closed",
+      "color": "green",
+      "final": true,
+      "blocking": false
+    },
+    {
+      "id": "maintenance_archive",
+      "label": "Archivé",
+      "description": "Ticket conservé sans action.",
+      "order": 8,
+      "category": "closed",
+      "color": "gray",
+      "final": true,
+      "blocking": false
+    }
+  ]
+}

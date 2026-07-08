@@ -1,0 +1,67 @@
+:root {
+  /* Figma collection: Palette / mode: Dark */
+  --color-bg-main: #0F0E0B;
+  --color-bg-deep: #15130F;
+
+  --color-surface-default: #211D18;
+  --color-surface-raised: #2B251E;
+  --color-surface-interactive: #372F25;
+  --color-surface-overlay: #0F0E0BE6;
+
+  --color-text-default: #FFF3E0;
+  --color-text-muted: #D8C6AF;
+  --color-text-subtle: #B79F86;
+  --color-text-inverse: #211D18;
+  --color-text-disabled: #7C7062;
+
+  --color-action-default: #F4A782;
+  --color-action-hover: #FFC19F;
+  --color-action-pressed: #E8946F;
+  --color-action-subtle: #3A2A24;
+
+  --color-decor-gold: #C99A5B;
+  --color-decor-taupe: #8F8172;
+  --color-badge-default: #8B5E63;
+  --color-caution-soft: #B86A5A;
+
+  --color-border-subtle: rgba(255, 243, 224, 0.12);
+  --color-border-strong: rgba(255, 243, 224, 0.22);
+  --color-border-control: #8A7764;
+  --color-border-focus: #FFC19F;
+
+  --color-success-bg: #10251D;
+  --color-success-text: #7EE2B0;
+  --color-success-border: #3FBF8A;
+  --color-success-solid: #3FBF8A;
+  --color-success-solid-hover: #7EE2B0;
+
+  --color-warning-bg: #2A2112;
+  --color-warning-text: #FFD089;
+  --color-warning-border: #E7A33A;
+  --color-warning-solid: #E7A33A;
+  --color-warning-solid-hover: #FFD089;
+
+  --color-danger-bg: #2B1716;
+  --color-danger-text: #FF9B95;
+  --color-danger-border: #F06F6B;
+  --color-danger-solid: #F06F6B;
+  --color-danger-solid-hover: #FF9B95;
+
+  --color-info-bg: #102134;
+  --color-info-text: #83BFFF;
+  --color-info-border: #5DA9FF;
+  --color-info-solid: #5DA9FF;
+  --color-info-solid-hover: #83BFFF;
+
+  --color-neutral-bg: #25221E;
+  --color-neutral-text: #D8C6AF;
+  --color-neutral-border: #8A7764;
+  --color-neutral-solid: #8A7764;
+  --color-neutral-solid-hover: #D8C6AF;
+
+  --color-draft-bg: #241B38;
+  --color-draft-text: #CDBBFF;
+  --color-draft-border: #A78BFA;
+  --color-draft-solid: #A78BFA;
+  --color-draft-solid-hover: #CDBBFF;
+}

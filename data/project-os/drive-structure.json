@@ -1,0 +1,79 @@
+{
+  "root": "Alchimiste Creations",
+  "globalTree": [
+    "00_QG-interne",
+    "01_Bibliotheque-interne/01_documents-types",
+    "01_Bibliotheque-interne/02_checklists",
+    "01_Bibliotheque-interne/03_modeles-mails",
+    "01_Bibliotheque-interne/04_modeles-livraison",
+    "01_Bibliotheque-interne/05_modeles-maintenance",
+    "01_Bibliotheque-interne/06_standards-qualite",
+    "02_Commercial/01_propositions",
+    "02_Commercial/02_devis",
+    "02_Commercial/03_factures",
+    "02_Commercial/04_ressources-commerciales",
+    "03_Projets-clients",
+    "04_Livrables-envoyes",
+    "05_Ressources-graphiques/01_marque-alchimiste",
+    "05_Ressources-graphiques/02_fonts",
+    "05_Ressources-graphiques/03_images",
+    "05_Ressources-graphiques/04_mockups",
+    "05_Ressources-graphiques/05_icons",
+    "06_Ressources-techniques/01_architectures",
+    "06_Ressources-techniques/02_snippets",
+    "06_Ressources-techniques/03_configurations",
+    "06_Ressources-techniques/04_documentation-dev",
+    "90_Archives"
+  ],
+  "clientProjectFolderPattern": "AC-YYYY-NNN_client-type",
+  "projectTree": [
+    "00_admin/devis",
+    "00_admin/factures",
+    "00_admin/contrat-cgv",
+    "01_cadrage/brief",
+    "01_cadrage/comptes-rendus",
+    "01_cadrage/questionnaire",
+    "02_contenus-client/textes",
+    "02_contenus-client/images",
+    "02_contenus-client/logos",
+    "02_contenus-client/acces",
+    "03_design/moodboard",
+    "03_design/wireframes",
+    "03_design/maquettes",
+    "03_design/exports",
+    "04_dev/notes-techniques",
+    "04_dev/exports",
+    "05_qa-recette/qa-interne",
+    "05_qa-recette/retours-client",
+    "06_livraison/livrables-finaux",
+    "06_livraison/guide-client",
+    "06_livraison/passation",
+    "07_maintenance/tickets",
+    "07_maintenance/evolutions",
+    "99_archive"
+  ],
+  "namingRules": {
+    "projectFolder": "AC-YYYY-NNN_client-type",
+    "projectDocument": "YYYY-MM-DD_TYPE_client_sujet_vXX",
+    "quote": "DEV-AC-YYYY-NNN-client-type-vXX.pdf",
+    "invoice": "FAC-AC-YYYY-NNN-client-nature-vXX.pdf",
+    "forbiddenVersionWords": [
+      "final",
+      "final-final",
+      "new",
+      "test"
+    ]
+  },
+  "storageRules": [
+    "Les documents types restent dans 01_Bibliotheque-interne.",
+    "Les documents réels vivent dans le dossier projet client.",
+    "Les livrables envoyés peuvent être copies dans 04_Livrables-envoyés si une archivé transversale est utile.",
+    "Notion stocke les liens et statuts, Drive stocke les fichiers.",
+    "Aucun mot de passe en clair dans Drive ou Notion."
+  ],
+  "archiveRules": [
+    "Un projet clôturé garde son dossier dans 03_Projets-clients tant qu'il peut servir de référence.",
+    "Les versions remplacées vont dans 99_archive du projet.",
+    "Les anciens dossiers non normalises sont reliés dans Notion avant renommage."
+  ]
+}

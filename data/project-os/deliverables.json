@@ -1,0 +1,2654 @@
+[
+  {
+    "id": "deliverable_fiche_opportunite",
+    "name": "Fiche opportunité",
+    "description": "Fiche CRM de la demande entrante.",
+    "lotId": "lot_commercial",
+    "phaseId": "phase_demande",
+    "category": "strategique",
+    "projectTypeIds": [
+      "all"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_fiche_opportunite",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Contact identifié",
+      "Besoin résumé",
+      "Prochaine action définie"
+    ],
+    "taskIds": [
+      "task_analyser_demande"
+    ]
+  },
+  {
+    "id": "deliverable_notes_decouverte",
+    "name": "Notes de découverte",
+    "description": "Compte rendu interne d'appel ou d'échange de qualification.",
+    "lotId": "lot_commercial",
+    "phaseId": "phase_qualification",
+    "category": "strategique",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "diagnostic_web",
+      "projet_avance_saas"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_notes_decouverte",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Objectif clarifié",
+      "Budget et délai notés",
+      "Risques notés"
+    ],
+    "taskIds": [
+      "task_qualifier_besoin"
+    ]
+  },
+  {
+    "id": "deliverable_devis",
+    "name": "Devis",
+    "description": "Proposition commerciale et conditions de démarrage.",
+    "lotId": "lot_commercial",
+    "phaseId": "phase_devis",
+    "category": "client",
+    "projectTypeIds": [
+      "all"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_devis",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Périmètre écrit",
+      "Prix et acompte écrits",
+      "Version envoyée"
+    ],
+    "taskIds": [
+      "task_preparer_devis"
+    ]
+  },
+  {
+    "id": "deliverable_brief_projet",
+    "name": "Brief projet",
+    "description": "Synthèse du contexte, des objectifs et de la cible.",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "category": "strategique",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "projet_avance_saas"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_brief_projet",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Objectif validé",
+      "Cible validée",
+      "Message principal clair"
+    ],
+    "taskIds": [
+      "task_rediger_cadrage"
+    ]
+  },
+  {
+    "id": "deliverable_fiche_cadrage",
+    "name": "Fiche de cadrage",
+    "description": "Document de périmètre, inclus, hors périmètre, livrables et validations.",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "category": "strategique",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "projet_avance_saas"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_fiche_cadrage",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Inclus liste",
+      "Hors périmètre liste",
+      "Validations listées"
+    ],
+    "taskIds": [
+      "task_rediger_cadrage"
+    ]
+  },
+  {
+    "id": "deliverable_planning",
+    "name": "Planning projet",
+    "description": "Jalons, dates cibles, dépendances et validations.",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_kickoff",
+    "category": "interne",
+    "projectTypeIds": [
+      "all"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_planning",
+    "validationRequired": false,
+    "visibility": "client",
+    "doneCriteria": [
+      "Dates cibles posées",
+      "Prochaine action visible",
+      "Dépendances client connues"
+    ],
+    "taskIds": [
+      "task_creer_dossier_drive",
+      "task_collecter_acces"
+    ]
+  },
+  {
+    "id": "deliverable_moodboard",
+    "name": "Moodboard",
+    "description": "Références visuelles et direction d'ambiance.",
+    "lotId": "lot_direction_artistique",
+    "phaseId": "phase_direction_artistique",
+    "category": "design",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte"
+    ],
+    "required": false,
+    "documentTemplateId": "doc_template_moodboard",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Références sélectionnées",
+      "Intentions expliquées"
+    ],
+    "taskIds": [
+      "task_rechercher_references"
+    ]
+  },
+  {
+    "id": "deliverable_direction_visuelle",
+    "name": "Direction visuelle",
+    "description": "Palette, typographies, principes visuels et composants clés.",
+    "lotId": "lot_direction_artistique",
+    "phaseId": "phase_direction_artistique",
+    "category": "design",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_direction_visuelle",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Palette définie",
+      "Typographies définies",
+      "Style approuvé"
+    ],
+    "taskIds": [
+      "task_creer_palette",
+      "task_definir_typographies"
+    ]
+  },
+  {
+    "id": "deliverable_arborescence",
+    "name": "Arborescence",
+    "description": "Pages, sections, navigation et CTA.",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "category": "design",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "projet_avance_saas"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_arborescence",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Pages listées",
+      "Sections ordonnees",
+      "CTA définis"
+    ],
+    "taskIds": [
+      "task_definir_arborescence"
+    ]
+  },
+  {
+    "id": "deliverable_wireframes",
+    "name": "Wireframes",
+    "description": "Structures basse fidélité des pages ou écrans clés.",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "category": "design",
+    "projectTypeIds": [
+      "site_vitrine",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "projet_avance_saas"
+    ],
+    "required": false,
+    "documentTemplateId": "doc_template_arborescence",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Écrans clés representes",
+      "Parcours compréhensible"
+    ],
+    "taskIds": [
+      "task_creer_wireframes"
+    ]
+  },
+  {
+    "id": "deliverable_maquettes",
+    "name": "Maquettes UI",
+    "description": "Écrans ou sections visuelles à valider avant dev.",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ui_maquettes",
+    "category": "design",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "projet_avance_saas"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_maquettes",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Écrans inclus produits",
+      "Responsive pensé",
+      "Retours intégrés ou arbitrés"
+    ],
+    "taskIds": [
+      "task_creer_maquettes"
+    ]
+  },
+  {
+    "id": "deliverable_contenus_pages",
+    "name": "Contenus pages",
+    "description": "Textes et médias exploitables par page ou section.",
+    "lotId": "lot_contenus_seo",
+    "phaseId": "phase_contenus",
+    "category": "client",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_contenus_pages",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Textes disponibles",
+      "Images disponibles",
+      "Manques traités"
+    ],
+    "taskIds": [
+      "task_collecter_contenus",
+      "task_optimiser_textes"
+    ]
+  },
+  {
+    "id": "deliverable_plan_seo",
+    "name": "Plan SEO",
+    "description": "Structure SEO de base par page.",
+    "lotId": "lot_contenus_seo",
+    "phaseId": "phase_seo",
+    "category": "seo",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "diagnostic_web"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_plan_seo",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Titles prêts",
+      "Descriptions prêtes",
+      "Slugs prêts"
+    ],
+    "taskIds": [
+      "task_preparer_metadata"
+    ]
+  },
+  {
+    "id": "deliverable_metadata",
+    "name": "Metadata",
+    "description": "Titles, descriptions, OpenGraph, robots et sitemap attendus.",
+    "lotId": "lot_contenus_seo",
+    "phaseId": "phase_seo",
+    "category": "seo",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_plan_seo",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Metadata intégrées",
+      "Sitemap prevu",
+      "Indexation décidée"
+    ],
+    "taskIds": [
+      "task_preparer_metadata"
+    ]
+  },
+  {
+    "id": "deliverable_architecture_technique",
+    "name": "Architecture technique",
+    "description": "Choix de stack, starter, routes, dossiers et exclusions.",
+    "lotId": "lot_architecture_technique",
+    "phaseId": "phase_architecture_technique",
+    "category": "technique",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "projet_avance_saas"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_architecture_technique",
+    "validationRequired": true,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Starter choisi",
+      "Routes listées",
+      "Exclusions notees"
+    ],
+    "taskIds": [
+      "task_choisir_starter"
+    ]
+  },
+  {
+    "id": "deliverable_repo_initialise",
+    "name": "Repo initialise",
+    "description": "Repository configure avec starter, README et scripts.",
+    "lotId": "lot_architecture_technique",
+    "phaseId": "phase_setup_repo",
+    "category": "technique",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "projet_avance_saas"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_architecture_technique",
+    "validationRequired": true,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Repo créé",
+      "README présent",
+      "Build local possible"
+    ],
+    "taskIds": [
+      "task_initialiser_repo",
+      "task_configurer_env"
+    ]
+  },
+  {
+    "id": "deliverable_version_dev",
+    "name": "Version de développement",
+    "description": "Version consultable en environnement de test.",
+    "lotId": "lot_developpement",
+    "phaseId": "phase_developpement",
+    "category": "technique",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "projet_avance_saas"
+    ],
+    "required": true,
+    "documentTemplateId": null,
+    "validationRequired": true,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Version accessible",
+      "Périmètre intégré",
+      "Erreurs evidentes corrigees"
+    ],
+    "taskIds": [
+      "task_developper_layout",
+      "task_integrer_pages"
+    ]
+  },
+  {
+    "id": "deliverable_pages_developpees",
+    "name": "Pages développées",
+    "description": "Pages, sections ou écrans inclus au périmètre.",
+    "lotId": "lot_developpement",
+    "phaseId": "phase_developpement",
+    "category": "technique",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte"
+    ],
+    "required": true,
+    "documentTemplateId": null,
+    "validationRequired": true,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Pages incluses terminées",
+      "Navigation fonctionnelle",
+      "Formulaires intégrés si prevus"
+    ],
+    "taskIds": [
+      "task_integrer_pages",
+      "task_integrer_formulaires"
+    ]
+  },
+  {
+    "id": "deliverable_module_avance",
+    "name": "Module avancé",
+    "description": "Module e-commerce, LMS, auth, dashboard, espace ou SaaS.",
+    "lotId": "lot_fonctionnalites_avancees",
+    "phaseId": "phase_fonctionnalites_avancees",
+    "category": "technique",
+    "projectTypeIds": [
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "projet_avance_saas"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_architecture_technique",
+    "validationRequired": true,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Flux nominal OK",
+      "Erreurs principales gérées",
+      "Droits contrôles"
+    ],
+    "taskIds": [
+      "task_modeliser_donnees",
+      "task_integrer_auth"
+    ]
+  },
+  {
+    "id": "deliverable_tests_fonctionnels",
+    "name": "Tests fonctionnels",
+    "description": "Tests manuels ou automatises des flux avancés.",
+    "lotId": "lot_fonctionnalites_avancees",
+    "phaseId": "phase_fonctionnalites_avancees",
+    "category": "qa",
+    "projectTypeIds": [
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "projet_avance_saas"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_checklist_qa",
+    "validationRequired": true,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Cas nominaux passes",
+      "Erreurs principales testées"
+    ],
+    "taskIds": [
+      "task_tester_flux_avances"
+    ]
+  },
+  {
+    "id": "deliverable_checklist_qa",
+    "name": "Checklist QA",
+    "description": "Controle qualité interne avant recette.",
+    "lotId": "lot_qa_recette",
+    "phaseId": "phase_qa_interne",
+    "category": "qa",
+    "projectTypeIds": [
+      "all"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_checklist_qa",
+    "validationRequired": true,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Responsive testé",
+      "Formulaires testés",
+      "SEO/accessibilité de base testés"
+    ],
+    "taskIds": [
+      "task_tester_responsive",
+      "task_tester_formulaires"
+    ]
+  },
+  {
+    "id": "deliverable_liste_retours",
+    "name": "Liste retours client",
+    "description": "Liste qualifiée des retours de recette.",
+    "lotId": "lot_qa_recette",
+    "phaseId": "phase_recette_client",
+    "category": "qa",
+    "projectTypeIds": [
+      "all"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_liste_retours",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Retours triés",
+      "Corrections incluses traitees",
+      "Hors périmètre arbitré"
+    ],
+    "taskIds": [
+      "task_traiter_retours"
+    ]
+  },
+  {
+    "id": "deliverable_site_en_ligne",
+    "name": "Site en ligne",
+    "description": "Production accessible sur domaine final ou URL de livraison.",
+    "lotId": "lot_mise_en_ligne",
+    "phaseId": "phase_mise_en_ligne",
+    "category": "livraison",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "projet_avance_saas"
+    ],
+    "required": true,
+    "documentTemplateId": null,
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Domaine actif",
+      "SSL actif",
+      "Parcours critique testé"
+    ],
+    "taskIds": [
+      "task_configurer_domaine",
+      "task_deployer_production",
+      "task_verifier_production"
+    ]
+  },
+  {
+    "id": "deliverable_checklist_lancement",
+    "name": "Checklist lancement",
+    "description": "Controle final production, SEO, analytics, formulaire, responsive.",
+    "lotId": "lot_mise_en_ligne",
+    "phaseId": "phase_mise_en_ligne",
+    "category": "qa",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "projet_avance_saas"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_checklist_qa",
+    "validationRequired": true,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Build OK",
+      "Formulaires OK",
+      "Analytics/SEO vérifiés"
+    ],
+    "taskIds": [
+      "task_verifier_production"
+    ]
+  },
+  {
+    "id": "deliverable_email_livraison",
+    "name": "Email de livraison",
+    "description": "Message officiel de livraison et prochaines étapes.",
+    "lotId": "lot_livraison_formation",
+    "phaseId": "phase_livraison",
+    "category": "livraison",
+    "projectTypeIds": [
+      "all"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_livraison",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Liens inclus",
+      "Accès transmis",
+      "Suite expliquée"
+    ],
+    "taskIds": [
+      "task_preparer_livraison",
+      "task_envoyer_livraison"
+    ]
+  },
+  {
+    "id": "deliverable_guide_client",
+    "name": "Guide client",
+    "description": "Guide d'utilisation, passation ou maintenance.",
+    "lotId": "lot_livraison_formation",
+    "phaseId": "phase_passation",
+    "category": "livraison",
+    "projectTypeIds": [
+      "site_vitrine",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "projet_avance_saas"
+    ],
+    "required": false,
+    "documentTemplateId": "doc_template_guide_client",
+    "validationRequired": false,
+    "visibility": "client",
+    "doneCriteria": [
+      "Instructions utiles",
+      "Accès expliqués",
+      "Limites de maintenance notees"
+    ],
+    "taskIds": [
+      "task_planifier_passation"
+    ]
+  },
+  {
+    "id": "deliverable_livrables_finaux",
+    "name": "Livrables finaux",
+    "description": "Exports, liens, fichiers finaux et références de livraison.",
+    "lotId": "lot_livraison_formation",
+    "phaseId": "phase_livraison",
+    "category": "livraison",
+    "projectTypeIds": [
+      "all"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_livraison",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Fichiers ranges",
+      "Liens stables",
+      "Version finale identifiée"
+    ],
+    "taskIds": [
+      "task_preparer_livraison"
+    ]
+  },
+  {
+    "id": "deliverable_rapport_diagnostic",
+    "name": "Rapport diagnostic",
+    "description": "Constats, priorités et plan d'action d'un diagnostic web.",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "category": "strategique",
+    "projectTypeIds": [
+      "diagnostic_web",
+      "refonte"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_rapport_diagnostic",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Constats classés",
+      "Priorités expliquées",
+      "Plan d'action fourni"
+    ],
+    "taskIds": [
+      "task_rediger_cadrage"
+    ]
+  },
+  {
+    "id": "deliverable_ticket_maintenance",
+    "name": "Ticket maintenance",
+    "description": "Demande de correction ou evolution qualifiée.",
+    "lotId": "lot_maintenance_evolution",
+    "phaseId": "phase_maintenance",
+    "category": "maintenance",
+    "projectTypeIds": [
+      "maintenance"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_ticket_maintenance",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Impact qualifié",
+      "Action définie",
+      "Responsable et date notés"
+    ],
+    "taskIds": [
+      "task_qualifier_ticket"
+    ]
+  },
+  {
+    "id": "deliverable_rapport_maintenance",
+    "name": "Rapport maintenance",
+    "description": "Synthèse des actions de maintenance ou evolution.",
+    "lotId": "lot_maintenance_evolution",
+    "phaseId": "phase_maintenance",
+    "category": "maintenance",
+    "projectTypeIds": [
+      "maintenance"
+    ],
+    "required": false,
+    "documentTemplateId": "doc_template_ticket_maintenance",
+    "validationRequired": false,
+    "visibility": "client",
+    "doneCriteria": [
+      "Actions listées",
+      "Résolution documentée",
+      "Suite indiquee"
+    ],
+    "taskIds": [
+      "task_documenter_resolution"
+    ]
+  },
+  {
+    "id": "deliverable_objectif_cta_one_page",
+    "name": "Objectif et CTA one-page",
+    "description": "Objectif unique, cible, action principale et limites du périmètre de la page.",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "category": "cadrage",
+    "projectTypeIds": [
+      "one_page"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_objectif_cta_one_page",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Objectif unique validé",
+      "CTA principal défini",
+      "Hors périmètre noté"
+    ],
+    "taskIds": [
+      "task_rediger_cadrage"
+    ]
+  },
+  {
+    "id": "deliverable_sections_one_page",
+    "name": "Structure de sections one-page",
+    "description": "Ordre des sections, ancres éventuelles et hiérarchie du message sur une page unique.",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "category": "ux",
+    "projectTypeIds": [
+      "one_page"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_sections_one_page",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Sections ordonnées",
+      "CTA positionné",
+      "Page non transformée en multi-pages"
+    ],
+    "taskIds": [
+      "task_definir_sections_one_page"
+    ]
+  },
+  {
+    "id": "deliverable_promesse_cta_landing",
+    "name": "Promesse et CTA landing",
+    "description": "Cible, promesse, offre, preuve et action principale de la landing page.",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "category": "conversion",
+    "projectTypeIds": [
+      "landing_page"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_promesse_cta_landing",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Objectif de conversion clair",
+      "CTA choisi",
+      "Preuves disponibles"
+    ],
+    "taskIds": [
+      "task_clarifier_conversion_landing"
+    ]
+  },
+  {
+    "id": "deliverable_structure_conversion_landing",
+    "name": "Structure de conversion",
+    "description": "Séquence accroche, bénéfices, preuves, objections, CTA et formulaire.",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "category": "ux",
+    "projectTypeIds": [
+      "landing_page"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_structure_conversion_landing",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Structure persuasive posée",
+      "Une seule action principale",
+      "Objections prévues"
+    ],
+    "taskIds": [
+      "task_structurer_landing_conversion"
+    ]
+  },
+  {
+    "id": "deliverable_message_objections_landing",
+    "name": "Message et objections landing",
+    "description": "Message principal, bénéfices, preuves, objections et microcopies de conversion.",
+    "lotId": "lot_contenus_seo",
+    "phaseId": "phase_contenus",
+    "category": "contenu",
+    "projectTypeIds": [
+      "landing_page"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_message_objections_landing",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Promesse formulée",
+      "Objections traitées",
+      "CTA et formulaire rédigés"
+    ],
+    "taskIds": [
+      "task_rediger_message_objections"
+    ]
+  },
+  {
+    "id": "deliverable_tests_conversion_landing",
+    "name": "Tests de conversion landing",
+    "description": "Contrôle CTA, formulaire, liens, confirmation et rendu mobile.",
+    "lotId": "lot_qa_recette",
+    "phaseId": "phase_qa_interne",
+    "category": "qa",
+    "projectTypeIds": [
+      "landing_page"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_tests_conversion_landing",
+    "validationRequired": true,
+    "visibility": "interne",
+    "doneCriteria": [
+      "CTA testé",
+      "Formulaire testé",
+      "Confirmation vérifiée",
+      "Mobile lisible"
+    ],
+    "taskIds": [
+      "task_tester_conversion_landing"
+    ]
+  },
+  {
+    "id": "deliverable_audit_existant_refonte",
+    "name": "Audit existant refonte",
+    "description": "Constats, risques, contenus utiles, pages sensibles et recommandations de refonte.",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_kickoff",
+    "category": "strategie",
+    "projectTypeIds": [
+      "refonte"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_audit_existant_refonte",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Pages existantes inventoriées",
+      "Risques SEO notés",
+      "Priorités de refonte posées"
+    ],
+    "taskIds": [
+      "task_auditer_existant_refonte"
+    ]
+  },
+  {
+    "id": "deliverable_tri_contenus_refonte",
+    "name": "Tri des contenus refonte",
+    "description": "Liste garder, supprimer, réécrire, fusionner ou déplacer.",
+    "lotId": "lot_contenus_seo",
+    "phaseId": "phase_contenus",
+    "category": "contenu",
+    "projectTypeIds": [
+      "refonte"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_tri_contenus_refonte",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Contenus classés",
+      "Manques identifiés",
+      "Actions client listées"
+    ],
+    "taskIds": [
+      "task_trier_contenus_refonte"
+    ]
+  },
+  {
+    "id": "deliverable_mapping_refonte",
+    "name": "Mapping refonte",
+    "description": "Correspondance anciennes pages, nouvelles pages, URLs sensibles et redirections.",
+    "lotId": "lot_mise_en_ligne",
+    "phaseId": "phase_mise_en_ligne",
+    "category": "seo",
+    "projectTypeIds": [
+      "refonte"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_mapping_refonte",
+    "validationRequired": true,
+    "visibility": "interne",
+    "doneCriteria": [
+      "URLs sensibles listées",
+      "Redirections prévues",
+      "Pages supprimées assumées"
+    ],
+    "taskIds": [
+      "task_preparer_mapping_refonte"
+    ]
+  },
+  {
+    "id": "deliverable_cadrage_ecommerce",
+    "name": "Cadrage e-commerce",
+    "description": "Périmètre catalogue, paiement, livraison, pages légales et limites de la boutique.",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "category": "ecommerce",
+    "projectTypeIds": [
+      "boutique_en_ligne"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_cadrage_ecommerce",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Produits prioritaires listés",
+      "Paiement choisi",
+      "Livraison cadrée"
+    ],
+    "taskIds": [
+      "task_cadrer_ecommerce"
+    ]
+  },
+  {
+    "id": "deliverable_catalogue_ecommerce",
+    "name": "Structure catalogue",
+    "description": "Catégories, produits prioritaires, attributs et organisation du catalogue.",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "category": "ecommerce",
+    "projectTypeIds": [
+      "boutique_en_ligne"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_catalogue_ecommerce",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Catégories validées",
+      "Produits prioritaires connus",
+      "Informations produit listées"
+    ],
+    "taskIds": [
+      "task_structurer_catalogue"
+    ]
+  },
+  {
+    "id": "deliverable_fiche_produit_type",
+    "name": "Fiche produit type",
+    "description": "Structure d'une fiche produit avec informations, preuves, variantes et CTA.",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ui_maquettes",
+    "category": "ecommerce",
+    "projectTypeIds": [
+      "boutique_en_ligne"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_fiche_produit_type",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Blocs produit définis",
+      "CTA clair",
+      "Infos obligatoires visibles"
+    ],
+    "taskIds": [
+      "task_definir_fiche_produit"
+    ]
+  },
+  {
+    "id": "deliverable_paiement_livraison",
+    "name": "Paiement et livraison cadrés",
+    "description": "Moyens de paiement, frais, modes de livraison, emails et conditions associées.",
+    "lotId": "lot_fonctionnalites_avancees",
+    "phaseId": "phase_fonctionnalites_avancees",
+    "category": "ecommerce",
+    "projectTypeIds": [
+      "boutique_en_ligne"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_paiement_livraison",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Paiement défini",
+      "Livraison définie",
+      "Cas limites listés"
+    ],
+    "taskIds": [
+      "task_cadrer_paiement_livraison"
+    ]
+  },
+  {
+    "id": "deliverable_boutique_developpee",
+    "name": "Boutique développée",
+    "description": "Pages boutique, catalogue, fiche produit et parcours d'achat intégrés.",
+    "lotId": "lot_developpement",
+    "phaseId": "phase_developpement",
+    "category": "production",
+    "projectTypeIds": [
+      "boutique_en_ligne"
+    ],
+    "required": true,
+    "documentTemplateId": null,
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Catalogue intégré",
+      "Fiche produit disponible",
+      "Parcours achat accessible"
+    ],
+    "taskIds": [
+      "task_integrer_boutique"
+    ]
+  },
+  {
+    "id": "deliverable_commande_testee",
+    "name": "Commande testée",
+    "description": "Parcours produit, panier, paiement, email et confirmation testés.",
+    "lotId": "lot_qa_recette",
+    "phaseId": "phase_qa_interne",
+    "category": "qa",
+    "projectTypeIds": [
+      "boutique_en_ligne"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_commande_testee",
+    "validationRequired": true,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Produit ajouté au panier",
+      "Paiement testé",
+      "Email vérifié"
+    ],
+    "taskIds": [
+      "task_tester_commande"
+    ]
+  },
+  {
+    "id": "deliverable_cadrage_pedagogique",
+    "name": "Cadrage pédagogique",
+    "description": "Transformation promise, public cible, modules pressentis, ressources et accès.",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "category": "formation",
+    "projectTypeIds": [
+      "formation_en_ligne"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_cadrage_pedagogique",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Objectif pédagogique validé",
+      "Public cible connu",
+      "Modalités d'accès cadrées"
+    ],
+    "taskIds": [
+      "task_cadrer_pedagogie"
+    ]
+  },
+  {
+    "id": "deliverable_modules_lecons",
+    "name": "Modules et leçons",
+    "description": "Architecture pédagogique : modules, leçons, ressources, progression.",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "category": "formation",
+    "projectTypeIds": [
+      "formation_en_ligne"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_modules_lecons",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Modules ordonnés",
+      "Leçons listées",
+      "Ressources identifiées"
+    ],
+    "taskIds": [
+      "task_structurer_modules_lecons"
+    ]
+  },
+  {
+    "id": "deliverable_acces_apprenant",
+    "name": "Accès apprenant",
+    "description": "Rôles, restrictions, progression et accès aux contenus de formation.",
+    "lotId": "lot_fonctionnalites_avancees",
+    "phaseId": "phase_fonctionnalites_avancees",
+    "category": "formation",
+    "projectTypeIds": [
+      "formation_en_ligne"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_acces_apprenant",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Rôles définis",
+      "Restrictions listées",
+      "Parcours testable"
+    ],
+    "taskIds": [
+      "task_cadrer_acces_apprenant"
+    ]
+  },
+  {
+    "id": "deliverable_formation_developpee",
+    "name": "Formation intégrée",
+    "description": "Pages, modules, ressources et accès prévus intégrés.",
+    "lotId": "lot_developpement",
+    "phaseId": "phase_developpement",
+    "category": "production",
+    "projectTypeIds": [
+      "formation_en_ligne"
+    ],
+    "required": true,
+    "documentTemplateId": null,
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Modules accessibles",
+      "Ressources disponibles",
+      "Pages publiques prêtes"
+    ],
+    "taskIds": [
+      "task_integrer_formation"
+    ]
+  },
+  {
+    "id": "deliverable_tests_apprenant",
+    "name": "Tests apprenant",
+    "description": "Accès, restrictions, ressources, progression et rendu mobile testés.",
+    "lotId": "lot_qa_recette",
+    "phaseId": "phase_qa_interne",
+    "category": "qa",
+    "projectTypeIds": [
+      "formation_en_ligne"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_tests_apprenant",
+    "validationRequired": true,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Accès testé",
+      "Ressources visibles",
+      "Restrictions vérifiées"
+    ],
+    "taskIds": [
+      "task_tester_acces_apprenant"
+    ]
+  },
+  {
+    "id": "deliverable_discovery_avancee",
+    "name": "Discovery avancée",
+    "description": "Objectifs, utilisateurs, contraintes, risques, budget, périmètre V1 et limites.",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "category": "produit",
+    "projectTypeIds": [
+      "projet_avance_saas"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_discovery_avancee",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Objectifs clarifiés",
+      "Utilisateurs identifiés",
+      "Risques listés"
+    ],
+    "taskIds": [
+      "task_discovery_avancee"
+    ]
+  },
+  {
+    "id": "deliverable_roles_permissions",
+    "name": "Rôles et permissions",
+    "description": "Profils utilisateurs, droits, espaces, actions autorisées et restrictions.",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "category": "produit",
+    "projectTypeIds": [
+      "projet_avance_saas"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_roles_permissions",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Rôles listés",
+      "Permissions définies",
+      "Restrictions notées"
+    ],
+    "taskIds": [
+      "task_cartographier_roles_permissions"
+    ]
+  },
+  {
+    "id": "deliverable_modele_donnees_metier",
+    "name": "Modèle de données métier",
+    "description": "Objets, statuts, relations et règles métier du MVP.",
+    "lotId": "lot_architecture_technique",
+    "phaseId": "phase_architecture_technique",
+    "category": "technique",
+    "projectTypeIds": [
+      "projet_avance_saas"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_modele_donnees_metier",
+    "validationRequired": true,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Objets listés",
+      "Relations clarifiées",
+      "Statuts définis"
+    ],
+    "taskIds": [
+      "task_modeliser_objets_metier"
+    ]
+  },
+  {
+    "id": "deliverable_backlog_mvp",
+    "name": "Backlog MVP priorisé",
+    "description": "Must-have, should-have, plus tard, hors périmètre, lot 1 et suite produit.",
+    "lotId": "lot_fonctionnalites_avancees",
+    "phaseId": "phase_fonctionnalites_avancees",
+    "category": "produit",
+    "projectTypeIds": [
+      "projet_avance_saas"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_backlog_mvp",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Must-have validé",
+      "Lot 1 défini",
+      "Plus tard assumé"
+    ],
+    "taskIds": [
+      "task_prioriser_backlog_mvp"
+    ]
+  },
+  {
+    "id": "deliverable_mvp_lot1",
+    "name": "MVP lot 1",
+    "description": "Premier lot exploitable construit selon le backlog validé.",
+    "lotId": "lot_developpement",
+    "phaseId": "phase_developpement",
+    "category": "production",
+    "projectTypeIds": [
+      "projet_avance_saas"
+    ],
+    "required": true,
+    "documentTemplateId": null,
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Lot 1 utilisable",
+      "Règles critiques prêtes",
+      "Périmètre traçable"
+    ],
+    "taskIds": [
+      "task_developper_mvp_lot1"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_passation_commerciale_fiche_passation_commerciale",
+    "name": "Fiche passation commerciale",
+    "description": "Fiche passation commerciale produit pendant le lot Passation commerciale.",
+    "lotId": "lot_site_vitrine_passation_commerciale",
+    "phaseId": "phase_site_vitrine_passation_commerciale",
+    "category": "commercial",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_passation_commerciale_fiche_passation_commerciale",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Fiche projet centrale créée",
+      "Devis et acompte vérifiés",
+      "Documents commerciaux rattachés"
+    ],
+    "taskIds": [
+      "task_site_vitrine_passation_commerciale_verifier_le_devis_accepte",
+      "task_site_vitrine_passation_commerciale_verifier_l_acompte_ou_l_exception_validee",
+      "task_site_vitrine_passation_commerciale_relire_la_demande_initiale",
+      "task_site_vitrine_passation_commerciale_relire_les_notes_de_qualification"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_passation_commerciale_projet_pret_a_lancer",
+    "name": "Projet prêt à lancer",
+    "description": "Projet prêt à lancer produit pendant le lot Passation commerciale.",
+    "lotId": "lot_site_vitrine_passation_commerciale",
+    "phaseId": "phase_site_vitrine_passation_commerciale",
+    "category": "commercial",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_passation_commerciale_projet_pret_a_lancer",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Fiche projet centrale créée",
+      "Devis et acompte vérifiés",
+      "Documents commerciaux rattachés"
+    ],
+    "taskIds": [
+      "task_site_vitrine_passation_commerciale_verifier_le_devis_accepte",
+      "task_site_vitrine_passation_commerciale_verifier_l_acompte_ou_l_exception_validee",
+      "task_site_vitrine_passation_commerciale_relire_la_demande_initiale",
+      "task_site_vitrine_passation_commerciale_relire_les_notes_de_qualification"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_kickoff_dossier_drive_projet",
+    "name": "Dossier Drive projet",
+    "description": "Dossier Drive projet produit pendant le lot Kickoff projet.",
+    "lotId": "lot_site_vitrine_kickoff",
+    "phaseId": "phase_site_vitrine_kickoff",
+    "category": "cadrage",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_kickoff_dossier_drive_projet",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Dossier Drive prêt",
+      "Planning macro posé",
+      "Accès et contenus demandés au client"
+    ],
+    "taskIds": [
+      "task_site_vitrine_kickoff_creer_l_espace_projet",
+      "task_site_vitrine_kickoff_creer_l_arborescence_drive",
+      "task_site_vitrine_kickoff_preparer_le_planning_macro",
+      "task_site_vitrine_kickoff_preparer_la_liste_des_acces_necessaires"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_kickoff_planning_initial",
+    "name": "Planning initial",
+    "description": "Planning initial produit pendant le lot Kickoff projet.",
+    "lotId": "lot_site_vitrine_kickoff",
+    "phaseId": "phase_site_vitrine_kickoff",
+    "category": "cadrage",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_kickoff_planning_initial",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Dossier Drive prêt",
+      "Planning macro posé",
+      "Accès et contenus demandés au client"
+    ],
+    "taskIds": [
+      "task_site_vitrine_kickoff_creer_l_espace_projet",
+      "task_site_vitrine_kickoff_creer_l_arborescence_drive",
+      "task_site_vitrine_kickoff_preparer_le_planning_macro",
+      "task_site_vitrine_kickoff_preparer_la_liste_des_acces_necessaires"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_kickoff_checklist_depart_client",
+    "name": "Checklist départ client",
+    "description": "Checklist départ client produit pendant le lot Kickoff projet.",
+    "lotId": "lot_site_vitrine_kickoff",
+    "phaseId": "phase_site_vitrine_kickoff",
+    "category": "cadrage",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_kickoff_checklist_depart_client",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Dossier Drive prêt",
+      "Planning macro posé",
+      "Accès et contenus demandés au client"
+    ],
+    "taskIds": [
+      "task_site_vitrine_kickoff_creer_l_espace_projet",
+      "task_site_vitrine_kickoff_creer_l_arborescence_drive",
+      "task_site_vitrine_kickoff_preparer_le_planning_macro",
+      "task_site_vitrine_kickoff_preparer_la_liste_des_acces_necessaires"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_cadrage_strategique_brief_projet_site_vitrine",
+    "name": "Brief projet site vitrine",
+    "description": "Brief projet site vitrine produit pendant le lot Cadrage stratégique.",
+    "lotId": "lot_site_vitrine_cadrage_strategique",
+    "phaseId": "phase_site_vitrine_cadrage_strategique",
+    "category": "cadrage",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_cadrage_strategique_brief_projet_site_vitrine",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Objectifs et cible validés",
+      "Pages incluses confirmées",
+      "Hors périmètre écrit"
+    ],
+    "taskIds": [
+      "task_site_vitrine_cadrage_strategique_definir_l_objectif_principal_du_site",
+      "task_site_vitrine_cadrage_strategique_definir_les_objectifs_secondaires",
+      "task_site_vitrine_cadrage_strategique_identifier_la_cible_principale",
+      "task_site_vitrine_cadrage_strategique_identifier_les_objections_et_freins"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_cadrage_strategique_fiche_cadrage_strategique",
+    "name": "Fiche cadrage stratégique",
+    "description": "Fiche cadrage stratégique produit pendant le lot Cadrage stratégique.",
+    "lotId": "lot_site_vitrine_cadrage_strategique",
+    "phaseId": "phase_site_vitrine_cadrage_strategique",
+    "category": "cadrage",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_cadrage_strategique_fiche_cadrage_strategique",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Objectifs et cible validés",
+      "Pages incluses confirmées",
+      "Hors périmètre écrit"
+    ],
+    "taskIds": [
+      "task_site_vitrine_cadrage_strategique_definir_l_objectif_principal_du_site",
+      "task_site_vitrine_cadrage_strategique_definir_les_objectifs_secondaires",
+      "task_site_vitrine_cadrage_strategique_identifier_la_cible_principale",
+      "task_site_vitrine_cadrage_strategique_identifier_les_objections_et_freins"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_cadrage_strategique_matrice_objectifs_et_pages",
+    "name": "Matrice objectifs et pages",
+    "description": "Matrice objectifs et pages produit pendant le lot Cadrage stratégique.",
+    "lotId": "lot_site_vitrine_cadrage_strategique",
+    "phaseId": "phase_site_vitrine_cadrage_strategique",
+    "category": "cadrage",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_cadrage_strategique_matrice_objectifs_et_pages",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Objectifs et cible validés",
+      "Pages incluses confirmées",
+      "Hors périmètre écrit"
+    ],
+    "taskIds": [
+      "task_site_vitrine_cadrage_strategique_definir_l_objectif_principal_du_site",
+      "task_site_vitrine_cadrage_strategique_definir_les_objectifs_secondaires",
+      "task_site_vitrine_cadrage_strategique_identifier_la_cible_principale",
+      "task_site_vitrine_cadrage_strategique_identifier_les_objections_et_freins"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_cadrage_strategique_liste_hors_perimetre",
+    "name": "Liste hors périmètre",
+    "description": "Liste hors périmètre produit pendant le lot Cadrage stratégique.",
+    "lotId": "lot_site_vitrine_cadrage_strategique",
+    "phaseId": "phase_site_vitrine_cadrage_strategique",
+    "category": "cadrage",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_cadrage_strategique_liste_hors_perimetre",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Objectifs et cible validés",
+      "Pages incluses confirmées",
+      "Hors périmètre écrit"
+    ],
+    "taskIds": [
+      "task_site_vitrine_cadrage_strategique_definir_l_objectif_principal_du_site",
+      "task_site_vitrine_cadrage_strategique_definir_les_objectifs_secondaires",
+      "task_site_vitrine_cadrage_strategique_identifier_la_cible_principale",
+      "task_site_vitrine_cadrage_strategique_identifier_les_objections_et_freins"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_architecture_site_arborescence_et_parcours",
+    "name": "Arborescence et parcours",
+    "description": "Arborescence et parcours produit pendant le lot Architecture du site.",
+    "lotId": "lot_site_vitrine_architecture_site",
+    "phaseId": "phase_site_vitrine_architecture_site",
+    "category": "ux",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_architecture_site_arborescence_et_parcours",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Arborescence validée",
+      "Navigation définie",
+      "CTA et parcours clarifiés"
+    ],
+    "taskIds": [
+      "task_site_vitrine_architecture_site_definir_l_arborescence",
+      "task_site_vitrine_architecture_site_definir_le_role_de_chaque_page",
+      "task_site_vitrine_architecture_site_definir_la_priorite_des_pages",
+      "task_site_vitrine_architecture_site_definir_le_cta_principal"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_architecture_site_structure_de_navigation",
+    "name": "Structure de navigation",
+    "description": "Structure de navigation produit pendant le lot Architecture du site.",
+    "lotId": "lot_site_vitrine_architecture_site",
+    "phaseId": "phase_site_vitrine_architecture_site",
+    "category": "ux",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_architecture_site_structure_de_navigation",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Arborescence validée",
+      "Navigation définie",
+      "CTA et parcours clarifiés"
+    ],
+    "taskIds": [
+      "task_site_vitrine_architecture_site_definir_l_arborescence",
+      "task_site_vitrine_architecture_site_definir_le_role_de_chaque_page",
+      "task_site_vitrine_architecture_site_definir_la_priorite_des_pages",
+      "task_site_vitrine_architecture_site_definir_le_cta_principal"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_architecture_site_matrice_pages_objectifs_cta",
+    "name": "Matrice pages objectifs CTA",
+    "description": "Matrice pages objectifs CTA produit pendant le lot Architecture du site.",
+    "lotId": "lot_site_vitrine_architecture_site",
+    "phaseId": "phase_site_vitrine_architecture_site",
+    "category": "ux",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_architecture_site_matrice_pages_objectifs_cta",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Arborescence validée",
+      "Navigation définie",
+      "CTA et parcours clarifiés"
+    ],
+    "taskIds": [
+      "task_site_vitrine_architecture_site_definir_l_arborescence",
+      "task_site_vitrine_architecture_site_definir_le_role_de_chaque_page",
+      "task_site_vitrine_architecture_site_definir_la_priorite_des_pages",
+      "task_site_vitrine_architecture_site_definir_le_cta_principal"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_contenus_seo_matrice_contenus",
+    "name": "Matrice contenus",
+    "description": "Matrice contenus produit pendant le lot Contenus et SEO.",
+    "lotId": "lot_site_vitrine_contenus_seo",
+    "phaseId": "phase_site_vitrine_contenus_seo",
+    "category": "contenu",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_contenus_seo_matrice_contenus",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Textes exploitables",
+      "SEO de base prêt",
+      "Médias nécessaires listés"
+    ],
+    "taskIds": [
+      "task_site_vitrine_contenus_seo_collecter_les_contenus_client",
+      "task_site_vitrine_contenus_seo_ecrire_ou_reecrire_les_textes",
+      "task_site_vitrine_contenus_seo_structurer_les_h1_h2_h3",
+      "task_site_vitrine_contenus_seo_preparer_les_titres_seo"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_contenus_seo_contenus_par_page",
+    "name": "Contenus par page",
+    "description": "Contenus par page produit pendant le lot Contenus et SEO.",
+    "lotId": "lot_site_vitrine_contenus_seo",
+    "phaseId": "phase_site_vitrine_contenus_seo",
+    "category": "contenu",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_contenus_seo_contenus_par_page",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Textes exploitables",
+      "SEO de base prêt",
+      "Médias nécessaires listés"
+    ],
+    "taskIds": [
+      "task_site_vitrine_contenus_seo_collecter_les_contenus_client",
+      "task_site_vitrine_contenus_seo_ecrire_ou_reecrire_les_textes",
+      "task_site_vitrine_contenus_seo_structurer_les_h1_h2_h3",
+      "task_site_vitrine_contenus_seo_preparer_les_titres_seo"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_contenus_seo_plan_seo_de_base",
+    "name": "Plan SEO de base",
+    "description": "Plan SEO de base produit pendant le lot Contenus et SEO.",
+    "lotId": "lot_site_vitrine_contenus_seo",
+    "phaseId": "phase_site_vitrine_contenus_seo",
+    "category": "contenu",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_contenus_seo_plan_seo_de_base",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Textes exploitables",
+      "SEO de base prêt",
+      "Médias nécessaires listés"
+    ],
+    "taskIds": [
+      "task_site_vitrine_contenus_seo_collecter_les_contenus_client",
+      "task_site_vitrine_contenus_seo_ecrire_ou_reecrire_les_textes",
+      "task_site_vitrine_contenus_seo_structurer_les_h1_h2_h3",
+      "task_site_vitrine_contenus_seo_preparer_les_titres_seo"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_contenus_seo_checklist_medias_necessaires",
+    "name": "Checklist médias nécessaires",
+    "description": "Checklist médias nécessaires produit pendant le lot Contenus et SEO.",
+    "lotId": "lot_site_vitrine_contenus_seo",
+    "phaseId": "phase_site_vitrine_contenus_seo",
+    "category": "contenu",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_contenus_seo_checklist_medias_necessaires",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Textes exploitables",
+      "SEO de base prêt",
+      "Médias nécessaires listés"
+    ],
+    "taskIds": [
+      "task_site_vitrine_contenus_seo_collecter_les_contenus_client",
+      "task_site_vitrine_contenus_seo_ecrire_ou_reecrire_les_textes",
+      "task_site_vitrine_contenus_seo_structurer_les_h1_h2_h3",
+      "task_site_vitrine_contenus_seo_preparer_les_titres_seo"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_direction_artistique_moodboard",
+    "name": "Moodboard",
+    "description": "Moodboard produit pendant le lot Direction artistique.",
+    "lotId": "lot_site_vitrine_direction_artistique",
+    "phaseId": "phase_site_vitrine_direction_artistique",
+    "category": "design",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_direction_artistique_moodboard",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Univers visuel validé",
+      "Palette et typographies définies",
+      "Références partagées"
+    ],
+    "taskIds": [
+      "task_site_vitrine_direction_artistique_analyser_l_identite_existante",
+      "task_site_vitrine_direction_artistique_choisir_la_direction_graphique",
+      "task_site_vitrine_direction_artistique_definir_la_palette",
+      "task_site_vitrine_direction_artistique_definir_les_typographies"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_direction_artistique_direction_visuelle",
+    "name": "Direction visuelle",
+    "description": "Direction visuelle produit pendant le lot Direction artistique.",
+    "lotId": "lot_site_vitrine_direction_artistique",
+    "phaseId": "phase_site_vitrine_direction_artistique",
+    "category": "design",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_direction_artistique_direction_visuelle",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Univers visuel validé",
+      "Palette et typographies définies",
+      "Références partagées"
+    ],
+    "taskIds": [
+      "task_site_vitrine_direction_artistique_analyser_l_identite_existante",
+      "task_site_vitrine_direction_artistique_choisir_la_direction_graphique",
+      "task_site_vitrine_direction_artistique_definir_la_palette",
+      "task_site_vitrine_direction_artistique_definir_les_typographies"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_direction_artistique_mini_charte_digitale",
+    "name": "Mini-charte digitale",
+    "description": "Mini-charte digitale produit pendant le lot Direction artistique.",
+    "lotId": "lot_site_vitrine_direction_artistique",
+    "phaseId": "phase_site_vitrine_direction_artistique",
+    "category": "design",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_direction_artistique_mini_charte_digitale",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Univers visuel validé",
+      "Palette et typographies définies",
+      "Références partagées"
+    ],
+    "taskIds": [
+      "task_site_vitrine_direction_artistique_analyser_l_identite_existante",
+      "task_site_vitrine_direction_artistique_choisir_la_direction_graphique",
+      "task_site_vitrine_direction_artistique_definir_la_palette",
+      "task_site_vitrine_direction_artistique_definir_les_typographies"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_maquettes_ui_maquettes_desktop",
+    "name": "Maquettes desktop",
+    "description": "Maquettes desktop produit pendant le lot Maquettes UI.",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "category": "design",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_maquettes_ui_maquettes_desktop",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Maquettes clés validées",
+      "Mobile prévu",
+      "Retours maquette traités"
+    ],
+    "taskIds": [
+      "task_site_vitrine_maquettes_ui_maquetter_la_home",
+      "task_site_vitrine_maquettes_ui_maquetter_une_page_interieure_type",
+      "task_site_vitrine_maquettes_ui_maquetter_la_page_contact",
+      "task_site_vitrine_maquettes_ui_maquetter_les_blocs_reutilisables"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_maquettes_ui_maquettes_mobile",
+    "name": "Maquettes mobile",
+    "description": "Maquettes mobile produit pendant le lot Maquettes UI.",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "category": "design",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_maquettes_ui_maquettes_mobile",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Maquettes clés validées",
+      "Mobile prévu",
+      "Retours maquette traités"
+    ],
+    "taskIds": [
+      "task_site_vitrine_maquettes_ui_maquetter_la_home",
+      "task_site_vitrine_maquettes_ui_maquetter_une_page_interieure_type",
+      "task_site_vitrine_maquettes_ui_maquetter_la_page_contact",
+      "task_site_vitrine_maquettes_ui_maquetter_les_blocs_reutilisables"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_maquettes_ui_composants_visuels_cles",
+    "name": "Composants visuels clés",
+    "description": "Composants visuels clés produit pendant le lot Maquettes UI.",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "category": "design",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_maquettes_ui_composants_visuels_cles",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Maquettes clés validées",
+      "Mobile prévu",
+      "Retours maquette traités"
+    ],
+    "taskIds": [
+      "task_site_vitrine_maquettes_ui_maquetter_la_home",
+      "task_site_vitrine_maquettes_ui_maquetter_une_page_interieure_type",
+      "task_site_vitrine_maquettes_ui_maquetter_la_page_contact",
+      "task_site_vitrine_maquettes_ui_maquetter_les_blocs_reutilisables"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_maquettes_ui_liste_retours_maquette",
+    "name": "Liste retours maquette",
+    "description": "Liste retours maquette produit pendant le lot Maquettes UI.",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "category": "design",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_maquettes_ui_liste_retours_maquette",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Maquettes clés validées",
+      "Mobile prévu",
+      "Retours maquette traités"
+    ],
+    "taskIds": [
+      "task_site_vitrine_maquettes_ui_maquetter_la_home",
+      "task_site_vitrine_maquettes_ui_maquetter_une_page_interieure_type",
+      "task_site_vitrine_maquettes_ui_maquetter_la_page_contact",
+      "task_site_vitrine_maquettes_ui_maquetter_les_blocs_reutilisables"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_setup_technique_architecture_technique_site_vitrine",
+    "name": "Architecture technique site vitrine",
+    "description": "Architecture technique site vitrine produit pendant le lot Setup technique.",
+    "lotId": "lot_site_vitrine_setup_technique",
+    "phaseId": "phase_site_vitrine_setup_technique",
+    "category": "technique",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_setup_technique_architecture_technique_site_vitrine",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Repo prêt",
+      "Preview disponible",
+      "Décisions techniques documentées"
+    ],
+    "taskIds": [
+      "task_site_vitrine_setup_technique_creer_ou_verifier_le_repo",
+      "task_site_vitrine_setup_technique_creer_la_branche_projet",
+      "task_site_vitrine_setup_technique_verifier_la_stack",
+      "task_site_vitrine_setup_technique_preparer_les_variables_environnement"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_setup_technique_repo_et_preview_prets",
+    "name": "Repo et preview prêts",
+    "description": "Repo et preview prêts produit pendant le lot Setup technique.",
+    "lotId": "lot_site_vitrine_setup_technique",
+    "phaseId": "phase_site_vitrine_setup_technique",
+    "category": "technique",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_setup_technique_repo_et_preview_prets",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Repo prêt",
+      "Preview disponible",
+      "Décisions techniques documentées"
+    ],
+    "taskIds": [
+      "task_site_vitrine_setup_technique_creer_ou_verifier_le_repo",
+      "task_site_vitrine_setup_technique_creer_la_branche_projet",
+      "task_site_vitrine_setup_technique_verifier_la_stack",
+      "task_site_vitrine_setup_technique_preparer_les_variables_environnement"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_setup_technique_checklist_setup_technique",
+    "name": "Checklist setup technique",
+    "description": "Checklist setup technique produit pendant le lot Setup technique.",
+    "lotId": "lot_site_vitrine_setup_technique",
+    "phaseId": "phase_site_vitrine_setup_technique",
+    "category": "technique",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_setup_technique_checklist_setup_technique",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Repo prêt",
+      "Preview disponible",
+      "Décisions techniques documentées"
+    ],
+    "taskIds": [
+      "task_site_vitrine_setup_technique_creer_ou_verifier_le_repo",
+      "task_site_vitrine_setup_technique_creer_la_branche_projet",
+      "task_site_vitrine_setup_technique_verifier_la_stack",
+      "task_site_vitrine_setup_technique_preparer_les_variables_environnement"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_developpement_version_preview",
+    "name": "Version preview",
+    "description": "Version preview produit pendant le lot Développement.",
+    "lotId": "lot_site_vitrine_developpement",
+    "phaseId": "phase_site_vitrine_developpement",
+    "category": "technique",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_developpement_version_preview",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Pages développées",
+      "Responsive intégré",
+      "Version preview prête"
+    ],
+    "taskIds": [
+      "task_site_vitrine_developpement_developper_le_layout_global",
+      "task_site_vitrine_developpement_developper_le_header",
+      "task_site_vitrine_developpement_developper_le_footer",
+      "task_site_vitrine_developpement_developper_la_home"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_developpement_pages_developpees",
+    "name": "Pages développées",
+    "description": "Pages développées produit pendant le lot Développement.",
+    "lotId": "lot_site_vitrine_developpement",
+    "phaseId": "phase_site_vitrine_developpement",
+    "category": "technique",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_developpement_pages_developpees",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Pages développées",
+      "Responsive intégré",
+      "Version preview prête"
+    ],
+    "taskIds": [
+      "task_site_vitrine_developpement_developper_le_layout_global",
+      "task_site_vitrine_developpement_developper_le_header",
+      "task_site_vitrine_developpement_developper_le_footer",
+      "task_site_vitrine_developpement_developper_la_home"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_developpement_composants_cles",
+    "name": "Composants clés",
+    "description": "Composants clés produit pendant le lot Développement.",
+    "lotId": "lot_site_vitrine_developpement",
+    "phaseId": "phase_site_vitrine_developpement",
+    "category": "technique",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_developpement_composants_cles",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Pages développées",
+      "Responsive intégré",
+      "Version preview prête"
+    ],
+    "taskIds": [
+      "task_site_vitrine_developpement_developper_le_layout_global",
+      "task_site_vitrine_developpement_developper_le_header",
+      "task_site_vitrine_developpement_developper_le_footer",
+      "task_site_vitrine_developpement_developper_la_home"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_integration_contenus_contenus_integres",
+    "name": "Contenus intégrés",
+    "description": "Contenus intégrés produit pendant le lot Intégration contenus.",
+    "lotId": "lot_site_vitrine_integration_contenus",
+    "phaseId": "phase_site_vitrine_integration_contenus",
+    "category": "contenu",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_integration_contenus_contenus_integres",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Textes et médias intégrés",
+      "SEO intégré",
+      "Contenu manquant arbitré"
+    ],
+    "taskIds": [
+      "task_site_vitrine_integration_contenus_integrer_les_textes_valides",
+      "task_site_vitrine_integration_contenus_integrer_les_images",
+      "task_site_vitrine_integration_contenus_renseigner_les_alt_images",
+      "task_site_vitrine_integration_contenus_integrer_les_titres_seo"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_integration_contenus_medias_utilises",
+    "name": "Médias utilisés",
+    "description": "Médias utilisés produit pendant le lot Intégration contenus.",
+    "lotId": "lot_site_vitrine_integration_contenus",
+    "phaseId": "phase_site_vitrine_integration_contenus",
+    "category": "contenu",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_integration_contenus_medias_utilises",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Textes et médias intégrés",
+      "SEO intégré",
+      "Contenu manquant arbitré"
+    ],
+    "taskIds": [
+      "task_site_vitrine_integration_contenus_integrer_les_textes_valides",
+      "task_site_vitrine_integration_contenus_integrer_les_images",
+      "task_site_vitrine_integration_contenus_renseigner_les_alt_images",
+      "task_site_vitrine_integration_contenus_integrer_les_titres_seo"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_integration_contenus_checklist_contenu_final",
+    "name": "Checklist contenu final",
+    "description": "Checklist contenu final produit pendant le lot Intégration contenus.",
+    "lotId": "lot_site_vitrine_integration_contenus",
+    "phaseId": "phase_site_vitrine_integration_contenus",
+    "category": "contenu",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_integration_contenus_checklist_contenu_final",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Textes et médias intégrés",
+      "SEO intégré",
+      "Contenu manquant arbitré"
+    ],
+    "taskIds": [
+      "task_site_vitrine_integration_contenus_integrer_les_textes_valides",
+      "task_site_vitrine_integration_contenus_integrer_les_images",
+      "task_site_vitrine_integration_contenus_renseigner_les_alt_images",
+      "task_site_vitrine_integration_contenus_integrer_les_titres_seo"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_fonctionnalites_checklist_fonctionnalites",
+    "name": "Checklist fonctionnalités",
+    "description": "Checklist fonctionnalités produit pendant le lot Fonctionnalités.",
+    "lotId": "lot_site_vitrine_fonctionnalites",
+    "phaseId": "phase_site_vitrine_fonctionnalites",
+    "category": "qa",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_fonctionnalites_checklist_fonctionnalites",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Formulaire testé",
+      "Navigation testée",
+      "Liens et tracking vérifiés si prévus"
+    ],
+    "taskIds": [
+      "task_site_vitrine_fonctionnalites_tester_le_formulaire_contact",
+      "task_site_vitrine_fonctionnalites_tester_l_email_de_reception",
+      "task_site_vitrine_fonctionnalites_tester_le_honeypot_ou_anti_spam",
+      "task_site_vitrine_fonctionnalites_tester_la_navigation"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_fonctionnalites_journal_tests_formulaire",
+    "name": "Journal tests formulaire",
+    "description": "Journal tests formulaire produit pendant le lot Fonctionnalités.",
+    "lotId": "lot_site_vitrine_fonctionnalites",
+    "phaseId": "phase_site_vitrine_fonctionnalites",
+    "category": "qa",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_fonctionnalites_journal_tests_formulaire",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Formulaire testé",
+      "Navigation testée",
+      "Liens et tracking vérifiés si prévus"
+    ],
+    "taskIds": [
+      "task_site_vitrine_fonctionnalites_tester_le_formulaire_contact",
+      "task_site_vitrine_fonctionnalites_tester_l_email_de_reception",
+      "task_site_vitrine_fonctionnalites_tester_le_honeypot_ou_anti_spam",
+      "task_site_vitrine_fonctionnalites_tester_la_navigation"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_fonctionnalites_liste_corrections_fonctionnelles",
+    "name": "Liste corrections fonctionnelles",
+    "description": "Liste corrections fonctionnelles produit pendant le lot Fonctionnalités.",
+    "lotId": "lot_site_vitrine_fonctionnalites",
+    "phaseId": "phase_site_vitrine_fonctionnalites",
+    "category": "qa",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_fonctionnalites_liste_corrections_fonctionnelles",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Formulaire testé",
+      "Navigation testée",
+      "Liens et tracking vérifiés si prévus"
+    ],
+    "taskIds": [
+      "task_site_vitrine_fonctionnalites_tester_le_formulaire_contact",
+      "task_site_vitrine_fonctionnalites_tester_l_email_de_reception",
+      "task_site_vitrine_fonctionnalites_tester_le_honeypot_ou_anti_spam",
+      "task_site_vitrine_fonctionnalites_tester_la_navigation"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_qa_interne_rapport_qa_interne",
+    "name": "Rapport QA interne",
+    "description": "Rapport QA interne produit pendant le lot QA interne.",
+    "lotId": "lot_site_vitrine_qa_interne",
+    "phaseId": "phase_site_vitrine_qa_interne",
+    "category": "qa",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_qa_interne_rapport_qa_interne",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "QA responsive passée",
+      "Bugs critiques corrigés",
+      "Version prête pour recette"
+    ],
+    "taskIds": [
+      "task_site_vitrine_qa_interne_tester_desktop",
+      "task_site_vitrine_qa_interne_tester_mobile",
+      "task_site_vitrine_qa_interne_tester_tablette_si_pertinent",
+      "task_site_vitrine_qa_interne_tester_chrome_safari_firefox_si_pertinent"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_qa_interne_liste_bugs_corriges",
+    "name": "Liste bugs corrigés",
+    "description": "Liste bugs corrigés produit pendant le lot QA interne.",
+    "lotId": "lot_site_vitrine_qa_interne",
+    "phaseId": "phase_site_vitrine_qa_interne",
+    "category": "qa",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_qa_interne_liste_bugs_corriges",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "QA responsive passée",
+      "Bugs critiques corrigés",
+      "Version prête pour recette"
+    ],
+    "taskIds": [
+      "task_site_vitrine_qa_interne_tester_desktop",
+      "task_site_vitrine_qa_interne_tester_mobile",
+      "task_site_vitrine_qa_interne_tester_tablette_si_pertinent",
+      "task_site_vitrine_qa_interne_tester_chrome_safari_firefox_si_pertinent"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_recette_client_email_recette_client",
+    "name": "Email recette client",
+    "description": "Email recette client produit pendant le lot Recette client.",
+    "lotId": "lot_site_vitrine_recette_client",
+    "phaseId": "phase_site_vitrine_recette_client",
+    "category": "recette",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_recette_client_email_recette_client",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Retours classés",
+      "Corrections incluses traitées",
+      "Validation finale obtenue"
+    ],
+    "taskIds": [
+      "task_site_vitrine_recette_client_envoyer_le_lien_preview",
+      "task_site_vitrine_recette_client_expliquer_comment_faire_les_retours",
+      "task_site_vitrine_recette_client_collecter_les_retours",
+      "task_site_vitrine_recette_client_classer_retours_en_bug_ajustement_inclus_ou_hors_perimetre"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_recette_client_tableau_retours_client",
+    "name": "Tableau retours client",
+    "description": "Tableau retours client produit pendant le lot Recette client.",
+    "lotId": "lot_site_vitrine_recette_client",
+    "phaseId": "phase_site_vitrine_recette_client",
+    "category": "recette",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_recette_client_tableau_retours_client",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Retours classés",
+      "Corrections incluses traitées",
+      "Validation finale obtenue"
+    ],
+    "taskIds": [
+      "task_site_vitrine_recette_client_envoyer_le_lien_preview",
+      "task_site_vitrine_recette_client_expliquer_comment_faire_les_retours",
+      "task_site_vitrine_recette_client_collecter_les_retours",
+      "task_site_vitrine_recette_client_classer_retours_en_bug_ajustement_inclus_ou_hors_perimetre"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_recette_client_version_corrigee_recette",
+    "name": "Version corrigée recette",
+    "description": "Version corrigée recette produit pendant le lot Recette client.",
+    "lotId": "lot_site_vitrine_recette_client",
+    "phaseId": "phase_site_vitrine_recette_client",
+    "category": "recette",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_recette_client_version_corrigee_recette",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Retours classés",
+      "Corrections incluses traitées",
+      "Validation finale obtenue"
+    ],
+    "taskIds": [
+      "task_site_vitrine_recette_client_envoyer_le_lien_preview",
+      "task_site_vitrine_recette_client_expliquer_comment_faire_les_retours",
+      "task_site_vitrine_recette_client_collecter_les_retours",
+      "task_site_vitrine_recette_client_classer_retours_en_bug_ajustement_inclus_ou_hors_perimetre"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_mise_en_ligne_site_en_ligne",
+    "name": "Site en ligne",
+    "description": "Site en ligne produit pendant le lot Mise en ligne.",
+    "lotId": "lot_site_vitrine_mise_en_ligne",
+    "phaseId": "phase_site_vitrine_mise_en_ligne",
+    "category": "lancement",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_mise_en_ligne_site_en_ligne",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Production accessible",
+      "Formulaire testé en production",
+      "Post-prod vérifiée"
+    ],
+    "taskIds": [
+      "task_site_vitrine_mise_en_ligne_verifier_le_domaine",
+      "task_site_vitrine_mise_en_ligne_configurer_dns",
+      "task_site_vitrine_mise_en_ligne_configurer_les_variables_production",
+      "task_site_vitrine_mise_en_ligne_lancer_le_build_production"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_mise_en_ligne_checklist_post_prod",
+    "name": "Checklist post-prod",
+    "description": "Checklist post-prod produit pendant le lot Mise en ligne.",
+    "lotId": "lot_site_vitrine_mise_en_ligne",
+    "phaseId": "phase_site_vitrine_mise_en_ligne",
+    "category": "lancement",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_mise_en_ligne_checklist_post_prod",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Production accessible",
+      "Formulaire testé en production",
+      "Post-prod vérifiée"
+    ],
+    "taskIds": [
+      "task_site_vitrine_mise_en_ligne_verifier_le_domaine",
+      "task_site_vitrine_mise_en_ligne_configurer_dns",
+      "task_site_vitrine_mise_en_ligne_configurer_les_variables_production",
+      "task_site_vitrine_mise_en_ligne_lancer_le_build_production"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_mise_en_ligne_journal_deploiement",
+    "name": "Journal déploiement",
+    "description": "Journal déploiement produit pendant le lot Mise en ligne.",
+    "lotId": "lot_site_vitrine_mise_en_ligne",
+    "phaseId": "phase_site_vitrine_mise_en_ligne",
+    "category": "lancement",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_mise_en_ligne_journal_deploiement",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Production accessible",
+      "Formulaire testé en production",
+      "Post-prod vérifiée"
+    ],
+    "taskIds": [
+      "task_site_vitrine_mise_en_ligne_verifier_le_domaine",
+      "task_site_vitrine_mise_en_ligne_configurer_dns",
+      "task_site_vitrine_mise_en_ligne_configurer_les_variables_production",
+      "task_site_vitrine_mise_en_ligne_lancer_le_build_production"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_livraison_passation_email_livraison",
+    "name": "Email livraison",
+    "description": "Email livraison produit pendant le lot Livraison et passation.",
+    "lotId": "lot_site_vitrine_livraison_passation",
+    "phaseId": "phase_site_vitrine_livraison_passation",
+    "category": "livraison",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_livraison_passation_email_livraison",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Email livraison envoyé",
+      "Guide client remis",
+      "Réception confirmée"
+    ],
+    "taskIds": [
+      "task_site_vitrine_livraison_passation_preparer_l_email_livraison",
+      "task_site_vitrine_livraison_passation_transmettre_les_liens_utiles",
+      "task_site_vitrine_livraison_passation_transmettre_les_acces_necessaires",
+      "task_site_vitrine_livraison_passation_preparer_le_guide_client"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_livraison_passation_guide_client",
+    "name": "Guide client",
+    "description": "Guide client produit pendant le lot Livraison et passation.",
+    "lotId": "lot_site_vitrine_livraison_passation",
+    "phaseId": "phase_site_vitrine_livraison_passation",
+    "category": "livraison",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_livraison_passation_guide_client",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Email livraison envoyé",
+      "Guide client remis",
+      "Réception confirmée"
+    ],
+    "taskIds": [
+      "task_site_vitrine_livraison_passation_preparer_l_email_livraison",
+      "task_site_vitrine_livraison_passation_transmettre_les_liens_utiles",
+      "task_site_vitrine_livraison_passation_transmettre_les_acces_necessaires",
+      "task_site_vitrine_livraison_passation_preparer_le_guide_client"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_livraison_passation_dossier_final",
+    "name": "Dossier final",
+    "description": "Dossier final produit pendant le lot Livraison et passation.",
+    "lotId": "lot_site_vitrine_livraison_passation",
+    "phaseId": "phase_site_vitrine_livraison_passation",
+    "category": "livraison",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_livraison_passation_dossier_final",
+    "validationRequired": true,
+    "visibility": "client",
+    "doneCriteria": [
+      "Email livraison envoyé",
+      "Guide client remis",
+      "Réception confirmée"
+    ],
+    "taskIds": [
+      "task_site_vitrine_livraison_passation_preparer_l_email_livraison",
+      "task_site_vitrine_livraison_passation_transmettre_les_liens_utiles",
+      "task_site_vitrine_livraison_passation_transmettre_les_acces_necessaires",
+      "task_site_vitrine_livraison_passation_preparer_le_guide_client"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_stabilisation_retex_fiche_stabilisation",
+    "name": "Fiche stabilisation",
+    "description": "Fiche stabilisation produit pendant le lot Stabilisation et RETEX.",
+    "lotId": "lot_site_vitrine_stabilisation_retex",
+    "phaseId": "phase_site_vitrine_stabilisation_retex",
+    "category": "interne",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_stabilisation_retex_fiche_stabilisation",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Projet clôturé",
+      "RETEX rempli",
+      "Évolutions futures qualifiées"
+    ],
+    "taskIds": [
+      "task_site_vitrine_stabilisation_retex_surveiller_les_erreurs_post_lancement",
+      "task_site_vitrine_stabilisation_retex_verifier_le_formulaire_apres_quelques_jours",
+      "task_site_vitrine_stabilisation_retex_noter_les_demandes_post_livraison",
+      "task_site_vitrine_stabilisation_retex_distinguer_bug_maintenance_et_evolution"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_stabilisation_retex_retex_interne",
+    "name": "RETEX interne",
+    "description": "RETEX interne produit pendant le lot Stabilisation et RETEX.",
+    "lotId": "lot_site_vitrine_stabilisation_retex",
+    "phaseId": "phase_site_vitrine_stabilisation_retex",
+    "category": "interne",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_stabilisation_retex_retex_interne",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Projet clôturé",
+      "RETEX rempli",
+      "Évolutions futures qualifiées"
+    ],
+    "taskIds": [
+      "task_site_vitrine_stabilisation_retex_surveiller_les_erreurs_post_lancement",
+      "task_site_vitrine_stabilisation_retex_verifier_le_formulaire_apres_quelques_jours",
+      "task_site_vitrine_stabilisation_retex_noter_les_demandes_post_livraison",
+      "task_site_vitrine_stabilisation_retex_distinguer_bug_maintenance_et_evolution"
+    ]
+  },
+  {
+    "id": "deliverable_site_vitrine_stabilisation_retex_liste_evolutions_futures",
+    "name": "Liste évolutions futures",
+    "description": "Liste évolutions futures produit pendant le lot Stabilisation et RETEX.",
+    "lotId": "lot_site_vitrine_stabilisation_retex",
+    "phaseId": "phase_site_vitrine_stabilisation_retex",
+    "category": "interne",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "required": true,
+    "documentTemplateId": "doc_template_site_vitrine_stabilisation_retex_liste_evolutions_futures",
+    "validationRequired": false,
+    "visibility": "interne",
+    "doneCriteria": [
+      "Projet clôturé",
+      "RETEX rempli",
+      "Évolutions futures qualifiées"
+    ],
+    "taskIds": [
+      "task_site_vitrine_stabilisation_retex_surveiller_les_erreurs_post_lancement",
+      "task_site_vitrine_stabilisation_retex_verifier_le_formulaire_apres_quelques_jours",
+      "task_site_vitrine_stabilisation_retex_noter_les_demandes_post_livraison",
+      "task_site_vitrine_stabilisation_retex_distinguer_bug_maintenance_et_evolution"
+    ]
+  }
+]

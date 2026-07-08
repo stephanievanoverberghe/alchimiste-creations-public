@@ -1,0 +1,36 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+next-env.d.ts
+out/
+tsconfig.tsbuildinfo
+
+# production
+build/
+dist/
+
+# local env files
+.env
+.env.*
+!.env.example
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# outils agents / IA (gardés en local, hors dépôt public)
+.codex/
+.claude/
+CLAUDE.md
+
+# tests
+test-results/
+playwright-report/
+
+# system
+.DS_Store
+Thumbs.db

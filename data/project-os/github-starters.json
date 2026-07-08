@@ -1,0 +1,254 @@
+{
+  "repositories": [
+    {
+      "id": "repo_alchimiste_starters",
+      "name": "alchimiste-starters",
+      "purpose": "Centraliser les starters Next.js par type de projet.",
+      "rootFolders": [
+        "starters",
+        "packages",
+        "docs",
+        "scripts"
+      ],
+      "requiredFiles": [
+        "README.md",
+        "CONTRIBUTING.md",
+        "docs/conventions/COMMITS.md",
+        "docs/checklists/SETUP.md"
+      ]
+    },
+    {
+      "id": "repo_alchimiste_components",
+      "name": "alchimiste-components",
+      "purpose": "Centraliser composants UI réutilisables, patterns et exemples.",
+      "rootFolders": [
+        "components",
+        "patterns",
+        "tokens",
+        "docs"
+      ],
+      "requiredFiles": [
+        "README.md",
+        "COMPONENT_GUIDELINES.md"
+      ]
+    },
+    {
+      "id": "repo_alchimiste_docs_tech",
+      "name": "alchimiste-docs-tech",
+      "purpose": "Documenter conventions techniques, décisions, scripts et références.",
+      "rootFolders": [
+        "architecture",
+        "conventions",
+        "checklists",
+        "decisions",
+        "snippets"
+      ],
+      "requiredFiles": [
+        "README.md",
+        "ARCHITECTURE_INDEX.md"
+      ]
+    }
+  ],
+  "starters": [
+    {
+      "id": "starter-next-vitrine",
+      "architectureId": "arch_next_site_vitrine",
+      "projectTypeIds": [
+        "site_vitrine"
+      ],
+      "tree": [
+        "app/(marketing)",
+        "components/layout",
+        "components/sections",
+        "components/ui",
+        "components/forms",
+        "content",
+        "lib/seo",
+        "public",
+        "docs"
+      ],
+      "requiredFiles": [
+        "README.md",
+        "docs/ARCHITECTURE.md",
+        "docs/CHECKLIST_QA.md",
+        "docs/CHECKLIST_LAUNCH.md",
+        ".env.example",
+        "package.json"
+      ],
+      "setupChecklistId": "checklist_setup_tech",
+      "deliveryChecklistId": "checklist_livraison"
+    },
+    {
+      "id": "starter-next-landing",
+      "architectureId": "arch_next_landing_page",
+      "projectTypeIds": [
+        "landing_page"
+      ],
+      "tree": [
+        "app/(landing)",
+        "components/sections",
+        "components/forms",
+        "lib/analytics",
+        "lib/seo",
+        "docs"
+      ],
+      "requiredFiles": [
+        "README.md",
+        "docs/CONVERSION_NOTES.md",
+        "docs/CHECKLIST_LAUNCH.md",
+        ".env.example",
+        "package.json"
+      ],
+      "setupChecklistId": "checklist_setup_tech",
+      "deliveryChecklistId": "checklist_livraison"
+    },
+    {
+      "id": "starter-next-one-page",
+      "architectureId": "arch_next_one_page",
+      "projectTypeIds": [
+        "one_page"
+      ],
+      "tree": [
+        "app",
+        "components/layout",
+        "components/sections",
+        "components/forms",
+        "lib/seo",
+        "docs"
+      ],
+      "requiredFiles": [
+        "README.md",
+        "docs/CHECKLIST_QA.md",
+        "docs/CHECKLIST_LAUNCH.md",
+        ".env.example",
+        "package.json"
+      ],
+      "setupChecklistId": "checklist_setup_tech",
+      "deliveryChecklistId": "checklist_livraison"
+    },
+    {
+      "id": "starter-next-ecommerce",
+      "architectureId": "arch_next_ecommerce",
+      "projectTypeIds": [
+        "boutique_en_ligne"
+      ],
+      "tree": [
+        "app/(shop)",
+        "components/product",
+        "components/cart",
+        "lib/payments",
+        "lib/products",
+        "docs"
+      ],
+      "requiredFiles": [
+        "README.md",
+        "docs/PAYMENTS.md",
+        "docs/CHECKLIST_ECOMMERCE.md",
+        "docs/CHECKLIST_LAUNCH.md",
+        ".env.example",
+        "package.json"
+      ],
+      "setupChecklistId": "checklist_setup_tech",
+      "deliveryChecklistId": "checklist_livraison"
+    },
+    {
+      "id": "starter-next-formation",
+      "architectureId": "arch_next_formation",
+      "projectTypeIds": [
+        "formation_en_ligne"
+      ],
+      "tree": [
+        "app/(marketing)",
+        "app/(member)",
+        "components/course",
+        "lib/auth",
+        "lib/progress",
+        "lib/video",
+        "docs"
+      ],
+      "requiredFiles": [
+        "README.md",
+        "docs/AUTH.md",
+        "docs/COURSE_MODEL.md",
+        "docs/CHECKLIST_FORMATION.md",
+        ".env.example",
+        "package.json"
+      ],
+      "setupChecklistId": "checklist_setup_tech",
+      "deliveryChecklistId": "checklist_livraison"
+    },
+    {
+      "id": "starter-next-refonte",
+      "architectureId": "arch_next_refonte",
+      "projectTypeIds": [
+        "refonte"
+      ],
+      "tree": [
+        "app",
+        "components",
+        "content",
+        "lib/redirects",
+        "lib/seo",
+        "docs/migration"
+      ],
+      "requiredFiles": [
+        "README.md",
+        "docs/MIGRATION.md",
+        "docs/REDIRECTS.md",
+        "docs/CHECKLIST_REFONTE.md",
+        ".env.example",
+        "package.json"
+      ],
+      "setupChecklistId": "checklist_setup_tech",
+      "deliveryChecklistId": "checklist_livraison"
+    },
+    {
+      "id": "starter-next-saas",
+      "architectureId": "arch_next_saas",
+      "projectTypeIds": [
+        "projet_avance_saas"
+      ],
+      "tree": [
+        "app/(marketing)",
+        "app/(auth)",
+        "app/(app)",
+        "app/api",
+        "components/app",
+        "lib/db",
+        "lib/auth",
+        "lib/permissions",
+        "docs"
+      ],
+      "requiredFiles": [
+        "README.md",
+        "docs/DATA_MODEL.md",
+        "docs/PERMISSIONS.md",
+        "docs/WORKFLOWS.md",
+        "docs/SECURITY.md",
+        ".env.example",
+        "package.json"
+      ],
+      "setupChecklistId": "checklist_setup_tech",
+      "deliveryChecklistId": "checklist_livraison"
+    }
+  ],
+  "conventions": {
+    "clientRepoPattern": "ac-{clientSlug}-{projectTypeSlug}",
+    "branchPatterns": [
+      "feat/{scope-action}",
+      "fix/{scope-action}",
+      "refactor/{scope-action}",
+      "docs/{scope-action}",
+      "codex/{scope-action}"
+    ],
+    "commitPattern": "type(scope): description courte",
+    "readmeExpectedSections": [
+      "Contexte",
+      "Stack",
+      "Scripts",
+      "Variables d'environnement",
+      "Liens projet",
+      "Checklist livraison"
+    ]
+  }
+}

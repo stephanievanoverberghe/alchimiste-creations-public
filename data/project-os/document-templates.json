@@ -1,0 +1,1546 @@
+[
+  {
+    "id": "doc_template_fiche_opportunite",
+    "name": "Fiche opportunité",
+    "category": "commercial",
+    "lotId": "lot_commercial",
+    "phaseId": "phase_demande",
+    "usage": "Structurer une demande entrante avant qualification.",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "diagnostic_web",
+      "maintenance",
+      "projet_avance_saas"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "02_Commercial/opportunites",
+    "producesDeliverableId": "deliverable_fiche_opportunite",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_notes_decouverte",
+    "name": "Notes appel découverte",
+    "category": "commercial",
+    "lotId": "lot_commercial",
+    "phaseId": "phase_qualification",
+    "usage": "Capturer besoin, contexte, budget, délai, risques et suite commerciale.",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "diagnostic_web",
+      "projet_avance_saas"
+    ],
+    "recommendedFormat": "Google Docs",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/01_cadrage/comptes-rendus",
+    "producesDeliverableId": "deliverable_notes_decouverte",
+    "visibility": "interne",
+    "status": "a_ameliorer"
+  },
+  {
+    "id": "doc_template_devis",
+    "name": "Modèle devis",
+    "category": "commercial",
+    "lotId": "lot_commercial",
+    "phaseId": "phase_devis",
+    "usage": "Présenter offre, périmètre, prix, acompte, conditions et validite.",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "diagnostic_web",
+      "maintenance",
+      "projet_avance_saas"
+    ],
+    "recommendedFormat": "Google Docs + PDF",
+    "recommendedDrivePath": "02_Commercial/02_devis",
+    "producesDeliverableId": "deliverable_devis",
+    "visibility": "client",
+    "status": "a_creer"
+  },
+  {
+    "id": "doc_template_brief_projet",
+    "name": "Brief projet",
+    "category": "cadrage",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "usage": "Centraliser objectif, cible, offre, messages, contraintes et attentes.",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "projet_avance_saas"
+    ],
+    "recommendedFormat": "Google Docs",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/01_cadrage/brief",
+    "producesDeliverableId": "deliverable_brief_projet",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_fiche_cadrage",
+    "name": "Fiche cadrage projet",
+    "category": "cadrage",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "usage": "Fixer le périmètre de production et les conditions de passage.",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "projet_avance_saas"
+    ],
+    "recommendedFormat": "Google Docs",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/01_cadrage",
+    "producesDeliverableId": "deliverable_fiche_cadrage",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_planning",
+    "name": "Planning projet",
+    "category": "cadrage",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_kickoff",
+    "usage": "Clarifier jalons, dates cibles, validations et dépendances client.",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "projet_avance_saas",
+      "diagnostic_web"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/01_cadrage",
+    "producesDeliverableId": "deliverable_planning",
+    "visibility": "client",
+    "status": "a_ameliorer"
+  },
+  {
+    "id": "doc_template_moodboard",
+    "name": "Moodboard",
+    "category": "design",
+    "lotId": "lot_direction_artistique",
+    "phaseId": "phase_direction_artistique",
+    "usage": "Aligner les références visuelles avant UI.",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte"
+    ],
+    "recommendedFormat": "Figma ou PDF",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/03_design/moodboard",
+    "producesDeliverableId": "deliverable_moodboard",
+    "visibility": "client",
+    "status": "a_creer"
+  },
+  {
+    "id": "doc_template_direction_visuelle",
+    "name": "Direction visuelle",
+    "category": "design",
+    "lotId": "lot_direction_artistique",
+    "phaseId": "phase_direction_artistique",
+    "usage": "Documenter palette, typographies, composants visuels et principes.",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte"
+    ],
+    "recommendedFormat": "Figma + PDF",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/03_design",
+    "producesDeliverableId": "deliverable_direction_visuelle",
+    "visibility": "client",
+    "status": "a_creer"
+  },
+  {
+    "id": "doc_template_arborescence",
+    "name": "Arborescence et parcours",
+    "category": "ux",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "usage": "Valider pages, sections, CTA et parcours utilisateur.",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "projet_avance_saas"
+    ],
+    "recommendedFormat": "Notion ou Figma",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/03_design/wireframes",
+    "producesDeliverableId": "deliverable_arborescence",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_maquettes",
+    "name": "Maquettes UI",
+    "category": "design",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ui_maquettes",
+    "usage": "Présenter les écrans ou sections à valider avant dev.",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "projet_avance_saas"
+    ],
+    "recommendedFormat": "Figma",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/03_design/maquettes",
+    "producesDeliverableId": "deliverable_maquettes",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_contenus_pages",
+    "name": "Matrice contenus pages",
+    "category": "contenu",
+    "lotId": "lot_contenus_seo",
+    "phaseId": "phase_contenus",
+    "usage": "Suivre textes, images, sources et validation par page ou section.",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte"
+    ],
+    "recommendedFormat": "Google Sheets",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/02_contenus-client",
+    "producesDeliverableId": "deliverable_contenus_pages",
+    "visibility": "client",
+    "status": "a_creer"
+  },
+  {
+    "id": "doc_template_plan_seo",
+    "name": "Plan SEO de base",
+    "category": "seo",
+    "lotId": "lot_contenus_seo",
+    "phaseId": "phase_seo",
+    "usage": "Lister slugs, titles, descriptions, H1 et indexation.",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "diagnostic_web"
+    ],
+    "recommendedFormat": "Google Sheets",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/02_contenus-client/seo",
+    "producesDeliverableId": "deliverable_plan_seo",
+    "visibility": "interne",
+    "status": "a_creer"
+  },
+  {
+    "id": "doc_template_architecture_technique",
+    "name": "Note architecture technique",
+    "category": "technique",
+    "lotId": "lot_architecture_technique",
+    "phaseId": "phase_architecture_technique",
+    "usage": "Documenter starter, stack, routes, dossiers, intégrations et exclusions.",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "projet_avance_saas"
+    ],
+    "recommendedFormat": "Markdown",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/04_dev/notes-techniques",
+    "producesDeliverableId": "deliverable_architecture_technique",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_checklist_qa",
+    "name": "Checklist QA",
+    "category": "qa",
+    "lotId": "lot_qa_recette",
+    "phaseId": "phase_qa_interne",
+    "usage": "Contrôler responsive, navigation, formulaires, SEO, accessibilité et performance.",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "projet_avance_saas"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/05_qa-recette/qa-interne",
+    "producesDeliverableId": "deliverable_checklist_qa",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_liste_retours",
+    "name": "Liste retours client",
+    "category": "qa",
+    "lotId": "lot_qa_recette",
+    "phaseId": "phase_recette_client",
+    "usage": "Trier retours inclus, hors périmètre, à corriger, à reporter.",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "projet_avance_saas"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/05_qa-recette/retours-client",
+    "producesDeliverableId": "deliverable_liste_retours",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_livraison",
+    "name": "Email de livraison",
+    "category": "livraison",
+    "lotId": "lot_livraison_formation",
+    "phaseId": "phase_livraison",
+    "usage": "Officialiser la livraison, les liens, les accès et les prochaines étapes.",
+    "projectTypeIds": [
+      "site_vitrine",
+      "landing_page",
+      "one_page",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "refonte",
+      "diagnostic_web",
+      "projet_avance_saas"
+    ],
+    "recommendedFormat": "Template email",
+    "recommendedDrivePath": "01_Bibliotheque-interne/04_modeles-livraison",
+    "producesDeliverableId": "deliverable_email_livraison",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_guide_client",
+    "name": "Guide client",
+    "category": "livraison",
+    "lotId": "lot_livraison_formation",
+    "phaseId": "phase_passation",
+    "usage": "Expliquer comment utiliser, maintenir ou comprendre le livrable.",
+    "projectTypeIds": [
+      "site_vitrine",
+      "boutique_en_ligne",
+      "formation_en_ligne",
+      "projet_avance_saas"
+    ],
+    "recommendedFormat": "Google Docs + PDF",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/06_livraison/guide-client",
+    "producesDeliverableId": "deliverable_guide_client",
+    "visibility": "client",
+    "status": "a_creer"
+  },
+  {
+    "id": "doc_template_rapport_diagnostic",
+    "name": "Rapport diagnostic web",
+    "category": "strategie",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "usage": "Restituer constats, priorités, risques et plan d'action.",
+    "projectTypeIds": [
+      "diagnostic_web",
+      "refonte"
+    ],
+    "recommendedFormat": "Google Docs + PDF",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/06_livraison/livrables-finaux",
+    "producesDeliverableId": "deliverable_rapport_diagnostic",
+    "visibility": "client",
+    "status": "a_creer"
+  },
+  {
+    "id": "doc_template_ticket_maintenance",
+    "name": "Fiche ticket maintenance",
+    "category": "maintenance",
+    "lotId": "lot_maintenance_evolution",
+    "phaseId": "phase_maintenance",
+    "usage": "Qualifier demande, impact, urgence, résolution et communication.",
+    "projectTypeIds": [
+      "maintenance"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/07_maintenance/tickets",
+    "producesDeliverableId": "deliverable_ticket_maintenance",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_objectif_cta_one_page",
+    "name": "Objectif et CTA one-page",
+    "category": "cadrage",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "usage": "Clarifier objectif unique, cible, CTA principal, sections attendues et limites de la one-page.",
+    "projectTypeIds": [
+      "one_page"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/01_cadrage",
+    "producesDeliverableId": "deliverable_objectif_cta_one_page",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_sections_one_page",
+    "name": "Structure one-page",
+    "category": "ux",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "usage": "Définir l'ordre des sections, les ancres utiles et le rythme de lecture d'une page unique.",
+    "projectTypeIds": [
+      "one_page"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/02_ux-ui",
+    "producesDeliverableId": "deliverable_sections_one_page",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_promesse_cta_landing",
+    "name": "Promesse et CTA landing",
+    "category": "conversion",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "usage": "Définir promesse, offre, cible, preuve, action attendue et outil de conversion.",
+    "projectTypeIds": [
+      "landing_page"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/01_cadrage",
+    "producesDeliverableId": "deliverable_promesse_cta_landing",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_structure_conversion_landing",
+    "name": "Structure conversion landing",
+    "category": "ux",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "usage": "Structurer accroche, bénéfices, preuves, objections, CTA et formulaire.",
+    "projectTypeIds": [
+      "landing_page"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/02_ux-ui",
+    "producesDeliverableId": "deliverable_structure_conversion_landing",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_message_objections_landing",
+    "name": "Message et objections landing",
+    "category": "contenu",
+    "lotId": "lot_contenus_seo",
+    "phaseId": "phase_contenus",
+    "usage": "Rédiger le message, les bénéfices, les preuves, les objections et les microcopies de conversion.",
+    "projectTypeIds": [
+      "landing_page"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/03_contenus",
+    "producesDeliverableId": "deliverable_message_objections_landing",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_tests_conversion_landing",
+    "name": "Tests conversion landing",
+    "category": "qa",
+    "lotId": "lot_qa_recette",
+    "phaseId": "phase_qa_interne",
+    "usage": "Contrôler CTA, formulaire, liens, confirmation, mobile et tracking prévu.",
+    "projectTypeIds": [
+      "landing_page"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/05_qa-recette",
+    "producesDeliverableId": "deliverable_tests_conversion_landing",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_audit_existant_refonte",
+    "name": "Audit existant refonte",
+    "category": "strategie",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_kickoff",
+    "usage": "Constats, risques, contenus utiles, pages sensibles et recommandations de refonte.",
+    "projectTypeIds": [
+      "refonte"
+    ],
+    "recommendedFormat": "Notion + Google Docs",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/01_cadrage",
+    "producesDeliverableId": "deliverable_audit_existant_refonte",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_tri_contenus_refonte",
+    "name": "Tri des contenus refonte",
+    "category": "contenu",
+    "lotId": "lot_contenus_seo",
+    "phaseId": "phase_contenus",
+    "usage": "Liste garder, supprimer, réécrire, fusionner ou déplacer.",
+    "projectTypeIds": [
+      "refonte"
+    ],
+    "recommendedFormat": "Notion + Google Docs",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/03_contenus",
+    "producesDeliverableId": "deliverable_tri_contenus_refonte",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_mapping_refonte",
+    "name": "Mapping refonte",
+    "category": "seo",
+    "lotId": "lot_mise_en_ligne",
+    "phaseId": "phase_mise_en_ligne",
+    "usage": "Correspondance anciennes pages, nouvelles pages, URLs sensibles et redirections.",
+    "projectTypeIds": [
+      "refonte"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/06_livraison",
+    "producesDeliverableId": "deliverable_mapping_refonte",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_cadrage_ecommerce",
+    "name": "Cadrage e-commerce",
+    "category": "ecommerce",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "usage": "Périmètre catalogue, paiement, livraison, pages légales et limites de la boutique.",
+    "projectTypeIds": [
+      "boutique_en_ligne"
+    ],
+    "recommendedFormat": "Notion + Google Docs",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/01_cadrage",
+    "producesDeliverableId": "deliverable_cadrage_ecommerce",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_catalogue_ecommerce",
+    "name": "Structure catalogue",
+    "category": "ecommerce",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "usage": "Catégories, produits prioritaires, attributs et organisation du catalogue.",
+    "projectTypeIds": [
+      "boutique_en_ligne"
+    ],
+    "recommendedFormat": "Notion + Google Docs",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/02_ux-ui",
+    "producesDeliverableId": "deliverable_catalogue_ecommerce",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_fiche_produit_type",
+    "name": "Fiche produit type",
+    "category": "ecommerce",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ui_maquettes",
+    "usage": "Structure d'une fiche produit avec informations, preuves, variantes et CTA.",
+    "projectTypeIds": [
+      "boutique_en_ligne"
+    ],
+    "recommendedFormat": "Notion + Google Docs",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/02_ux-ui",
+    "producesDeliverableId": "deliverable_fiche_produit_type",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_paiement_livraison",
+    "name": "Paiement et livraison cadrés",
+    "category": "ecommerce",
+    "lotId": "lot_fonctionnalites_avancees",
+    "phaseId": "phase_fonctionnalites_avancees",
+    "usage": "Moyens de paiement, frais, modes de livraison, emails et conditions associées.",
+    "projectTypeIds": [
+      "boutique_en_ligne"
+    ],
+    "recommendedFormat": "Notion + Google Docs",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/04_technique",
+    "producesDeliverableId": "deliverable_paiement_livraison",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_commande_testee",
+    "name": "Commande testée",
+    "category": "qa",
+    "lotId": "lot_qa_recette",
+    "phaseId": "phase_qa_interne",
+    "usage": "Parcours produit, panier, paiement, email et confirmation testés.",
+    "projectTypeIds": [
+      "boutique_en_ligne"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/05_qa-recette",
+    "producesDeliverableId": "deliverable_commande_testee",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_cadrage_pedagogique",
+    "name": "Cadrage pédagogique",
+    "category": "formation",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "usage": "Transformation promise, public cible, modules pressentis, ressources et accès.",
+    "projectTypeIds": [
+      "formation_en_ligne"
+    ],
+    "recommendedFormat": "Notion + Google Docs",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/01_cadrage",
+    "producesDeliverableId": "deliverable_cadrage_pedagogique",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_modules_lecons",
+    "name": "Modules et leçons",
+    "category": "formation",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "usage": "Architecture pédagogique : modules, leçons, ressources, progression.",
+    "projectTypeIds": [
+      "formation_en_ligne"
+    ],
+    "recommendedFormat": "Notion + Google Docs",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/02_ux-ui",
+    "producesDeliverableId": "deliverable_modules_lecons",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_acces_apprenant",
+    "name": "Accès apprenant",
+    "category": "formation",
+    "lotId": "lot_fonctionnalites_avancees",
+    "phaseId": "phase_fonctionnalites_avancees",
+    "usage": "Rôles, restrictions, progression et accès aux contenus de formation.",
+    "projectTypeIds": [
+      "formation_en_ligne"
+    ],
+    "recommendedFormat": "Notion + Google Docs",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/04_technique",
+    "producesDeliverableId": "deliverable_acces_apprenant",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_tests_apprenant",
+    "name": "Tests apprenant",
+    "category": "qa",
+    "lotId": "lot_qa_recette",
+    "phaseId": "phase_qa_interne",
+    "usage": "Accès, restrictions, ressources, progression et rendu mobile testés.",
+    "projectTypeIds": [
+      "formation_en_ligne"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/05_qa-recette",
+    "producesDeliverableId": "deliverable_tests_apprenant",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_discovery_avancee",
+    "name": "Discovery avancée",
+    "category": "produit",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "usage": "Objectifs, utilisateurs, contraintes, risques, budget, périmètre V1 et limites.",
+    "projectTypeIds": [
+      "projet_avance_saas"
+    ],
+    "recommendedFormat": "Notion + Google Docs",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/01_cadrage",
+    "producesDeliverableId": "deliverable_discovery_avancee",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_roles_permissions",
+    "name": "Rôles et permissions",
+    "category": "produit",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "usage": "Profils utilisateurs, droits, espaces, actions autorisées et restrictions.",
+    "projectTypeIds": [
+      "projet_avance_saas"
+    ],
+    "recommendedFormat": "Notion + Google Docs",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/02_ux-ui",
+    "producesDeliverableId": "deliverable_roles_permissions",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_modele_donnees_metier",
+    "name": "Modèle de données métier",
+    "category": "technique",
+    "lotId": "lot_architecture_technique",
+    "phaseId": "phase_architecture_technique",
+    "usage": "Objets, statuts, relations et règles métier du MVP.",
+    "projectTypeIds": [
+      "projet_avance_saas"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/04_technique",
+    "producesDeliverableId": "deliverable_modele_donnees_metier",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_backlog_mvp",
+    "name": "Backlog MVP priorisé",
+    "category": "produit",
+    "lotId": "lot_fonctionnalites_avancees",
+    "phaseId": "phase_fonctionnalites_avancees",
+    "usage": "Must-have, should-have, plus tard, hors périmètre, lot 1 et suite produit.",
+    "projectTypeIds": [
+      "projet_avance_saas"
+    ],
+    "recommendedFormat": "Notion + Google Docs",
+    "recommendedDrivePath": "03_Projets-clients/{projectFolder}/04_technique",
+    "producesDeliverableId": "deliverable_backlog_mvp",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_passation_commerciale_fiche_passation_commerciale",
+    "name": "Fiche passation commerciale",
+    "category": "commercial",
+    "lotId": "lot_site_vitrine_passation_commerciale",
+    "phaseId": "phase_site_vitrine_passation_commerciale",
+    "usage": "Fiche passation commerciale sert à piloter ou prouver le lot Passation commerciale du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/00_passation_commerciale",
+    "producesDeliverableId": "deliverable_site_vitrine_passation_commerciale_fiche_passation_commerciale",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_passation_commerciale_projet_pret_a_lancer",
+    "name": "Projet prêt à lancer",
+    "category": "commercial",
+    "lotId": "lot_site_vitrine_passation_commerciale",
+    "phaseId": "phase_site_vitrine_passation_commerciale",
+    "usage": "Projet prêt à lancer sert à piloter ou prouver le lot Passation commerciale du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/00_passation_commerciale",
+    "producesDeliverableId": "deliverable_site_vitrine_passation_commerciale_projet_pret_a_lancer",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_kickoff_dossier_drive_projet",
+    "name": "Dossier Drive projet",
+    "category": "cadrage",
+    "lotId": "lot_site_vitrine_kickoff",
+    "phaseId": "phase_site_vitrine_kickoff",
+    "usage": "Dossier Drive projet sert à piloter ou prouver le lot Kickoff projet du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/01_kickoff",
+    "producesDeliverableId": "deliverable_site_vitrine_kickoff_dossier_drive_projet",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_kickoff_planning_initial",
+    "name": "Planning initial",
+    "category": "cadrage",
+    "lotId": "lot_site_vitrine_kickoff",
+    "phaseId": "phase_site_vitrine_kickoff",
+    "usage": "Planning initial sert à piloter ou prouver le lot Kickoff projet du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/01_kickoff",
+    "producesDeliverableId": "deliverable_site_vitrine_kickoff_planning_initial",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_kickoff_checklist_depart_client",
+    "name": "Checklist départ client",
+    "category": "cadrage",
+    "lotId": "lot_site_vitrine_kickoff",
+    "phaseId": "phase_site_vitrine_kickoff",
+    "usage": "Checklist départ client sert à piloter ou prouver le lot Kickoff projet du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/01_kickoff",
+    "producesDeliverableId": "deliverable_site_vitrine_kickoff_checklist_depart_client",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_cadrage_strategique_brief_projet_site_vitrine",
+    "name": "Brief projet site vitrine",
+    "category": "cadrage",
+    "lotId": "lot_site_vitrine_cadrage_strategique",
+    "phaseId": "phase_site_vitrine_cadrage_strategique",
+    "usage": "Brief projet site vitrine sert à piloter ou prouver le lot Cadrage stratégique du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/02_cadrage_strategique",
+    "producesDeliverableId": "deliverable_site_vitrine_cadrage_strategique_brief_projet_site_vitrine",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_cadrage_strategique_fiche_cadrage_strategique",
+    "name": "Fiche cadrage stratégique",
+    "category": "cadrage",
+    "lotId": "lot_site_vitrine_cadrage_strategique",
+    "phaseId": "phase_site_vitrine_cadrage_strategique",
+    "usage": "Fiche cadrage stratégique sert à piloter ou prouver le lot Cadrage stratégique du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/02_cadrage_strategique",
+    "producesDeliverableId": "deliverable_site_vitrine_cadrage_strategique_fiche_cadrage_strategique",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_cadrage_strategique_matrice_objectifs_et_pages",
+    "name": "Matrice objectifs et pages",
+    "category": "cadrage",
+    "lotId": "lot_site_vitrine_cadrage_strategique",
+    "phaseId": "phase_site_vitrine_cadrage_strategique",
+    "usage": "Matrice objectifs et pages sert à piloter ou prouver le lot Cadrage stratégique du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/02_cadrage_strategique",
+    "producesDeliverableId": "deliverable_site_vitrine_cadrage_strategique_matrice_objectifs_et_pages",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_cadrage_strategique_liste_hors_perimetre",
+    "name": "Liste hors périmètre",
+    "category": "cadrage",
+    "lotId": "lot_site_vitrine_cadrage_strategique",
+    "phaseId": "phase_site_vitrine_cadrage_strategique",
+    "usage": "Liste hors périmètre sert à piloter ou prouver le lot Cadrage stratégique du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/02_cadrage_strategique",
+    "producesDeliverableId": "deliverable_site_vitrine_cadrage_strategique_liste_hors_perimetre",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_architecture_site_arborescence_et_parcours",
+    "name": "Arborescence et parcours",
+    "category": "ux",
+    "lotId": "lot_site_vitrine_architecture_site",
+    "phaseId": "phase_site_vitrine_architecture_site",
+    "usage": "Arborescence et parcours sert à piloter ou prouver le lot Architecture du site du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/03_architecture_site",
+    "producesDeliverableId": "deliverable_site_vitrine_architecture_site_arborescence_et_parcours",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_architecture_site_structure_de_navigation",
+    "name": "Structure de navigation",
+    "category": "ux",
+    "lotId": "lot_site_vitrine_architecture_site",
+    "phaseId": "phase_site_vitrine_architecture_site",
+    "usage": "Structure de navigation sert à piloter ou prouver le lot Architecture du site du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/03_architecture_site",
+    "producesDeliverableId": "deliverable_site_vitrine_architecture_site_structure_de_navigation",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_architecture_site_matrice_pages_objectifs_cta",
+    "name": "Matrice pages objectifs CTA",
+    "category": "ux",
+    "lotId": "lot_site_vitrine_architecture_site",
+    "phaseId": "phase_site_vitrine_architecture_site",
+    "usage": "Matrice pages objectifs CTA sert à piloter ou prouver le lot Architecture du site du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/03_architecture_site",
+    "producesDeliverableId": "deliverable_site_vitrine_architecture_site_matrice_pages_objectifs_cta",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_contenus_seo_matrice_contenus",
+    "name": "Matrice contenus",
+    "category": "contenu",
+    "lotId": "lot_site_vitrine_contenus_seo",
+    "phaseId": "phase_site_vitrine_contenus_seo",
+    "usage": "Matrice contenus sert à piloter ou prouver le lot Contenus et SEO du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/04_contenus_seo",
+    "producesDeliverableId": "deliverable_site_vitrine_contenus_seo_matrice_contenus",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_contenus_seo_contenus_par_page",
+    "name": "Contenus par page",
+    "category": "contenu",
+    "lotId": "lot_site_vitrine_contenus_seo",
+    "phaseId": "phase_site_vitrine_contenus_seo",
+    "usage": "Contenus par page sert à piloter ou prouver le lot Contenus et SEO du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/04_contenus_seo",
+    "producesDeliverableId": "deliverable_site_vitrine_contenus_seo_contenus_par_page",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_contenus_seo_plan_seo_de_base",
+    "name": "Plan SEO de base",
+    "category": "contenu",
+    "lotId": "lot_site_vitrine_contenus_seo",
+    "phaseId": "phase_site_vitrine_contenus_seo",
+    "usage": "Plan SEO de base sert à piloter ou prouver le lot Contenus et SEO du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/04_contenus_seo",
+    "producesDeliverableId": "deliverable_site_vitrine_contenus_seo_plan_seo_de_base",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_contenus_seo_checklist_medias_necessaires",
+    "name": "Checklist médias nécessaires",
+    "category": "contenu",
+    "lotId": "lot_site_vitrine_contenus_seo",
+    "phaseId": "phase_site_vitrine_contenus_seo",
+    "usage": "Checklist médias nécessaires sert à piloter ou prouver le lot Contenus et SEO du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/04_contenus_seo",
+    "producesDeliverableId": "deliverable_site_vitrine_contenus_seo_checklist_medias_necessaires",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_direction_artistique_moodboard",
+    "name": "Moodboard",
+    "category": "design",
+    "lotId": "lot_site_vitrine_direction_artistique",
+    "phaseId": "phase_site_vitrine_direction_artistique",
+    "usage": "Moodboard sert à piloter ou prouver le lot Direction artistique du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Figma ou Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/05_direction_artistique",
+    "producesDeliverableId": "deliverable_site_vitrine_direction_artistique_moodboard",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_direction_artistique_direction_visuelle",
+    "name": "Direction visuelle",
+    "category": "design",
+    "lotId": "lot_site_vitrine_direction_artistique",
+    "phaseId": "phase_site_vitrine_direction_artistique",
+    "usage": "Direction visuelle sert à piloter ou prouver le lot Direction artistique du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Figma ou Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/05_direction_artistique",
+    "producesDeliverableId": "deliverable_site_vitrine_direction_artistique_direction_visuelle",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_direction_artistique_mini_charte_digitale",
+    "name": "Mini-charte digitale",
+    "category": "design",
+    "lotId": "lot_site_vitrine_direction_artistique",
+    "phaseId": "phase_site_vitrine_direction_artistique",
+    "usage": "Mini-charte digitale sert à piloter ou prouver le lot Direction artistique du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Figma ou Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/05_direction_artistique",
+    "producesDeliverableId": "deliverable_site_vitrine_direction_artistique_mini_charte_digitale",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_maquettes_ui_maquettes_desktop",
+    "name": "Maquettes desktop",
+    "category": "design",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "usage": "Maquettes desktop sert à piloter ou prouver le lot Maquettes UI du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Figma ou Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/06_maquettes_ui",
+    "producesDeliverableId": "deliverable_site_vitrine_maquettes_ui_maquettes_desktop",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_maquettes_ui_maquettes_mobile",
+    "name": "Maquettes mobile",
+    "category": "design",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "usage": "Maquettes mobile sert à piloter ou prouver le lot Maquettes UI du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Figma ou Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/06_maquettes_ui",
+    "producesDeliverableId": "deliverable_site_vitrine_maquettes_ui_maquettes_mobile",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_maquettes_ui_composants_visuels_cles",
+    "name": "Composants visuels clés",
+    "category": "design",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "usage": "Composants visuels clés sert à piloter ou prouver le lot Maquettes UI du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Figma ou Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/06_maquettes_ui",
+    "producesDeliverableId": "deliverable_site_vitrine_maquettes_ui_composants_visuels_cles",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_maquettes_ui_liste_retours_maquette",
+    "name": "Liste retours maquette",
+    "category": "design",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "usage": "Liste retours maquette sert à piloter ou prouver le lot Maquettes UI du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Figma ou Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/06_maquettes_ui",
+    "producesDeliverableId": "deliverable_site_vitrine_maquettes_ui_liste_retours_maquette",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_setup_technique_architecture_technique_site_vitrine",
+    "name": "Architecture technique site vitrine",
+    "category": "technique",
+    "lotId": "lot_site_vitrine_setup_technique",
+    "phaseId": "phase_site_vitrine_setup_technique",
+    "usage": "Architecture technique site vitrine sert à piloter ou prouver le lot Setup technique du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Markdown ou Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/07_setup_technique",
+    "producesDeliverableId": "deliverable_site_vitrine_setup_technique_architecture_technique_site_vitrine",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_setup_technique_repo_et_preview_prets",
+    "name": "Repo et preview prêts",
+    "category": "technique",
+    "lotId": "lot_site_vitrine_setup_technique",
+    "phaseId": "phase_site_vitrine_setup_technique",
+    "usage": "Repo et preview prêts sert à piloter ou prouver le lot Setup technique du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Markdown ou Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/07_setup_technique",
+    "producesDeliverableId": "deliverable_site_vitrine_setup_technique_repo_et_preview_prets",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_setup_technique_checklist_setup_technique",
+    "name": "Checklist setup technique",
+    "category": "technique",
+    "lotId": "lot_site_vitrine_setup_technique",
+    "phaseId": "phase_site_vitrine_setup_technique",
+    "usage": "Checklist setup technique sert à piloter ou prouver le lot Setup technique du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Markdown ou Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/07_setup_technique",
+    "producesDeliverableId": "deliverable_site_vitrine_setup_technique_checklist_setup_technique",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_developpement_version_preview",
+    "name": "Version preview",
+    "category": "technique",
+    "lotId": "lot_site_vitrine_developpement",
+    "phaseId": "phase_site_vitrine_developpement",
+    "usage": "Version preview sert à piloter ou prouver le lot Développement du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Markdown ou Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/08_developpement",
+    "producesDeliverableId": "deliverable_site_vitrine_developpement_version_preview",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_developpement_pages_developpees",
+    "name": "Pages développées",
+    "category": "technique",
+    "lotId": "lot_site_vitrine_developpement",
+    "phaseId": "phase_site_vitrine_developpement",
+    "usage": "Pages développées sert à piloter ou prouver le lot Développement du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Markdown ou Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/08_developpement",
+    "producesDeliverableId": "deliverable_site_vitrine_developpement_pages_developpees",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_developpement_composants_cles",
+    "name": "Composants clés",
+    "category": "technique",
+    "lotId": "lot_site_vitrine_developpement",
+    "phaseId": "phase_site_vitrine_developpement",
+    "usage": "Composants clés sert à piloter ou prouver le lot Développement du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Markdown ou Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/08_developpement",
+    "producesDeliverableId": "deliverable_site_vitrine_developpement_composants_cles",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_integration_contenus_contenus_integres",
+    "name": "Contenus intégrés",
+    "category": "contenu",
+    "lotId": "lot_site_vitrine_integration_contenus",
+    "phaseId": "phase_site_vitrine_integration_contenus",
+    "usage": "Contenus intégrés sert à piloter ou prouver le lot Intégration contenus du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/09_integration_contenus",
+    "producesDeliverableId": "deliverable_site_vitrine_integration_contenus_contenus_integres",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_integration_contenus_medias_utilises",
+    "name": "Médias utilisés",
+    "category": "contenu",
+    "lotId": "lot_site_vitrine_integration_contenus",
+    "phaseId": "phase_site_vitrine_integration_contenus",
+    "usage": "Médias utilisés sert à piloter ou prouver le lot Intégration contenus du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/09_integration_contenus",
+    "producesDeliverableId": "deliverable_site_vitrine_integration_contenus_medias_utilises",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_integration_contenus_checklist_contenu_final",
+    "name": "Checklist contenu final",
+    "category": "contenu",
+    "lotId": "lot_site_vitrine_integration_contenus",
+    "phaseId": "phase_site_vitrine_integration_contenus",
+    "usage": "Checklist contenu final sert à piloter ou prouver le lot Intégration contenus du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/09_integration_contenus",
+    "producesDeliverableId": "deliverable_site_vitrine_integration_contenus_checklist_contenu_final",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_fonctionnalites_checklist_fonctionnalites",
+    "name": "Checklist fonctionnalités",
+    "category": "qa",
+    "lotId": "lot_site_vitrine_fonctionnalites",
+    "phaseId": "phase_site_vitrine_fonctionnalites",
+    "usage": "Checklist fonctionnalités sert à piloter ou prouver le lot Fonctionnalités du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/10_fonctionnalites",
+    "producesDeliverableId": "deliverable_site_vitrine_fonctionnalites_checklist_fonctionnalites",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_fonctionnalites_journal_tests_formulaire",
+    "name": "Journal tests formulaire",
+    "category": "qa",
+    "lotId": "lot_site_vitrine_fonctionnalites",
+    "phaseId": "phase_site_vitrine_fonctionnalites",
+    "usage": "Journal tests formulaire sert à piloter ou prouver le lot Fonctionnalités du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/10_fonctionnalites",
+    "producesDeliverableId": "deliverable_site_vitrine_fonctionnalites_journal_tests_formulaire",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_fonctionnalites_liste_corrections_fonctionnelles",
+    "name": "Liste corrections fonctionnelles",
+    "category": "qa",
+    "lotId": "lot_site_vitrine_fonctionnalites",
+    "phaseId": "phase_site_vitrine_fonctionnalites",
+    "usage": "Liste corrections fonctionnelles sert à piloter ou prouver le lot Fonctionnalités du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/10_fonctionnalites",
+    "producesDeliverableId": "deliverable_site_vitrine_fonctionnalites_liste_corrections_fonctionnelles",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_qa_interne_rapport_qa_interne",
+    "name": "Rapport QA interne",
+    "category": "qa",
+    "lotId": "lot_site_vitrine_qa_interne",
+    "phaseId": "phase_site_vitrine_qa_interne",
+    "usage": "Rapport QA interne sert à piloter ou prouver le lot QA interne du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/11_qa_interne",
+    "producesDeliverableId": "deliverable_site_vitrine_qa_interne_rapport_qa_interne",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_qa_interne_liste_bugs_corriges",
+    "name": "Liste bugs corrigés",
+    "category": "qa",
+    "lotId": "lot_site_vitrine_qa_interne",
+    "phaseId": "phase_site_vitrine_qa_interne",
+    "usage": "Liste bugs corrigés sert à piloter ou prouver le lot QA interne du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/11_qa_interne",
+    "producesDeliverableId": "deliverable_site_vitrine_qa_interne_liste_bugs_corriges",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_recette_client_email_recette_client",
+    "name": "Email recette client",
+    "category": "recette",
+    "lotId": "lot_site_vitrine_recette_client",
+    "phaseId": "phase_site_vitrine_recette_client",
+    "usage": "Email recette client sert à piloter ou prouver le lot Recette client du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/12_recette_client",
+    "producesDeliverableId": "deliverable_site_vitrine_recette_client_email_recette_client",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_recette_client_tableau_retours_client",
+    "name": "Tableau retours client",
+    "category": "recette",
+    "lotId": "lot_site_vitrine_recette_client",
+    "phaseId": "phase_site_vitrine_recette_client",
+    "usage": "Tableau retours client sert à piloter ou prouver le lot Recette client du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/12_recette_client",
+    "producesDeliverableId": "deliverable_site_vitrine_recette_client_tableau_retours_client",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_recette_client_version_corrigee_recette",
+    "name": "Version corrigée recette",
+    "category": "recette",
+    "lotId": "lot_site_vitrine_recette_client",
+    "phaseId": "phase_site_vitrine_recette_client",
+    "usage": "Version corrigée recette sert à piloter ou prouver le lot Recette client du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/12_recette_client",
+    "producesDeliverableId": "deliverable_site_vitrine_recette_client_version_corrigee_recette",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_mise_en_ligne_site_en_ligne",
+    "name": "Site en ligne",
+    "category": "lancement",
+    "lotId": "lot_site_vitrine_mise_en_ligne",
+    "phaseId": "phase_site_vitrine_mise_en_ligne",
+    "usage": "Site en ligne sert à piloter ou prouver le lot Mise en ligne du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/13_mise_en_ligne",
+    "producesDeliverableId": "deliverable_site_vitrine_mise_en_ligne_site_en_ligne",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_mise_en_ligne_checklist_post_prod",
+    "name": "Checklist post-prod",
+    "category": "lancement",
+    "lotId": "lot_site_vitrine_mise_en_ligne",
+    "phaseId": "phase_site_vitrine_mise_en_ligne",
+    "usage": "Checklist post-prod sert à piloter ou prouver le lot Mise en ligne du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/13_mise_en_ligne",
+    "producesDeliverableId": "deliverable_site_vitrine_mise_en_ligne_checklist_post_prod",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_mise_en_ligne_journal_deploiement",
+    "name": "Journal déploiement",
+    "category": "lancement",
+    "lotId": "lot_site_vitrine_mise_en_ligne",
+    "phaseId": "phase_site_vitrine_mise_en_ligne",
+    "usage": "Journal déploiement sert à piloter ou prouver le lot Mise en ligne du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/13_mise_en_ligne",
+    "producesDeliverableId": "deliverable_site_vitrine_mise_en_ligne_journal_deploiement",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_livraison_passation_email_livraison",
+    "name": "Email livraison",
+    "category": "livraison",
+    "lotId": "lot_site_vitrine_livraison_passation",
+    "phaseId": "phase_site_vitrine_livraison_passation",
+    "usage": "Email livraison sert à piloter ou prouver le lot Livraison et passation du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/14_livraison_passation",
+    "producesDeliverableId": "deliverable_site_vitrine_livraison_passation_email_livraison",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_livraison_passation_guide_client",
+    "name": "Guide client",
+    "category": "livraison",
+    "lotId": "lot_site_vitrine_livraison_passation",
+    "phaseId": "phase_site_vitrine_livraison_passation",
+    "usage": "Guide client sert à piloter ou prouver le lot Livraison et passation du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/14_livraison_passation",
+    "producesDeliverableId": "deliverable_site_vitrine_livraison_passation_guide_client",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_livraison_passation_dossier_final",
+    "name": "Dossier final",
+    "category": "livraison",
+    "lotId": "lot_site_vitrine_livraison_passation",
+    "phaseId": "phase_site_vitrine_livraison_passation",
+    "usage": "Dossier final sert à piloter ou prouver le lot Livraison et passation du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/14_livraison_passation",
+    "producesDeliverableId": "deliverable_site_vitrine_livraison_passation_dossier_final",
+    "visibility": "client",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_stabilisation_retex_fiche_stabilisation",
+    "name": "Fiche stabilisation",
+    "category": "interne",
+    "lotId": "lot_site_vitrine_stabilisation_retex",
+    "phaseId": "phase_site_vitrine_stabilisation_retex",
+    "usage": "Fiche stabilisation sert à piloter ou prouver le lot Stabilisation et RETEX du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/15_stabilisation_retex",
+    "producesDeliverableId": "deliverable_site_vitrine_stabilisation_retex_fiche_stabilisation",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_stabilisation_retex_retex_interne",
+    "name": "RETEX interne",
+    "category": "interne",
+    "lotId": "lot_site_vitrine_stabilisation_retex",
+    "phaseId": "phase_site_vitrine_stabilisation_retex",
+    "usage": "RETEX interne sert à piloter ou prouver le lot Stabilisation et RETEX du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/15_stabilisation_retex",
+    "producesDeliverableId": "deliverable_site_vitrine_stabilisation_retex_retex_interne",
+    "visibility": "interne",
+    "status": "pret"
+  },
+  {
+    "id": "doc_template_site_vitrine_stabilisation_retex_liste_evolutions_futures",
+    "name": "Liste évolutions futures",
+    "category": "interne",
+    "lotId": "lot_site_vitrine_stabilisation_retex",
+    "phaseId": "phase_site_vitrine_stabilisation_retex",
+    "usage": "Liste évolutions futures sert à piloter ou prouver le lot Stabilisation et RETEX du site vitrine.",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedFormat": "Notion",
+    "recommendedDrivePath": "03_Project_OS/site-vitrine/15_stabilisation_retex",
+    "producesDeliverableId": "deliverable_site_vitrine_stabilisation_retex_liste_evolutions_futures",
+    "visibility": "interne",
+    "status": "pret"
+  }
+]

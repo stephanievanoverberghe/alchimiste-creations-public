@@ -1,0 +1,16 @@
+/*
+ * Thème papier (sprint F2, phase 6) — documents officiels et aperçu
+ * imprimable. Deuxième thème assumé : clair, chaleureux, encre chaude.
+ * --paper-ink-subtle est volontairement plus sombre que l'ancien #a09380
+ * (3.0:1 sur blanc, sous le seuil AA) : #7d7060 donne 4.8:1.
+ */
+
+:root {
+    --paper-bg: #ece5da;
+    --paper-sheet: #ffffff;
+    --paper-ink: #241c14;
+    --paper-ink-muted: #6b5f4f;
+    --paper-ink-subtle: #7d7060;
+    --paper-accent: #b4551f;
+    --paper-border: #ece5da;
+}

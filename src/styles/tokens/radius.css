@@ -1,0 +1,13 @@
+/*
+ * Rayons (sprint F2, phase 6) — échelle sémantique unique.
+ * Décision de la refonte : 3 niveaux + pilule, appliqués page par page
+ * (lots A→D) à la place du mélange rounded-xl/2xl/3xl relevé à l'audit.
+ * control = champs, boutons, chips · card = cartes et blocs ·
+ * panel = grandes surfaces (héros, modales, sections).
+ */
+
+@theme static {
+    --radius-control: 0.75rem;
+    --radius-card: 1rem;
+    --radius-panel: 1.5rem;
+}

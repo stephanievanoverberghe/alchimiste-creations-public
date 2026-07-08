@@ -1,0 +1,20 @@
+/*
+ * Effets de direction artistique (sprint F2, phase 6).
+ * Réservés aux zones de mise en avant (héros, cartes clés, CTA) —
+ * jamais en décor systématique. Usage : bg-[image:var(--gradient-hero)],
+ * shadow-[var(--glow-action)].
+ */
+
+:root {
+    /* Lueur d'or diffuse en haut de héros, fond sombre préservé */
+    --gradient-hero:
+        radial-gradient(
+            120% 90% at 70% 8%,
+            rgba(201, 154, 91, 0.14) 0%,
+            rgba(201, 154, 91, 0.05) 35%,
+            rgba(15, 14, 11, 0) 65%
+        );
+
+    /* Halo cuivre pour l'action principale mise en avant */
+    --glow-action: 0 0 24px rgba(244, 167, 130, 0.35);
+}

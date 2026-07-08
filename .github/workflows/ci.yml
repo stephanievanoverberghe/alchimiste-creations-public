@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    env:
+      # Valeurs factices : aucun job ne parle à une vraie base ni à un service externe.
+      DATABASE_URL: "postgresql://ci:ci@localhost:5432/ci?schema=public"
+      DIRECT_URL: "postgresql://ci:ci@localhost:5432/ci?schema=public"
+      AUTH_SECRET: "ci-only-secret"
+      AUTH_TRUST_HOST: "true"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Enable corepack (pnpm)
+        run: corepack enable
+
+      - name: Install dependencies
+        run: corepack pnpm install --frozen-lockfile
+
+      # Génère le client Prisma typé AVANT lint/typecheck/build. Indispensable :
+      # pnpm 10 n'exécute pas le postinstall de @prisma/client, donc sans cette
+      # étape `tsc` échoue sur tous les `import ... from "@prisma/client"`.
+      - name: Prisma generate
+        run: corepack pnpm prisma:generate
+
+      - name: Lint
+        run: corepack pnpm lint
+
+      - name: Typecheck
+        run: corepack pnpm typecheck
+
+      - name: Unit and integration tests (Vitest)
+        run: corepack pnpm test
+
+      - name: CRM hardening checks
+        run: corepack pnpm test:crm-hardening
+
+      - name: Project OS quality checks
+        run: corepack pnpm test:project-os
+
+      - name: Prisma validate
+        run: corepack pnpm prisma:validate
+
+      - name: Build
+        run: corepack pnpm build

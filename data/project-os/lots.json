@@ -1,0 +1,913 @@
+[
+  {
+    "id": "lot_commercial",
+    "order": 0,
+    "name": "Lot 0 - Commercial",
+    "objective": "Qualifier, vendre ou refuser proprement une demande.",
+    "defaultPhaseIds": [
+      "phase_demande",
+      "phase_qualification",
+      "phase_devis"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_fiche_opportunite",
+      "deliverable_devis"
+    ],
+    "defaultTaskIds": [
+      "task_analyser_demande",
+      "task_qualifier_besoin",
+      "task_preparer_devis"
+    ],
+    "defaultValidationIds": [
+      "validation_devis_client"
+    ],
+    "definitionOfDone": "L'opportunité à une décision claire: refusée, en attente, devis envoyé ou convertie en projet.",
+    "risks": [
+      "Besoin flou",
+      "Budget non aligne",
+      "Périmètre implicite"
+    ]
+  },
+  {
+    "id": "lot_cadrage",
+    "order": 1,
+    "name": "Lot 1 - Cadrage",
+    "objective": "Transformer l'offre vendue en périmètre de production clair.",
+    "defaultPhaseIds": [
+      "phase_kickoff",
+      "phase_cadrage"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_brief_projet",
+      "deliverable_fiche_cadrage",
+      "deliverable_planning"
+    ],
+    "defaultTaskIds": [
+      "task_creer_dossier_drive",
+      "task_collecter_acces",
+      "task_rediger_cadrage"
+    ],
+    "defaultValidationIds": [
+      "validation_cadrage_client"
+    ],
+    "definitionOfDone": "Objectif, cible, inclus, hors périmètre, livrables, planning et validations sont confirmés.",
+    "risks": [
+      "Attentes client non écrites",
+      "Accès manquants",
+      "Contenus non anticipes"
+    ]
+  },
+  {
+    "id": "lot_direction_artistique",
+    "order": 2,
+    "name": "Lot 2 - Direction artistique",
+    "objective": "Définir l'univers visuel avant la production UI.",
+    "defaultPhaseIds": [
+      "phase_direction_artistique"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_moodboard",
+      "deliverable_direction_visuelle"
+    ],
+    "defaultTaskIds": [
+      "task_rechercher_references",
+      "task_creer_palette",
+      "task_definir_typographies"
+    ],
+    "defaultValidationIds": [
+      "validation_direction_artistique_client"
+    ],
+    "definitionOfDone": "La direction visuelle est validée ou arbitree pour produire les maquettes.",
+    "risks": [
+      "Goûts personnels non cadrés",
+      "Trop de variantes",
+      "Absence de marque existante"
+    ]
+  },
+  {
+    "id": "lot_ux_ui",
+    "order": 3,
+    "name": "Lot 3 - UX/UI",
+    "objective": "Structurer les parcours, les pages et les interfaces.",
+    "defaultPhaseIds": [
+      "phase_ux_structure",
+      "phase_ui_maquettes"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_arborescence",
+      "deliverable_wireframes",
+      "deliverable_maquettes"
+    ],
+    "defaultTaskIds": [
+      "task_definir_arborescence",
+      "task_creer_wireframes",
+      "task_creer_maquettes"
+    ],
+    "defaultValidationIds": [
+      "validation_structure_client",
+      "validation_maquette_client"
+    ],
+    "definitionOfDone": "Les écrans ou sections nécessaires sont validés pour développement.",
+    "risks": [
+      "Navigation confuse",
+      "Maquette trop détaillée pour un projet léger",
+      "Retours non priorisés"
+    ]
+  },
+  {
+    "id": "lot_contenus_seo",
+    "order": 4,
+    "name": "Lot 4 - Contenus / SEO",
+    "objective": "Rendre les textes, médias et bases SEO exploitables.",
+    "defaultPhaseIds": [
+      "phase_contenus",
+      "phase_seo"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_contenus_pages",
+      "deliverable_plan_seo",
+      "deliverable_metadata"
+    ],
+    "defaultTaskIds": [
+      "task_collecter_contenus",
+      "task_optimiser_textes",
+      "task_preparer_metadata"
+    ],
+    "defaultValidationIds": [
+      "validation_contenus_client"
+    ],
+    "definitionOfDone": "Les contenus nécessaires sont reçus, corriges, validés ou remplaces par une décision.",
+    "risks": [
+      "Retard client",
+      "Textes trop longs",
+      "Images non exploitables",
+      "SEO oublie"
+    ]
+  },
+  {
+    "id": "lot_architecture_technique",
+    "order": 5,
+    "name": "Lot 5 - Architecture technique",
+    "objective": "Choisir le starter, la stack, le repo et les contraintes techniques.",
+    "defaultPhaseIds": [
+      "phase_architecture_technique",
+      "phase_setup_repo"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_architecture_technique",
+      "deliverable_repo_initialise"
+    ],
+    "defaultTaskIds": [
+      "task_choisir_starter",
+      "task_initialiser_repo",
+      "task_configurer_env"
+    ],
+    "defaultValidationIds": [
+      "validation_setup_interne"
+    ],
+    "definitionOfDone": "Le repo, le starter, les conventions et les variables attendues sont posés.",
+    "risks": [
+      "Starter inadapté",
+      "Secrets mal gérés",
+      "Stack surdimensionnée"
+    ]
+  },
+  {
+    "id": "lot_developpement",
+    "order": 6,
+    "name": "Lot 6 - Développement",
+    "objective": "Produire le site, l'app ou les pages prevues au périmètre.",
+    "defaultPhaseIds": [
+      "phase_developpement"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_version_dev",
+      "deliverable_pages_developpees"
+    ],
+    "defaultTaskIds": [
+      "task_developper_layout",
+      "task_integrer_pages",
+      "task_integrer_formulaires"
+    ],
+    "defaultValidationIds": [
+      "validation_pret_qa_interne"
+    ],
+    "definitionOfDone": "Le périmètre vendu est développé et consultable en environnement de test.",
+    "risks": [
+      "Scope creep",
+      "Composants non réutilisables",
+      "Integrations mal testées"
+    ]
+  },
+  {
+    "id": "lot_fonctionnalites_avancees",
+    "order": 7,
+    "name": "Lot 7 - Fonctionnalites avancées",
+    "objective": "Produire les modules complexes: paiement, auth, espace, dashboard, LMS, CMS.",
+    "defaultPhaseIds": [
+      "phase_fonctionnalites_avancees"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_module_avance",
+      "deliverable_tests_fonctionnels"
+    ],
+    "defaultTaskIds": [
+      "task_modeliser_donnees",
+      "task_integrer_auth",
+      "task_tester_flux_avances"
+    ],
+    "defaultValidationIds": [
+      "validation_fonctionnalites_interne"
+    ],
+    "definitionOfDone": "Les flux avancés passent les cas nominaux et les erreurs principales.",
+    "risks": [
+      "Complexité sous-estimee",
+      "Securite insuffisante",
+      "Règles métier incompletes"
+    ]
+  },
+  {
+    "id": "lot_qa_recette",
+    "order": 8,
+    "name": "Lot 8 - Recette / QA",
+    "objective": "Vérifier, corriger et faire valider la version produite.",
+    "defaultPhaseIds": [
+      "phase_qa_interne",
+      "phase_recette_client"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_checklist_qa",
+      "deliverable_liste_retours"
+    ],
+    "defaultTaskIds": [
+      "task_tester_responsive",
+      "task_tester_formulaires",
+      "task_traiter_retours"
+    ],
+    "defaultValidationIds": [
+      "validation_recette_client"
+    ],
+    "definitionOfDone": "QA interne passée, retours inclus traités, accord client obtenu ou décision tracée.",
+    "risks": [
+      "Retours hors périmètre",
+      "Tests mobiles incomplets",
+      "Corrections non priorisees"
+    ]
+  },
+  {
+    "id": "lot_mise_en_ligne",
+    "order": 9,
+    "name": "Lot 9 - Mise en ligne",
+    "objective": "Déployer, connecter le domaine et vérifier la production.",
+    "defaultPhaseIds": [
+      "phase_mise_en_ligne"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_site_en_ligne",
+      "deliverable_checklist_lancement"
+    ],
+    "defaultTaskIds": [
+      "task_configurer_domaine",
+      "task_deployer_production",
+      "task_verifier_production"
+    ],
+    "defaultValidationIds": [
+      "validation_lancement_interne"
+    ],
+    "definitionOfDone": "La production est accessible, testée et prete pour livraison client.",
+    "risks": [
+      "DNS non prêt",
+      "Variables manquantes",
+      "Indexation oubliee"
+    ]
+  },
+  {
+    "id": "lot_livraison_formation",
+    "order": 10,
+    "name": "Lot 10 - Livraison / Formation",
+    "objective": "Remettre les livrables, former si nécessaire et clore côté client.",
+    "defaultPhaseIds": [
+      "phase_livraison",
+      "phase_passation"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_email_livraison",
+      "deliverable_guide_client",
+      "deliverable_livrables_finaux"
+    ],
+    "defaultTaskIds": [
+      "task_preparer_livraison",
+      "task_envoyer_livraison",
+      "task_planifier_passation"
+    ],
+    "defaultValidationIds": [
+      "validation_livraison_client"
+    ],
+    "definitionOfDone": "Livrables remis, accès transmis, guide envoyé, validation finale tracée.",
+    "risks": [
+      "Client non autonome",
+      "Fichiers finaux disperses",
+      "Suite commerciale oubliee"
+    ]
+  },
+  {
+    "id": "lot_maintenance_evolution",
+    "order": 11,
+    "name": "Lot 11 - Maintenance / Evolution",
+    "objective": "Suivre, corriger, sécuriser et faire evoluer après livraison.",
+    "defaultPhaseIds": [
+      "phase_maintenance"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_ticket_maintenance",
+      "deliverable_rapport_maintenance"
+    ],
+    "defaultTaskIds": [
+      "task_qualifier_ticket",
+      "task_corriger_ticket",
+      "task_documenter_resolution"
+    ],
+    "defaultValidationIds": [
+      "validation_ticket_client"
+    ],
+    "definitionOfDone": "Le ticket ou la periode est traite, documenté et communiqué au client.",
+    "risks": [
+      "Demandes hors forfait",
+      "Urgence mal qualifiée",
+      "Historique incomplet"
+    ]
+  },
+  {
+    "id": "lot_site_vitrine_passation_commerciale",
+    "order": 0,
+    "name": "Lot 0 - Passation commerciale",
+    "objective": "Transformer l'opportunité validée en projet exploitable côté production.",
+    "defaultPhaseIds": [
+      "phase_site_vitrine_passation_commerciale"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_site_vitrine_passation_commerciale_fiche_passation_commerciale",
+      "deliverable_site_vitrine_passation_commerciale_projet_pret_a_lancer"
+    ],
+    "defaultTaskIds": [
+      "task_site_vitrine_passation_commerciale_verifier_le_devis_accepte",
+      "task_site_vitrine_passation_commerciale_verifier_l_acompte_ou_l_exception_validee",
+      "task_site_vitrine_passation_commerciale_relire_la_demande_initiale",
+      "task_site_vitrine_passation_commerciale_relire_les_notes_de_qualification",
+      "task_site_vitrine_passation_commerciale_confirmer_l_offre_vendue",
+      "task_site_vitrine_passation_commerciale_confirmer_les_options_incluses",
+      "task_site_vitrine_passation_commerciale_creer_la_fiche_projet_centrale",
+      "task_site_vitrine_passation_commerciale_rattacher_client_offre_documents_commerciaux_et_dossier_drive"
+    ],
+    "defaultValidationIds": [
+      "validation_site_vitrine_passation_commerciale_projet_pret_a_lancer"
+    ],
+    "definitionOfDone": "Fiche projet centrale créée ; Devis et acompte vérifiés ; Documents commerciaux rattachés.",
+    "risks": [
+      "Passation incomplète",
+      "Options vendues non reprises",
+      "Acompte non tracé"
+    ]
+  },
+  {
+    "id": "lot_site_vitrine_kickoff",
+    "order": 1,
+    "name": "Lot 1 - Kickoff projet",
+    "objective": "Poser le cadre opérationnel avant de produire.",
+    "defaultPhaseIds": [
+      "phase_site_vitrine_kickoff"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_site_vitrine_kickoff_dossier_drive_projet",
+      "deliverable_site_vitrine_kickoff_planning_initial",
+      "deliverable_site_vitrine_kickoff_checklist_depart_client"
+    ],
+    "defaultTaskIds": [
+      "task_site_vitrine_kickoff_creer_l_espace_projet",
+      "task_site_vitrine_kickoff_creer_l_arborescence_drive",
+      "task_site_vitrine_kickoff_preparer_le_planning_macro",
+      "task_site_vitrine_kickoff_preparer_la_liste_des_acces_necessaires",
+      "task_site_vitrine_kickoff_preparer_la_liste_des_contenus_attendus",
+      "task_site_vitrine_kickoff_envoyer_le_message_de_lancement",
+      "task_site_vitrine_kickoff_planifier_le_kickoff_si_necessaire",
+      "task_site_vitrine_kickoff_faire_confirmer_les_coordonnees_client",
+      "task_site_vitrine_kickoff_faire_transmettre_les_acces_utiles",
+      "task_site_vitrine_kickoff_faire_valider_le_mode_de_communication"
+    ],
+    "defaultValidationIds": [
+      "validation_site_vitrine_kickoff_kickoff_pret",
+      "validation_site_vitrine_kickoff_informations_de_depart_confirmees"
+    ],
+    "definitionOfDone": "Dossier Drive prêt ; Planning macro posé ; Accès et contenus demandés au client.",
+    "risks": [
+      "Accès manquants",
+      "Planning flou",
+      "Contenus non anticipés"
+    ]
+  },
+  {
+    "id": "lot_site_vitrine_cadrage_strategique",
+    "order": 2,
+    "name": "Lot 2 - Cadrage stratégique",
+    "objective": "Clarifier ce que le site doit accomplir et verrouiller le périmètre.",
+    "defaultPhaseIds": [
+      "phase_site_vitrine_cadrage_strategique"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_site_vitrine_cadrage_strategique_brief_projet_site_vitrine",
+      "deliverable_site_vitrine_cadrage_strategique_fiche_cadrage_strategique",
+      "deliverable_site_vitrine_cadrage_strategique_matrice_objectifs_et_pages",
+      "deliverable_site_vitrine_cadrage_strategique_liste_hors_perimetre"
+    ],
+    "defaultTaskIds": [
+      "task_site_vitrine_cadrage_strategique_definir_l_objectif_principal_du_site",
+      "task_site_vitrine_cadrage_strategique_definir_les_objectifs_secondaires",
+      "task_site_vitrine_cadrage_strategique_identifier_la_cible_principale",
+      "task_site_vitrine_cadrage_strategique_identifier_les_objections_et_freins",
+      "task_site_vitrine_cadrage_strategique_definir_le_message_central",
+      "task_site_vitrine_cadrage_strategique_definir_la_promesse_claire",
+      "task_site_vitrine_cadrage_strategique_definir_le_ton_editorial",
+      "task_site_vitrine_cadrage_strategique_confirmer_les_pages_incluses",
+      "task_site_vitrine_cadrage_strategique_confirmer_le_hors_perimetre",
+      "task_site_vitrine_cadrage_strategique_definir_les_criteres_de_reussite",
+      "task_site_vitrine_cadrage_strategique_faire_valider_objectifs_cible_et_perimetre"
+    ],
+    "defaultValidationIds": [
+      "validation_site_vitrine_cadrage_strategique_cadrage_valide"
+    ],
+    "definitionOfDone": "Objectifs et cible validés ; Pages incluses confirmées ; Hors périmètre écrit.",
+    "risks": [
+      "Objectif trop vague",
+      "Pages ajoutées sans arbitrage",
+      "Hors périmètre non écrit"
+    ]
+  },
+  {
+    "id": "lot_site_vitrine_architecture_site",
+    "order": 3,
+    "name": "Lot 3 - Architecture du site",
+    "objective": "Organiser les pages, la navigation et le parcours utilisateur.",
+    "defaultPhaseIds": [
+      "phase_site_vitrine_architecture_site"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_site_vitrine_architecture_site_arborescence_et_parcours",
+      "deliverable_site_vitrine_architecture_site_structure_de_navigation",
+      "deliverable_site_vitrine_architecture_site_matrice_pages_objectifs_cta"
+    ],
+    "defaultTaskIds": [
+      "task_site_vitrine_architecture_site_definir_l_arborescence",
+      "task_site_vitrine_architecture_site_definir_le_role_de_chaque_page",
+      "task_site_vitrine_architecture_site_definir_la_priorite_des_pages",
+      "task_site_vitrine_architecture_site_definir_le_cta_principal",
+      "task_site_vitrine_architecture_site_definir_le_cta_secondaire",
+      "task_site_vitrine_architecture_site_definir_le_parcours_utilisateur",
+      "task_site_vitrine_architecture_site_definir_la_navigation_header",
+      "task_site_vitrine_architecture_site_definir_la_navigation_footer",
+      "task_site_vitrine_architecture_site_prevoir_les_pages_legales",
+      "task_site_vitrine_architecture_site_prevoir_les_etats_formulaire",
+      "task_site_vitrine_architecture_site_identifier_les_contenus_manquants",
+      "task_site_vitrine_architecture_site_faire_valider_arborescence_et_priorites"
+    ],
+    "defaultValidationIds": [
+      "validation_site_vitrine_architecture_site_structure_du_site_validee"
+    ],
+    "definitionOfDone": "Arborescence validée ; Navigation définie ; CTA et parcours clarifiés.",
+    "risks": [
+      "Navigation confuse",
+      "CTA concurrents",
+      "Pages légales oubliées"
+    ]
+  },
+  {
+    "id": "lot_site_vitrine_contenus_seo",
+    "order": 4,
+    "name": "Lot 4 - Contenus et SEO",
+    "objective": "Préparer les textes, les médias et les bases SEO avant design final.",
+    "defaultPhaseIds": [
+      "phase_site_vitrine_contenus_seo"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_site_vitrine_contenus_seo_matrice_contenus",
+      "deliverable_site_vitrine_contenus_seo_contenus_par_page",
+      "deliverable_site_vitrine_contenus_seo_plan_seo_de_base",
+      "deliverable_site_vitrine_contenus_seo_checklist_medias_necessaires"
+    ],
+    "defaultTaskIds": [
+      "task_site_vitrine_contenus_seo_collecter_les_contenus_client",
+      "task_site_vitrine_contenus_seo_ecrire_ou_reecrire_les_textes",
+      "task_site_vitrine_contenus_seo_structurer_les_h1_h2_h3",
+      "task_site_vitrine_contenus_seo_preparer_les_titres_seo",
+      "task_site_vitrine_contenus_seo_preparer_les_descriptions_seo",
+      "task_site_vitrine_contenus_seo_definir_les_mots_cles_principaux",
+      "task_site_vitrine_contenus_seo_definir_le_maillage_interne",
+      "task_site_vitrine_contenus_seo_rediger_les_textes_cta",
+      "task_site_vitrine_contenus_seo_verifier_la_coherence_offre_cible_page",
+      "task_site_vitrine_contenus_seo_identifier_les_images_necessaires",
+      "task_site_vitrine_contenus_seo_faire_valider_les_formulations_metier"
+    ],
+    "defaultValidationIds": [
+      "validation_site_vitrine_contenus_seo_contenus_et_seo_valides"
+    ],
+    "definitionOfDone": "Textes exploitables ; SEO de base prêt ; Médias nécessaires listés.",
+    "risks": [
+      "Contenus client en retard",
+      "Textes trop longs",
+      "Images faibles",
+      "SEO traité trop tard"
+    ]
+  },
+  {
+    "id": "lot_site_vitrine_direction_artistique",
+    "order": 5,
+    "name": "Lot 5 - Direction artistique",
+    "objective": "Fixer l'univers visuel avant les maquettes.",
+    "defaultPhaseIds": [
+      "phase_site_vitrine_direction_artistique"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_site_vitrine_direction_artistique_moodboard",
+      "deliverable_site_vitrine_direction_artistique_direction_visuelle",
+      "deliverable_site_vitrine_direction_artistique_mini_charte_digitale"
+    ],
+    "defaultTaskIds": [
+      "task_site_vitrine_direction_artistique_analyser_l_identite_existante",
+      "task_site_vitrine_direction_artistique_choisir_la_direction_graphique",
+      "task_site_vitrine_direction_artistique_definir_la_palette",
+      "task_site_vitrine_direction_artistique_definir_les_typographies",
+      "task_site_vitrine_direction_artistique_definir_le_style_iconographique",
+      "task_site_vitrine_direction_artistique_definir_le_style_photo_ou_illustration",
+      "task_site_vitrine_direction_artistique_definir_l_ambiance_globale",
+      "task_site_vitrine_direction_artistique_preparer_les_references_visuelles",
+      "task_site_vitrine_direction_artistique_verifier_la_coherence_avec_la_cible",
+      "task_site_vitrine_direction_artistique_faire_valider_la_direction_artistique"
+    ],
+    "defaultValidationIds": [
+      "validation_site_vitrine_direction_artistique_direction_artistique_validee"
+    ],
+    "definitionOfDone": "Univers visuel validé ; Palette et typographies définies ; Références partagées.",
+    "risks": [
+      "Goûts personnels non cadrés",
+      "Trop de variantes",
+      "Identité existante faible"
+    ]
+  },
+  {
+    "id": "lot_site_vitrine_maquettes_ui",
+    "order": 6,
+    "name": "Lot 6 - Maquettes UI",
+    "objective": "Concevoir l'interface avant développement.",
+    "defaultPhaseIds": [
+      "phase_site_vitrine_maquettes_ui"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_site_vitrine_maquettes_ui_maquettes_desktop",
+      "deliverable_site_vitrine_maquettes_ui_maquettes_mobile",
+      "deliverable_site_vitrine_maquettes_ui_composants_visuels_cles",
+      "deliverable_site_vitrine_maquettes_ui_liste_retours_maquette"
+    ],
+    "defaultTaskIds": [
+      "task_site_vitrine_maquettes_ui_maquetter_la_home",
+      "task_site_vitrine_maquettes_ui_maquetter_une_page_interieure_type",
+      "task_site_vitrine_maquettes_ui_maquetter_la_page_contact",
+      "task_site_vitrine_maquettes_ui_maquetter_les_blocs_reutilisables",
+      "task_site_vitrine_maquettes_ui_prevoir_la_version_mobile",
+      "task_site_vitrine_maquettes_ui_prevoir_header_et_footer",
+      "task_site_vitrine_maquettes_ui_prevoir_les_etats_formulaire",
+      "task_site_vitrine_maquettes_ui_prevoir_les_cta",
+      "task_site_vitrine_maquettes_ui_verifier_la_lisibilite",
+      "task_site_vitrine_maquettes_ui_verifier_la_hierarchie_visuelle",
+      "task_site_vitrine_maquettes_ui_verifier_la_coherence_avec_les_contenus",
+      "task_site_vitrine_maquettes_ui_faire_valider_les_maquettes"
+    ],
+    "defaultValidationIds": [
+      "validation_site_vitrine_maquettes_ui_maquettes_validees"
+    ],
+    "definitionOfDone": "Maquettes clés validées ; Mobile prévu ; Retours maquette traités.",
+    "risks": [
+      "Retours dispersés",
+      "Maquette validée puis remise en cause",
+      "Mobile négligé"
+    ]
+  },
+  {
+    "id": "lot_site_vitrine_setup_technique",
+    "order": 7,
+    "name": "Lot 7 - Setup technique",
+    "objective": "Préparer une base technique propre et vérifiable.",
+    "defaultPhaseIds": [
+      "phase_site_vitrine_setup_technique"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_site_vitrine_setup_technique_architecture_technique_site_vitrine",
+      "deliverable_site_vitrine_setup_technique_repo_et_preview_prets",
+      "deliverable_site_vitrine_setup_technique_checklist_setup_technique"
+    ],
+    "defaultTaskIds": [
+      "task_site_vitrine_setup_technique_creer_ou_verifier_le_repo",
+      "task_site_vitrine_setup_technique_creer_la_branche_projet",
+      "task_site_vitrine_setup_technique_verifier_la_stack",
+      "task_site_vitrine_setup_technique_preparer_les_variables_environnement",
+      "task_site_vitrine_setup_technique_preparer_l_hebergement",
+      "task_site_vitrine_setup_technique_preparer_le_domaine_si_connu",
+      "task_site_vitrine_setup_technique_preparer_la_structure_des_routes",
+      "task_site_vitrine_setup_technique_preparer_la_structure_des_contenus",
+      "task_site_vitrine_setup_technique_verifier_les_dependances",
+      "task_site_vitrine_setup_technique_creer_l_environnement_preview",
+      "task_site_vitrine_setup_technique_documenter_les_decisions_techniques"
+    ],
+    "defaultValidationIds": [
+      "validation_site_vitrine_setup_technique_setup_technique_valide"
+    ],
+    "definitionOfDone": "Repo prêt ; Preview disponible ; Décisions techniques documentées.",
+    "risks": [
+      "Variables manquantes",
+      "Preview absente",
+      "Structure technique improvisée"
+    ]
+  },
+  {
+    "id": "lot_site_vitrine_developpement",
+    "order": 8,
+    "name": "Lot 8 - Développement",
+    "objective": "Construire le site selon le périmètre validé.",
+    "defaultPhaseIds": [
+      "phase_site_vitrine_developpement"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_site_vitrine_developpement_version_preview",
+      "deliverable_site_vitrine_developpement_pages_developpees",
+      "deliverable_site_vitrine_developpement_composants_cles"
+    ],
+    "defaultTaskIds": [
+      "task_site_vitrine_developpement_developper_le_layout_global",
+      "task_site_vitrine_developpement_developper_le_header",
+      "task_site_vitrine_developpement_developper_le_footer",
+      "task_site_vitrine_developpement_developper_la_home",
+      "task_site_vitrine_developpement_developper_les_pages_interieures",
+      "task_site_vitrine_developpement_developper_la_page_contact",
+      "task_site_vitrine_developpement_integrer_les_composants_reutilisables",
+      "task_site_vitrine_developpement_integrer_le_responsive",
+      "task_site_vitrine_developpement_integrer_les_animations_sobres",
+      "task_site_vitrine_developpement_gerer_les_etats_ui_utiles",
+      "task_site_vitrine_developpement_connecter_le_formulaire_si_prevu",
+      "task_site_vitrine_developpement_verifier_l_accessibilite_de_base"
+    ],
+    "defaultValidationIds": [
+      "validation_site_vitrine_developpement_developpement_pret_pour_integration_contenus"
+    ],
+    "definitionOfDone": "Pages développées ; Responsive intégré ; Version preview prête.",
+    "risks": [
+      "Scope creep",
+      "Composants non réutilisables",
+      "Responsive traité trop tard"
+    ]
+  },
+  {
+    "id": "lot_site_vitrine_integration_contenus",
+    "order": 9,
+    "name": "Lot 9 - Intégration contenus",
+    "objective": "Intégrer les textes, médias, CTA et métadonnées définitifs.",
+    "defaultPhaseIds": [
+      "phase_site_vitrine_integration_contenus"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_site_vitrine_integration_contenus_contenus_integres",
+      "deliverable_site_vitrine_integration_contenus_medias_utilises",
+      "deliverable_site_vitrine_integration_contenus_checklist_contenu_final"
+    ],
+    "defaultTaskIds": [
+      "task_site_vitrine_integration_contenus_integrer_les_textes_valides",
+      "task_site_vitrine_integration_contenus_integrer_les_images",
+      "task_site_vitrine_integration_contenus_renseigner_les_alt_images",
+      "task_site_vitrine_integration_contenus_integrer_les_titres_seo",
+      "task_site_vitrine_integration_contenus_integrer_les_descriptions_seo",
+      "task_site_vitrine_integration_contenus_verifier_les_cta",
+      "task_site_vitrine_integration_contenus_verifier_les_liens_internes",
+      "task_site_vitrine_integration_contenus_verifier_la_coherence_mobile",
+      "task_site_vitrine_integration_contenus_verifier_les_pages_legales",
+      "task_site_vitrine_integration_contenus_verifier_le_contenu_manquant",
+      "task_site_vitrine_integration_contenus_faire_completer_les_derniers_elements_client"
+    ],
+    "defaultValidationIds": [
+      "validation_site_vitrine_integration_contenus_contenus_integres_valides"
+    ],
+    "definitionOfDone": "Textes et médias intégrés ; SEO intégré ; Contenu manquant arbitré.",
+    "risks": [
+      "Médias non optimisés",
+      "Alt manquants",
+      "CTA incohérents"
+    ]
+  },
+  {
+    "id": "lot_site_vitrine_fonctionnalites",
+    "order": 10,
+    "name": "Lot 10 - Fonctionnalités",
+    "objective": "Vérifier les fonctions attendues du site vitrine.",
+    "defaultPhaseIds": [
+      "phase_site_vitrine_fonctionnalites"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_site_vitrine_fonctionnalites_checklist_fonctionnalites",
+      "deliverable_site_vitrine_fonctionnalites_journal_tests_formulaire",
+      "deliverable_site_vitrine_fonctionnalites_liste_corrections_fonctionnelles"
+    ],
+    "defaultTaskIds": [
+      "task_site_vitrine_fonctionnalites_tester_le_formulaire_contact",
+      "task_site_vitrine_fonctionnalites_tester_l_email_de_reception",
+      "task_site_vitrine_fonctionnalites_tester_le_honeypot_ou_anti_spam",
+      "task_site_vitrine_fonctionnalites_tester_la_navigation",
+      "task_site_vitrine_fonctionnalites_tester_les_liens_cta",
+      "task_site_vitrine_fonctionnalites_tester_les_liens_reseaux_sociaux",
+      "task_site_vitrine_fonctionnalites_tester_le_tracking_si_prevu",
+      "task_site_vitrine_fonctionnalites_tester_les_telechargements_si_prevus",
+      "task_site_vitrine_fonctionnalites_tester_les_pages_legales",
+      "task_site_vitrine_fonctionnalites_corriger_les_erreurs_fonctionnelles"
+    ],
+    "defaultValidationIds": [
+      "validation_site_vitrine_fonctionnalites_fonctionnalites_validees"
+    ],
+    "definitionOfDone": "Formulaire testé ; Navigation testée ; Liens et tracking vérifiés si prévus.",
+    "risks": [
+      "Formulaire non testé",
+      "Email non reçu",
+      "Liens cassés"
+    ]
+  },
+  {
+    "id": "lot_site_vitrine_qa_interne",
+    "order": 11,
+    "name": "Lot 11 - QA interne",
+    "objective": "Contrôler le site avant de l'envoyer au client.",
+    "defaultPhaseIds": [
+      "phase_site_vitrine_qa_interne"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_site_vitrine_qa_interne_rapport_qa_interne",
+      "deliverable_site_vitrine_qa_interne_liste_bugs_corriges"
+    ],
+    "defaultTaskIds": [
+      "task_site_vitrine_qa_interne_tester_desktop",
+      "task_site_vitrine_qa_interne_tester_mobile",
+      "task_site_vitrine_qa_interne_tester_tablette_si_pertinent",
+      "task_site_vitrine_qa_interne_tester_chrome_safari_firefox_si_pertinent",
+      "task_site_vitrine_qa_interne_verifier_la_performance_raisonnable",
+      "task_site_vitrine_qa_interne_verifier_les_erreurs_console",
+      "task_site_vitrine_qa_interne_verifier_l_accessibilite_de_base",
+      "task_site_vitrine_qa_interne_verifier_le_seo_technique_de_base",
+      "task_site_vitrine_qa_interne_verifier_sitemap_et_robots_si_concernes",
+      "task_site_vitrine_qa_interne_verifier_la_404",
+      "task_site_vitrine_qa_interne_verifier_les_formulaires",
+      "task_site_vitrine_qa_interne_verifier_les_liens_casses",
+      "task_site_vitrine_qa_interne_corriger_les_bugs"
+    ],
+    "defaultValidationIds": [
+      "validation_site_vitrine_qa_interne_qa_interne_validee"
+    ],
+    "definitionOfDone": "QA responsive passée ; Bugs critiques corrigés ; Version prête pour recette.",
+    "risks": [
+      "Tests mobiles incomplets",
+      "Erreurs console ignorées",
+      "Liens cassés"
+    ]
+  },
+  {
+    "id": "lot_site_vitrine_recette_client",
+    "order": 12,
+    "name": "Lot 12 - Recette client",
+    "objective": "Faire valider le site sans mélanger bugs, ajustements et hors périmètre.",
+    "defaultPhaseIds": [
+      "phase_site_vitrine_recette_client"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_site_vitrine_recette_client_email_recette_client",
+      "deliverable_site_vitrine_recette_client_tableau_retours_client",
+      "deliverable_site_vitrine_recette_client_version_corrigee_recette"
+    ],
+    "defaultTaskIds": [
+      "task_site_vitrine_recette_client_envoyer_le_lien_preview",
+      "task_site_vitrine_recette_client_expliquer_comment_faire_les_retours",
+      "task_site_vitrine_recette_client_collecter_les_retours",
+      "task_site_vitrine_recette_client_classer_retours_en_bug_ajustement_inclus_ou_hors_perimetre",
+      "task_site_vitrine_recette_client_corriger_les_retours_inclus",
+      "task_site_vitrine_recette_client_chiffrer_ou_reporter_le_hors_perimetre",
+      "task_site_vitrine_recette_client_renvoyer_la_version_corrigee",
+      "task_site_vitrine_recette_client_obtenir_la_validation_finale"
+    ],
+    "defaultValidationIds": [
+      "validation_site_vitrine_recette_client_recette_client_validee"
+    ],
+    "definitionOfDone": "Retours classés ; Corrections incluses traitées ; Validation finale obtenue.",
+    "risks": [
+      "Retours hors périmètre",
+      "Retours envoyés au fil de l'eau",
+      "Validation finale non tracée"
+    ]
+  },
+  {
+    "id": "lot_site_vitrine_mise_en_ligne",
+    "order": 13,
+    "name": "Lot 13 - Mise en ligne",
+    "objective": "Publier sans perte ni improvisation.",
+    "defaultPhaseIds": [
+      "phase_site_vitrine_mise_en_ligne"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_site_vitrine_mise_en_ligne_site_en_ligne",
+      "deliverable_site_vitrine_mise_en_ligne_checklist_post_prod",
+      "deliverable_site_vitrine_mise_en_ligne_journal_deploiement"
+    ],
+    "defaultTaskIds": [
+      "task_site_vitrine_mise_en_ligne_verifier_le_domaine",
+      "task_site_vitrine_mise_en_ligne_configurer_dns",
+      "task_site_vitrine_mise_en_ligne_configurer_les_variables_production",
+      "task_site_vitrine_mise_en_ligne_lancer_le_build_production",
+      "task_site_vitrine_mise_en_ligne_deployer",
+      "task_site_vitrine_mise_en_ligne_verifier_ssl",
+      "task_site_vitrine_mise_en_ligne_verifier_les_pages_en_production",
+      "task_site_vitrine_mise_en_ligne_tester_le_formulaire_en_production",
+      "task_site_vitrine_mise_en_ligne_verifier_l_indexation",
+      "task_site_vitrine_mise_en_ligne_verifier_les_redirections_si_besoin",
+      "task_site_vitrine_mise_en_ligne_verifier_analytics_si_prevu",
+      "task_site_vitrine_mise_en_ligne_surveiller_les_premieres_erreurs"
+    ],
+    "defaultValidationIds": [
+      "validation_site_vitrine_mise_en_ligne_production_verifiee",
+      "validation_site_vitrine_mise_en_ligne_site_en_ligne_confirme"
+    ],
+    "definitionOfDone": "Production accessible ; Formulaire testé en production ; Post-prod vérifiée.",
+    "risks": [
+      "DNS non prêt",
+      "Variables de production manquantes",
+      "Formulaire non testé en production"
+    ]
+  },
+  {
+    "id": "lot_site_vitrine_livraison_passation",
+    "order": 14,
+    "name": "Lot 14 - Livraison et passation",
+    "objective": "Livrer proprement et rendre le client autonome.",
+    "defaultPhaseIds": [
+      "phase_site_vitrine_livraison_passation"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_site_vitrine_livraison_passation_email_livraison",
+      "deliverable_site_vitrine_livraison_passation_guide_client",
+      "deliverable_site_vitrine_livraison_passation_dossier_final"
+    ],
+    "defaultTaskIds": [
+      "task_site_vitrine_livraison_passation_preparer_l_email_livraison",
+      "task_site_vitrine_livraison_passation_transmettre_les_liens_utiles",
+      "task_site_vitrine_livraison_passation_transmettre_les_acces_necessaires",
+      "task_site_vitrine_livraison_passation_preparer_le_guide_client",
+      "task_site_vitrine_livraison_passation_expliquer_les_limites_d_intervention",
+      "task_site_vitrine_livraison_passation_expliquer_la_maintenance_si_proposee",
+      "task_site_vitrine_livraison_passation_organiser_la_mini_passation",
+      "task_site_vitrine_livraison_passation_archiver_les_livrables",
+      "task_site_vitrine_livraison_passation_fermer_les_taches_ouvertes",
+      "task_site_vitrine_livraison_passation_faire_confirmer_la_bonne_reception"
+    ],
+    "defaultValidationIds": [
+      "validation_site_vitrine_livraison_passation_livraison_validee"
+    ],
+    "definitionOfDone": "Email livraison envoyé ; Guide client remis ; Réception confirmée.",
+    "risks": [
+      "Client non autonome",
+      "Livrables dispersés",
+      "Suite maintenance non cadrée"
+    ]
+  },
+  {
+    "id": "lot_site_vitrine_stabilisation_retex",
+    "order": 15,
+    "name": "Lot 15 - Stabilisation et RETEX",
+    "objective": "Sécuriser l'après-livraison et améliorer la méthode.",
+    "defaultPhaseIds": [
+      "phase_site_vitrine_stabilisation_retex"
+    ],
+    "defaultDeliverableIds": [
+      "deliverable_site_vitrine_stabilisation_retex_fiche_stabilisation",
+      "deliverable_site_vitrine_stabilisation_retex_retex_interne",
+      "deliverable_site_vitrine_stabilisation_retex_liste_evolutions_futures"
+    ],
+    "defaultTaskIds": [
+      "task_site_vitrine_stabilisation_retex_surveiller_les_erreurs_post_lancement",
+      "task_site_vitrine_stabilisation_retex_verifier_le_formulaire_apres_quelques_jours",
+      "task_site_vitrine_stabilisation_retex_noter_les_demandes_post_livraison",
+      "task_site_vitrine_stabilisation_retex_distinguer_bug_maintenance_et_evolution",
+      "task_site_vitrine_stabilisation_retex_faire_le_bilan_temps_passe",
+      "task_site_vitrine_stabilisation_retex_noter_les_blocages_rencontres",
+      "task_site_vitrine_stabilisation_retex_noter_les_ameliorations_du_playbook",
+      "task_site_vitrine_stabilisation_retex_cloturer_le_projet"
+    ],
+    "defaultValidationIds": [
+      "validation_site_vitrine_stabilisation_retex_projet_cloture"
+    ],
+    "definitionOfDone": "Projet clôturé ; RETEX rempli ; Évolutions futures qualifiées.",
+    "risks": [
+      "Demandes post-livraison non qualifiées",
+      "RETEX oublié",
+      "Maintenance implicite"
+    ]
+  }
+]

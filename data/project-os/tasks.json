@@ -1,0 +1,2081 @@
+[
+  {
+    "id": "task_analyser_demande",
+    "name": "Analyser la demande",
+    "lotId": "lot_commercial",
+    "phaseId": "phase_demande",
+    "type": "admin",
+    "blocking": true,
+    "description": "Vérifier contact, besoin, urgence, budget et coherence minimale."
+  },
+  {
+    "id": "task_qualifier_besoin",
+    "name": "Qualifier le besoin",
+    "lotId": "lot_commercial",
+    "phaseId": "phase_qualification",
+    "type": "admin",
+    "blocking": true,
+    "description": "Clarifier objectif, cible, type de projet, délai, budget et prochaine action."
+  },
+  {
+    "id": "task_preparer_devis",
+    "name": "Préparer le devis",
+    "lotId": "lot_commercial",
+    "phaseId": "phase_devis",
+    "type": "admin",
+    "blocking": true,
+    "description": "Formaliser offre, inclus, hors périmètre, prix, conditions et validite."
+  },
+  {
+    "id": "task_creer_dossier_drive",
+    "name": "Créer le dossier Drive projet",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_kickoff",
+    "type": "admin",
+    "blocking": true,
+    "description": "Créer le dossier projet selon la convention AC-YYYY-NNN_client-type."
+  },
+  {
+    "id": "task_collecter_acces",
+    "name": "Collecter les accès et ressources",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_kickoff",
+    "type": "client",
+    "blocking": true,
+    "description": "Lister et demander domaines, hebergement, CMS, contenus, logos, comptes externes."
+  },
+  {
+    "id": "task_rediger_cadrage",
+    "name": "Rédiger la fiche de cadrage",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "type": "admin",
+    "blocking": true,
+    "description": "Écrire objectif, cible, inclus, hors périmètre, livrables, planning, validations."
+  },
+  {
+    "id": "task_rechercher_references",
+    "name": "Rechercher les références visuelles",
+    "lotId": "lot_direction_artistique",
+    "phaseId": "phase_direction_artistique",
+    "type": "design",
+    "blocking": false,
+    "description": "Compiler références utiles et anti-références."
+  },
+  {
+    "id": "task_creer_palette",
+    "name": "Créer la palette",
+    "lotId": "lot_direction_artistique",
+    "phaseId": "phase_direction_artistique",
+    "type": "design",
+    "blocking": true,
+    "description": "Définir couleurs principales, secondaires, neutres et usages."
+  },
+  {
+    "id": "task_definir_typographies",
+    "name": "Définir les typographies",
+    "lotId": "lot_direction_artistique",
+    "phaseId": "phase_direction_artistique",
+    "type": "design",
+    "blocking": false,
+    "description": "Choisir les fontes et leurs usages."
+  },
+  {
+    "id": "task_definir_arborescence",
+    "name": "Définir l'arborescence",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "type": "ux",
+    "blocking": true,
+    "description": "Lister pages, sections, hiérarchie, CTA et parcours."
+  },
+  {
+    "id": "task_creer_wireframes",
+    "name": "Créer les wireframes",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "type": "ux",
+    "blocking": false,
+    "description": "Produire les structures basse fidélité si utiles."
+  },
+  {
+    "id": "task_creer_maquettes",
+    "name": "Créer les maquettes",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ui_maquettes",
+    "type": "design",
+    "blocking": true,
+    "description": "Produire les écrans ou sections clés à valider."
+  },
+  {
+    "id": "task_collecter_contenus",
+    "name": "Collecter les contenus",
+    "lotId": "lot_contenus_seo",
+    "phaseId": "phase_contenus",
+    "type": "client",
+    "blocking": true,
+    "description": "Récupérer textes, images, fichiers et informations manquantes."
+  },
+  {
+    "id": "task_optimiser_textes",
+    "name": "Optimiser les textes",
+    "lotId": "lot_contenus_seo",
+    "phaseId": "phase_contenus",
+    "type": "content",
+    "blocking": false,
+    "description": "Rendre les textes clairs, coherents et adaptes aux pages."
+  },
+  {
+    "id": "task_preparer_metadata",
+    "name": "Préparer les metadata SEO",
+    "lotId": "lot_contenus_seo",
+    "phaseId": "phase_seo",
+    "type": "seo",
+    "blocking": true,
+    "description": "Définir titles, descriptions, slugs, OG et indexation."
+  },
+  {
+    "id": "task_choisir_starter",
+    "name": "Choisir le starter technique",
+    "lotId": "lot_architecture_technique",
+    "phaseId": "phase_architecture_technique",
+    "type": "tech",
+    "blocking": true,
+    "description": "Sélectionner l'architecture code selon le type projet."
+  },
+  {
+    "id": "task_initialiser_repo",
+    "name": "Initialiser le repo",
+    "lotId": "lot_architecture_technique",
+    "phaseId": "phase_setup_repo",
+    "type": "tech",
+    "blocking": true,
+    "description": "Créer le repo, installer le starter et documenter le lien projet."
+  },
+  {
+    "id": "task_configurer_env",
+    "name": "Configurer l'environnement",
+    "lotId": "lot_architecture_technique",
+    "phaseId": "phase_setup_repo",
+    "type": "tech",
+    "blocking": true,
+    "description": "Préparer .env.example, scripts, lint, format, build et deploy preview."
+  },
+  {
+    "id": "task_developper_layout",
+    "name": "Développer le layout",
+    "lotId": "lot_developpement",
+    "phaseId": "phase_developpement",
+    "type": "dev",
+    "blocking": true,
+    "description": "Créer structure globale, header, footer et navigation."
+  },
+  {
+    "id": "task_integrer_pages",
+    "name": "Intégrer les pages",
+    "lotId": "lot_developpement",
+    "phaseId": "phase_developpement",
+    "type": "dev",
+    "blocking": true,
+    "description": "Développer pages ou sections incluses au périmètre."
+  },
+  {
+    "id": "task_integrer_formulaires",
+    "name": "Intégrer les formulaires",
+    "lotId": "lot_developpement",
+    "phaseId": "phase_developpement",
+    "type": "dev",
+    "blocking": false,
+    "description": "Ajouter validation, anti-spam et envoi si prevus."
+  },
+  {
+    "id": "task_modeliser_donnees",
+    "name": "Modéliser les données",
+    "lotId": "lot_fonctionnalites_avancees",
+    "phaseId": "phase_fonctionnalites_avancees",
+    "type": "tech",
+    "blocking": true,
+    "description": "Définir entités, relations, droits et workflows."
+  },
+  {
+    "id": "task_integrer_auth",
+    "name": "Intégrer l'authentification",
+    "lotId": "lot_fonctionnalites_avancees",
+    "phaseId": "phase_fonctionnalites_avancees",
+    "type": "dev",
+    "blocking": true,
+    "description": "Configurer login, rôles et protection des routes si nécessaire."
+  },
+  {
+    "id": "task_tester_flux_avances",
+    "name": "Tester les flux avancés",
+    "lotId": "lot_fonctionnalites_avancees",
+    "phaseId": "phase_fonctionnalites_avancees",
+    "type": "qa",
+    "blocking": true,
+    "description": "Tester paiement, espace membre, LMS, dashboard ou SaaS selon projet."
+  },
+  {
+    "id": "task_tester_responsive",
+    "name": "Tester le responsive",
+    "lotId": "lot_qa_recette",
+    "phaseId": "phase_qa_interne",
+    "type": "qa",
+    "blocking": true,
+    "description": "Vérifier mobile, tablette, desktop et textes sans débordement."
+  },
+  {
+    "id": "task_tester_formulaires",
+    "name": "Tester les formulaires",
+    "lotId": "lot_qa_recette",
+    "phaseId": "phase_qa_interne",
+    "type": "qa",
+    "blocking": true,
+    "description": "Vérifier validation, erreurs, succès, anti-spam et notifications."
+  },
+  {
+    "id": "task_traiter_retours",
+    "name": "Traiter les retours client",
+    "lotId": "lot_qa_recette",
+    "phaseId": "phase_recette_client",
+    "type": "admin",
+    "blocking": true,
+    "description": "Trier inclus/hors périmètre, corriger, reporter ou chiffrer."
+  },
+  {
+    "id": "task_configurer_domaine",
+    "name": "Configurer le domaine",
+    "lotId": "lot_mise_en_ligne",
+    "phaseId": "phase_mise_en_ligne",
+    "type": "tech",
+    "blocking": true,
+    "description": "Configurer DNS, domaine, SSL et redirects."
+  },
+  {
+    "id": "task_deployer_production",
+    "name": "Déployer en production",
+    "lotId": "lot_mise_en_ligne",
+    "phaseId": "phase_mise_en_ligne",
+    "type": "tech",
+    "blocking": true,
+    "description": "Lancer le build et déployer la version finale."
+  },
+  {
+    "id": "task_verifier_production",
+    "name": "Vérifier la production",
+    "lotId": "lot_mise_en_ligne",
+    "phaseId": "phase_mise_en_ligne",
+    "type": "qa",
+    "blocking": true,
+    "description": "Tester pages, formulaires, SEO technique, performance de base et analytics."
+  },
+  {
+    "id": "task_preparer_livraison",
+    "name": "Préparer la livraison",
+    "lotId": "lot_livraison_formation",
+    "phaseId": "phase_livraison",
+    "type": "admin",
+    "blocking": true,
+    "description": "Rassembler liens, exports, guide, accès et message de livraison."
+  },
+  {
+    "id": "task_envoyer_livraison",
+    "name": "Envoyer la livraison",
+    "lotId": "lot_livraison_formation",
+    "phaseId": "phase_livraison",
+    "type": "admin",
+    "blocking": true,
+    "description": "Envoyer le message de livraison et tracer la preuve."
+  },
+  {
+    "id": "task_planifier_passation",
+    "name": "Planifier la passation",
+    "lotId": "lot_livraison_formation",
+    "phaseId": "phase_passation",
+    "type": "client",
+    "blocking": false,
+    "description": "Organiser formation ou remise des informations utiles."
+  },
+  {
+    "id": "task_qualifier_ticket",
+    "name": "Qualifier le ticket",
+    "lotId": "lot_maintenance_evolution",
+    "phaseId": "phase_maintenance",
+    "type": "admin",
+    "blocking": true,
+    "description": "Identifier impact, urgence, périmètre, délai et besoin de devis."
+  },
+  {
+    "id": "task_corriger_ticket",
+    "name": "Corriger le ticket",
+    "lotId": "lot_maintenance_evolution",
+    "phaseId": "phase_maintenance",
+    "type": "dev",
+    "blocking": true,
+    "description": "Traiter la correction ou l'evolution validée."
+  },
+  {
+    "id": "task_documenter_resolution",
+    "name": "Documenter la résolution",
+    "lotId": "lot_maintenance_evolution",
+    "phaseId": "phase_maintenance",
+    "type": "admin",
+    "blocking": false,
+    "description": "Tracer cause, action, fichiers touches et information client."
+  },
+  {
+    "id": "task_definir_sections_one_page",
+    "name": "Définir les sections de la one-page",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "type": "admin",
+    "blocking": true,
+    "description": "Poser l'ordre des sections, les ancres utiles et le CTA principal sans transformer la page en site complet."
+  },
+  {
+    "id": "task_verifier_cta_one_page",
+    "name": "Vérifier le CTA principal",
+    "lotId": "lot_qa_recette",
+    "phaseId": "phase_qa_interne",
+    "type": "admin",
+    "blocking": true,
+    "description": "Contrôler que l'action principale est visible, testée et cohérente sur mobile et desktop."
+  },
+  {
+    "id": "task_clarifier_conversion_landing",
+    "name": "Clarifier la conversion attendue",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "type": "admin",
+    "blocking": true,
+    "description": "Définir cible, promesse, offre, action attendue et preuve nécessaire avant de structurer la page."
+  },
+  {
+    "id": "task_structurer_landing_conversion",
+    "name": "Structurer le parcours de conversion",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "type": "admin",
+    "blocking": true,
+    "description": "Organiser accroche, bénéfices, preuves, objections et CTA pour guider vers une seule action."
+  },
+  {
+    "id": "task_rediger_message_objections",
+    "name": "Préparer le message et les objections",
+    "lotId": "lot_contenus_seo",
+    "phaseId": "phase_contenus",
+    "type": "admin",
+    "blocking": true,
+    "description": "Formaliser promesse, bénéfices, preuves, objections, microcopies CTA et contenu du formulaire."
+  },
+  {
+    "id": "task_tester_conversion_landing",
+    "name": "Tester le parcours de conversion",
+    "lotId": "lot_qa_recette",
+    "phaseId": "phase_qa_interne",
+    "type": "admin",
+    "blocking": true,
+    "description": "Tester CTA, formulaire, liens, confirmation et expérience mobile avant mise en ligne."
+  },
+  {
+    "id": "task_auditer_existant_refonte",
+    "name": "Auditer le site existant",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_kickoff",
+    "type": "admin",
+    "blocking": true,
+    "description": "Lister pages, contenus, forces, irritants, risques SEO, technique et UX avant de cadrer la refonte."
+  },
+  {
+    "id": "task_trier_contenus_refonte",
+    "name": "Trier les contenus existants",
+    "lotId": "lot_contenus_seo",
+    "phaseId": "phase_contenus",
+    "type": "admin",
+    "blocking": true,
+    "description": "Classer les contenus en garder, supprimer, réécrire, fusionner ou déplacer."
+  },
+  {
+    "id": "task_repenser_direction_refonte",
+    "name": "Repenser la direction visuelle",
+    "lotId": "lot_direction_artistique",
+    "phaseId": "phase_direction_artistique",
+    "type": "admin",
+    "blocking": true,
+    "description": "Adapter l'univers visuel sans repartir en identité de marque complète."
+  },
+  {
+    "id": "task_preparer_mapping_refonte",
+    "name": "Préparer le mapping de refonte",
+    "lotId": "lot_mise_en_ligne",
+    "phaseId": "phase_mise_en_ligne",
+    "type": "admin",
+    "blocking": true,
+    "description": "Vérifier anciennes pages, nouvelles pages, URLs sensibles et redirections nécessaires."
+  },
+  {
+    "id": "task_cadrer_ecommerce",
+    "name": "Cadrer le périmètre e-commerce",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "type": "admin",
+    "blocking": true,
+    "description": "Clarifier produits, catalogue, paiement, livraison, pages légales, emails et limites du projet boutique."
+  },
+  {
+    "id": "task_structurer_catalogue",
+    "name": "Structurer le catalogue",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "type": "admin",
+    "blocking": true,
+    "description": "Définir catégories, produits prioritaires, informations produit et parcours vers l'achat."
+  },
+  {
+    "id": "task_definir_fiche_produit",
+    "name": "Définir la fiche produit type",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ui_maquettes",
+    "type": "admin",
+    "blocking": true,
+    "description": "Définir blocs, infos, preuves, CTA, variantes et repères visuels de la fiche produit."
+  },
+  {
+    "id": "task_cadrer_paiement_livraison",
+    "name": "Cadrer paiement et livraison",
+    "lotId": "lot_fonctionnalites_avancees",
+    "phaseId": "phase_fonctionnalites_avancees",
+    "type": "admin",
+    "blocking": true,
+    "description": "Formaliser paiement, livraison, frais, emails, conditions et scénarios de commande."
+  },
+  {
+    "id": "task_integrer_boutique",
+    "name": "Intégrer la boutique",
+    "lotId": "lot_developpement",
+    "phaseId": "phase_developpement",
+    "type": "dev",
+    "blocking": true,
+    "description": "Intégrer pages boutique, catalogue, fiche produit, panier ou parcours d'achat prévu."
+  },
+  {
+    "id": "task_tester_commande",
+    "name": "Tester une commande complète",
+    "lotId": "lot_qa_recette",
+    "phaseId": "phase_qa_interne",
+    "type": "admin",
+    "blocking": true,
+    "description": "Tester produit, panier, paiement, email, annulation ou confirmation selon le périmètre."
+  },
+  {
+    "id": "task_cadrer_pedagogie",
+    "name": "Cadrer la pédagogie",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "type": "admin",
+    "blocking": true,
+    "description": "Clarifier transformation promise, public, modules, niveau, ressources et modalités d'accès."
+  },
+  {
+    "id": "task_structurer_modules_lecons",
+    "name": "Structurer modules et leçons",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "type": "admin",
+    "blocking": true,
+    "description": "Organiser modules, leçons, progression, ressources et logique de parcours apprenant."
+  },
+  {
+    "id": "task_cadrer_acces_apprenant",
+    "name": "Cadrer les accès apprenant",
+    "lotId": "lot_fonctionnalites_avancees",
+    "phaseId": "phase_fonctionnalites_avancees",
+    "type": "admin",
+    "blocking": true,
+    "description": "Définir rôles, accès, protection des contenus, progression et limites du support."
+  },
+  {
+    "id": "task_integrer_formation",
+    "name": "Intégrer la formation",
+    "lotId": "lot_developpement",
+    "phaseId": "phase_developpement",
+    "type": "dev",
+    "blocking": true,
+    "description": "Intégrer pages publiques, modules, ressources et accès prévus."
+  },
+  {
+    "id": "task_tester_acces_apprenant",
+    "name": "Tester les accès apprenant",
+    "lotId": "lot_qa_recette",
+    "phaseId": "phase_qa_interne",
+    "type": "admin",
+    "blocking": true,
+    "description": "Tester inscription ou accès, consultation des ressources, restrictions et expérience mobile."
+  },
+  {
+    "id": "task_discovery_avancee",
+    "name": "Mener la discovery avancée",
+    "lotId": "lot_cadrage",
+    "phaseId": "phase_cadrage",
+    "type": "admin",
+    "blocking": true,
+    "description": "Clarifier objectifs, utilisateurs, contraintes, risques, budget, périmètre V1 et limites."
+  },
+  {
+    "id": "task_cartographier_roles_permissions",
+    "name": "Cartographier rôles et permissions",
+    "lotId": "lot_ux_ui",
+    "phaseId": "phase_ux_structure",
+    "type": "admin",
+    "blocking": true,
+    "description": "Décrire profils utilisateurs, droits, espaces, actions autorisées et restrictions."
+  },
+  {
+    "id": "task_modeliser_objets_metier",
+    "name": "Modéliser les objets métier",
+    "lotId": "lot_architecture_technique",
+    "phaseId": "phase_architecture_technique",
+    "type": "admin",
+    "blocking": true,
+    "description": "Lister objets, statuts, relations, propriétés, sources et règles métier du MVP."
+  },
+  {
+    "id": "task_prioriser_backlog_mvp",
+    "name": "Prioriser le backlog MVP",
+    "lotId": "lot_fonctionnalites_avancees",
+    "phaseId": "phase_fonctionnalites_avancees",
+    "type": "admin",
+    "blocking": true,
+    "description": "Découper must-have, should-have, later, hors périmètre, lot 1 et suite produit."
+  },
+  {
+    "id": "task_developper_mvp_lot1",
+    "name": "Développer le lot 1 MVP",
+    "lotId": "lot_developpement",
+    "phaseId": "phase_developpement",
+    "type": "dev",
+    "blocking": true,
+    "description": "Construire le premier lot exploitable selon le backlog validé et les règles métier critiques."
+  },
+  {
+    "id": "task_site_vitrine_passation_commerciale_verifier_le_devis_accepte",
+    "name": "Vérifier le devis accepté",
+    "lotId": "lot_site_vitrine_passation_commerciale",
+    "phaseId": "phase_site_vitrine_passation_commerciale",
+    "type": "admin",
+    "blocking": true,
+    "description": "Vérifier le devis accepté pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_passation_commerciale_verifier_l_acompte_ou_l_exception_validee",
+    "name": "Vérifier l'acompte ou l'exception validée",
+    "lotId": "lot_site_vitrine_passation_commerciale",
+    "phaseId": "phase_site_vitrine_passation_commerciale",
+    "type": "admin",
+    "blocking": true,
+    "description": "Vérifier l'acompte ou l'exception validée pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_passation_commerciale_relire_la_demande_initiale",
+    "name": "Relire la demande initiale",
+    "lotId": "lot_site_vitrine_passation_commerciale",
+    "phaseId": "phase_site_vitrine_passation_commerciale",
+    "type": "admin",
+    "blocking": true,
+    "description": "Relire la demande initiale pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_passation_commerciale_relire_les_notes_de_qualification",
+    "name": "Relire les notes de qualification",
+    "lotId": "lot_site_vitrine_passation_commerciale",
+    "phaseId": "phase_site_vitrine_passation_commerciale",
+    "type": "admin",
+    "blocking": true,
+    "description": "Relire les notes de qualification pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_passation_commerciale_confirmer_l_offre_vendue",
+    "name": "Confirmer l'offre vendue",
+    "lotId": "lot_site_vitrine_passation_commerciale",
+    "phaseId": "phase_site_vitrine_passation_commerciale",
+    "type": "admin",
+    "blocking": true,
+    "description": "Confirmer l'offre vendue pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_passation_commerciale_confirmer_les_options_incluses",
+    "name": "Confirmer les options incluses",
+    "lotId": "lot_site_vitrine_passation_commerciale",
+    "phaseId": "phase_site_vitrine_passation_commerciale",
+    "type": "admin",
+    "blocking": true,
+    "description": "Confirmer les options incluses pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_passation_commerciale_creer_la_fiche_projet_centrale",
+    "name": "Créer la fiche projet centrale",
+    "lotId": "lot_site_vitrine_passation_commerciale",
+    "phaseId": "phase_site_vitrine_passation_commerciale",
+    "type": "admin",
+    "blocking": true,
+    "description": "Créer la fiche projet centrale pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_passation_commerciale_rattacher_client_offre_documents_commerciaux_et_dossier_drive",
+    "name": "Rattacher client, offre, documents commerciaux et dossier Drive",
+    "lotId": "lot_site_vitrine_passation_commerciale",
+    "phaseId": "phase_site_vitrine_passation_commerciale",
+    "type": "client",
+    "blocking": true,
+    "description": "Rattacher client, offre, documents commerciaux et dossier Drive pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_kickoff_creer_l_espace_projet",
+    "name": "Créer l'espace projet",
+    "lotId": "lot_site_vitrine_kickoff",
+    "phaseId": "phase_site_vitrine_kickoff",
+    "type": "admin",
+    "blocking": true,
+    "description": "Créer l'espace projet pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_kickoff_creer_l_arborescence_drive",
+    "name": "Créer l'arborescence Drive",
+    "lotId": "lot_site_vitrine_kickoff",
+    "phaseId": "phase_site_vitrine_kickoff",
+    "type": "admin",
+    "blocking": true,
+    "description": "Créer l'arborescence Drive pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_kickoff_preparer_le_planning_macro",
+    "name": "Préparer le planning macro",
+    "lotId": "lot_site_vitrine_kickoff",
+    "phaseId": "phase_site_vitrine_kickoff",
+    "type": "admin",
+    "blocking": true,
+    "description": "Préparer le planning macro pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_kickoff_preparer_la_liste_des_acces_necessaires",
+    "name": "Préparer la liste des accès nécessaires",
+    "lotId": "lot_site_vitrine_kickoff",
+    "phaseId": "phase_site_vitrine_kickoff",
+    "type": "admin",
+    "blocking": true,
+    "description": "Préparer la liste des accès nécessaires pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_kickoff_preparer_la_liste_des_contenus_attendus",
+    "name": "Préparer la liste des contenus attendus",
+    "lotId": "lot_site_vitrine_kickoff",
+    "phaseId": "phase_site_vitrine_kickoff",
+    "type": "admin",
+    "blocking": true,
+    "description": "Préparer la liste des contenus attendus pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_kickoff_envoyer_le_message_de_lancement",
+    "name": "Envoyer le message de lancement",
+    "lotId": "lot_site_vitrine_kickoff",
+    "phaseId": "phase_site_vitrine_kickoff",
+    "type": "admin",
+    "blocking": true,
+    "description": "Envoyer le message de lancement pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_kickoff_planifier_le_kickoff_si_necessaire",
+    "name": "Planifier le kickoff si nécessaire",
+    "lotId": "lot_site_vitrine_kickoff",
+    "phaseId": "phase_site_vitrine_kickoff",
+    "type": "admin",
+    "blocking": false,
+    "description": "Planifier le kickoff si nécessaire pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_kickoff_faire_confirmer_les_coordonnees_client",
+    "name": "Faire confirmer les coordonnées client",
+    "lotId": "lot_site_vitrine_kickoff",
+    "phaseId": "phase_site_vitrine_kickoff",
+    "type": "client",
+    "blocking": true,
+    "description": "Faire confirmer les coordonnées client pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_kickoff_faire_transmettre_les_acces_utiles",
+    "name": "Faire transmettre les accès utiles",
+    "lotId": "lot_site_vitrine_kickoff",
+    "phaseId": "phase_site_vitrine_kickoff",
+    "type": "client",
+    "blocking": true,
+    "description": "Faire transmettre les accès utiles pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_kickoff_faire_valider_le_mode_de_communication",
+    "name": "Faire valider le mode de communication",
+    "lotId": "lot_site_vitrine_kickoff",
+    "phaseId": "phase_site_vitrine_kickoff",
+    "type": "client",
+    "blocking": true,
+    "description": "Faire valider le mode de communication pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_cadrage_strategique_definir_l_objectif_principal_du_site",
+    "name": "Définir l'objectif principal du site",
+    "lotId": "lot_site_vitrine_cadrage_strategique",
+    "phaseId": "phase_site_vitrine_cadrage_strategique",
+    "type": "admin",
+    "blocking": true,
+    "description": "Définir l'objectif principal du site pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_cadrage_strategique_definir_les_objectifs_secondaires",
+    "name": "Définir les objectifs secondaires",
+    "lotId": "lot_site_vitrine_cadrage_strategique",
+    "phaseId": "phase_site_vitrine_cadrage_strategique",
+    "type": "admin",
+    "blocking": true,
+    "description": "Définir les objectifs secondaires pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_cadrage_strategique_identifier_la_cible_principale",
+    "name": "Identifier la cible principale",
+    "lotId": "lot_site_vitrine_cadrage_strategique",
+    "phaseId": "phase_site_vitrine_cadrage_strategique",
+    "type": "admin",
+    "blocking": true,
+    "description": "Identifier la cible principale pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_cadrage_strategique_identifier_les_objections_et_freins",
+    "name": "Identifier les objections et freins",
+    "lotId": "lot_site_vitrine_cadrage_strategique",
+    "phaseId": "phase_site_vitrine_cadrage_strategique",
+    "type": "admin",
+    "blocking": true,
+    "description": "Identifier les objections et freins pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_cadrage_strategique_definir_le_message_central",
+    "name": "Définir le message central",
+    "lotId": "lot_site_vitrine_cadrage_strategique",
+    "phaseId": "phase_site_vitrine_cadrage_strategique",
+    "type": "admin",
+    "blocking": true,
+    "description": "Définir le message central pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_cadrage_strategique_definir_la_promesse_claire",
+    "name": "Définir la promesse claire",
+    "lotId": "lot_site_vitrine_cadrage_strategique",
+    "phaseId": "phase_site_vitrine_cadrage_strategique",
+    "type": "admin",
+    "blocking": true,
+    "description": "Définir la promesse claire pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_cadrage_strategique_definir_le_ton_editorial",
+    "name": "Définir le ton éditorial",
+    "lotId": "lot_site_vitrine_cadrage_strategique",
+    "phaseId": "phase_site_vitrine_cadrage_strategique",
+    "type": "admin",
+    "blocking": true,
+    "description": "Définir le ton éditorial pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_cadrage_strategique_confirmer_les_pages_incluses",
+    "name": "Confirmer les pages incluses",
+    "lotId": "lot_site_vitrine_cadrage_strategique",
+    "phaseId": "phase_site_vitrine_cadrage_strategique",
+    "type": "admin",
+    "blocking": true,
+    "description": "Confirmer les pages incluses pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_cadrage_strategique_confirmer_le_hors_perimetre",
+    "name": "Confirmer le hors périmètre",
+    "lotId": "lot_site_vitrine_cadrage_strategique",
+    "phaseId": "phase_site_vitrine_cadrage_strategique",
+    "type": "admin",
+    "blocking": true,
+    "description": "Confirmer le hors périmètre pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_cadrage_strategique_definir_les_criteres_de_reussite",
+    "name": "Définir les critères de réussite",
+    "lotId": "lot_site_vitrine_cadrage_strategique",
+    "phaseId": "phase_site_vitrine_cadrage_strategique",
+    "type": "admin",
+    "blocking": true,
+    "description": "Définir les critères de réussite pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_cadrage_strategique_faire_valider_objectifs_cible_et_perimetre",
+    "name": "Faire valider objectifs, cible et périmètre",
+    "lotId": "lot_site_vitrine_cadrage_strategique",
+    "phaseId": "phase_site_vitrine_cadrage_strategique",
+    "type": "client",
+    "blocking": true,
+    "description": "Faire valider objectifs, cible et périmètre pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_architecture_site_definir_l_arborescence",
+    "name": "Définir l'arborescence",
+    "lotId": "lot_site_vitrine_architecture_site",
+    "phaseId": "phase_site_vitrine_architecture_site",
+    "type": "admin",
+    "blocking": true,
+    "description": "Définir l'arborescence pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_architecture_site_definir_le_role_de_chaque_page",
+    "name": "Définir le rôle de chaque page",
+    "lotId": "lot_site_vitrine_architecture_site",
+    "phaseId": "phase_site_vitrine_architecture_site",
+    "type": "admin",
+    "blocking": true,
+    "description": "Définir le rôle de chaque page pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_architecture_site_definir_la_priorite_des_pages",
+    "name": "Définir la priorité des pages",
+    "lotId": "lot_site_vitrine_architecture_site",
+    "phaseId": "phase_site_vitrine_architecture_site",
+    "type": "admin",
+    "blocking": true,
+    "description": "Définir la priorité des pages pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_architecture_site_definir_le_cta_principal",
+    "name": "Définir le CTA principal",
+    "lotId": "lot_site_vitrine_architecture_site",
+    "phaseId": "phase_site_vitrine_architecture_site",
+    "type": "admin",
+    "blocking": true,
+    "description": "Définir le CTA principal pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_architecture_site_definir_le_cta_secondaire",
+    "name": "Définir le CTA secondaire",
+    "lotId": "lot_site_vitrine_architecture_site",
+    "phaseId": "phase_site_vitrine_architecture_site",
+    "type": "admin",
+    "blocking": true,
+    "description": "Définir le CTA secondaire pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_architecture_site_definir_le_parcours_utilisateur",
+    "name": "Définir le parcours utilisateur",
+    "lotId": "lot_site_vitrine_architecture_site",
+    "phaseId": "phase_site_vitrine_architecture_site",
+    "type": "admin",
+    "blocking": true,
+    "description": "Définir le parcours utilisateur pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_architecture_site_definir_la_navigation_header",
+    "name": "Définir la navigation header",
+    "lotId": "lot_site_vitrine_architecture_site",
+    "phaseId": "phase_site_vitrine_architecture_site",
+    "type": "admin",
+    "blocking": true,
+    "description": "Définir la navigation header pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_architecture_site_definir_la_navigation_footer",
+    "name": "Définir la navigation footer",
+    "lotId": "lot_site_vitrine_architecture_site",
+    "phaseId": "phase_site_vitrine_architecture_site",
+    "type": "admin",
+    "blocking": true,
+    "description": "Définir la navigation footer pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_architecture_site_prevoir_les_pages_legales",
+    "name": "Prévoir les pages légales",
+    "lotId": "lot_site_vitrine_architecture_site",
+    "phaseId": "phase_site_vitrine_architecture_site",
+    "type": "admin",
+    "blocking": true,
+    "description": "Prévoir les pages légales pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_architecture_site_prevoir_les_etats_formulaire",
+    "name": "Prévoir les états formulaire",
+    "lotId": "lot_site_vitrine_architecture_site",
+    "phaseId": "phase_site_vitrine_architecture_site",
+    "type": "admin",
+    "blocking": true,
+    "description": "Prévoir les états formulaire pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_architecture_site_identifier_les_contenus_manquants",
+    "name": "Identifier les contenus manquants",
+    "lotId": "lot_site_vitrine_architecture_site",
+    "phaseId": "phase_site_vitrine_architecture_site",
+    "type": "admin",
+    "blocking": true,
+    "description": "Identifier les contenus manquants pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_architecture_site_faire_valider_arborescence_et_priorites",
+    "name": "Faire valider arborescence et priorités",
+    "lotId": "lot_site_vitrine_architecture_site",
+    "phaseId": "phase_site_vitrine_architecture_site",
+    "type": "client",
+    "blocking": true,
+    "description": "Faire valider arborescence et priorités pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_contenus_seo_collecter_les_contenus_client",
+    "name": "Collecter les contenus client",
+    "lotId": "lot_site_vitrine_contenus_seo",
+    "phaseId": "phase_site_vitrine_contenus_seo",
+    "type": "client",
+    "blocking": true,
+    "description": "Collecter les contenus client pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_contenus_seo_ecrire_ou_reecrire_les_textes",
+    "name": "Écrire ou réécrire les textes",
+    "lotId": "lot_site_vitrine_contenus_seo",
+    "phaseId": "phase_site_vitrine_contenus_seo",
+    "type": "content",
+    "blocking": true,
+    "description": "Écrire ou réécrire les textes pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_contenus_seo_structurer_les_h1_h2_h3",
+    "name": "Structurer les H1 H2 H3",
+    "lotId": "lot_site_vitrine_contenus_seo",
+    "phaseId": "phase_site_vitrine_contenus_seo",
+    "type": "content",
+    "blocking": true,
+    "description": "Structurer les H1 H2 H3 pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_contenus_seo_preparer_les_titres_seo",
+    "name": "Préparer les titres SEO",
+    "lotId": "lot_site_vitrine_contenus_seo",
+    "phaseId": "phase_site_vitrine_contenus_seo",
+    "type": "content",
+    "blocking": true,
+    "description": "Préparer les titres SEO pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_contenus_seo_preparer_les_descriptions_seo",
+    "name": "Préparer les descriptions SEO",
+    "lotId": "lot_site_vitrine_contenus_seo",
+    "phaseId": "phase_site_vitrine_contenus_seo",
+    "type": "content",
+    "blocking": true,
+    "description": "Préparer les descriptions SEO pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_contenus_seo_definir_les_mots_cles_principaux",
+    "name": "Définir les mots-clés principaux",
+    "lotId": "lot_site_vitrine_contenus_seo",
+    "phaseId": "phase_site_vitrine_contenus_seo",
+    "type": "content",
+    "blocking": true,
+    "description": "Définir les mots-clés principaux pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_contenus_seo_definir_le_maillage_interne",
+    "name": "Définir le maillage interne",
+    "lotId": "lot_site_vitrine_contenus_seo",
+    "phaseId": "phase_site_vitrine_contenus_seo",
+    "type": "content",
+    "blocking": true,
+    "description": "Définir le maillage interne pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_contenus_seo_rediger_les_textes_cta",
+    "name": "Rédiger les textes CTA",
+    "lotId": "lot_site_vitrine_contenus_seo",
+    "phaseId": "phase_site_vitrine_contenus_seo",
+    "type": "content",
+    "blocking": true,
+    "description": "Rédiger les textes CTA pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_contenus_seo_verifier_la_coherence_offre_cible_page",
+    "name": "Vérifier la cohérence offre cible page",
+    "lotId": "lot_site_vitrine_contenus_seo",
+    "phaseId": "phase_site_vitrine_contenus_seo",
+    "type": "content",
+    "blocking": true,
+    "description": "Vérifier la cohérence offre cible page pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_contenus_seo_identifier_les_images_necessaires",
+    "name": "Identifier les images nécessaires",
+    "lotId": "lot_site_vitrine_contenus_seo",
+    "phaseId": "phase_site_vitrine_contenus_seo",
+    "type": "content",
+    "blocking": true,
+    "description": "Identifier les images nécessaires pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_contenus_seo_faire_valider_les_formulations_metier",
+    "name": "Faire valider les formulations métier",
+    "lotId": "lot_site_vitrine_contenus_seo",
+    "phaseId": "phase_site_vitrine_contenus_seo",
+    "type": "client",
+    "blocking": true,
+    "description": "Faire valider les formulations métier pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_direction_artistique_analyser_l_identite_existante",
+    "name": "Analyser l'identité existante",
+    "lotId": "lot_site_vitrine_direction_artistique",
+    "phaseId": "phase_site_vitrine_direction_artistique",
+    "type": "design",
+    "blocking": true,
+    "description": "Analyser l'identité existante pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_direction_artistique_choisir_la_direction_graphique",
+    "name": "Choisir la direction graphique",
+    "lotId": "lot_site_vitrine_direction_artistique",
+    "phaseId": "phase_site_vitrine_direction_artistique",
+    "type": "design",
+    "blocking": true,
+    "description": "Choisir la direction graphique pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_direction_artistique_definir_la_palette",
+    "name": "Définir la palette",
+    "lotId": "lot_site_vitrine_direction_artistique",
+    "phaseId": "phase_site_vitrine_direction_artistique",
+    "type": "design",
+    "blocking": true,
+    "description": "Définir la palette pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_direction_artistique_definir_les_typographies",
+    "name": "Définir les typographies",
+    "lotId": "lot_site_vitrine_direction_artistique",
+    "phaseId": "phase_site_vitrine_direction_artistique",
+    "type": "design",
+    "blocking": true,
+    "description": "Définir les typographies pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_direction_artistique_definir_le_style_iconographique",
+    "name": "Définir le style iconographique",
+    "lotId": "lot_site_vitrine_direction_artistique",
+    "phaseId": "phase_site_vitrine_direction_artistique",
+    "type": "design",
+    "blocking": true,
+    "description": "Définir le style iconographique pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_direction_artistique_definir_le_style_photo_ou_illustration",
+    "name": "Définir le style photo ou illustration",
+    "lotId": "lot_site_vitrine_direction_artistique",
+    "phaseId": "phase_site_vitrine_direction_artistique",
+    "type": "design",
+    "blocking": true,
+    "description": "Définir le style photo ou illustration pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_direction_artistique_definir_l_ambiance_globale",
+    "name": "Définir l'ambiance globale",
+    "lotId": "lot_site_vitrine_direction_artistique",
+    "phaseId": "phase_site_vitrine_direction_artistique",
+    "type": "design",
+    "blocking": true,
+    "description": "Définir l'ambiance globale pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_direction_artistique_preparer_les_references_visuelles",
+    "name": "Préparer les références visuelles",
+    "lotId": "lot_site_vitrine_direction_artistique",
+    "phaseId": "phase_site_vitrine_direction_artistique",
+    "type": "design",
+    "blocking": true,
+    "description": "Préparer les références visuelles pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_direction_artistique_verifier_la_coherence_avec_la_cible",
+    "name": "Vérifier la cohérence avec la cible",
+    "lotId": "lot_site_vitrine_direction_artistique",
+    "phaseId": "phase_site_vitrine_direction_artistique",
+    "type": "design",
+    "blocking": true,
+    "description": "Vérifier la cohérence avec la cible pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_direction_artistique_faire_valider_la_direction_artistique",
+    "name": "Faire valider la direction artistique",
+    "lotId": "lot_site_vitrine_direction_artistique",
+    "phaseId": "phase_site_vitrine_direction_artistique",
+    "type": "client",
+    "blocking": true,
+    "description": "Faire valider la direction artistique pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_maquettes_ui_maquetter_la_home",
+    "name": "Maquetter la home",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "type": "design",
+    "blocking": true,
+    "description": "Maquetter la home pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_maquettes_ui_maquetter_une_page_interieure_type",
+    "name": "Maquetter une page intérieure type",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "type": "design",
+    "blocking": true,
+    "description": "Maquetter une page intérieure type pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_maquettes_ui_maquetter_la_page_contact",
+    "name": "Maquetter la page contact",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "type": "design",
+    "blocking": true,
+    "description": "Maquetter la page contact pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_maquettes_ui_maquetter_les_blocs_reutilisables",
+    "name": "Maquetter les blocs réutilisables",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "type": "design",
+    "blocking": true,
+    "description": "Maquetter les blocs réutilisables pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_maquettes_ui_prevoir_la_version_mobile",
+    "name": "Prévoir la version mobile",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "type": "design",
+    "blocking": true,
+    "description": "Prévoir la version mobile pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_maquettes_ui_prevoir_header_et_footer",
+    "name": "Prévoir header et footer",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "type": "design",
+    "blocking": true,
+    "description": "Prévoir header et footer pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_maquettes_ui_prevoir_les_etats_formulaire",
+    "name": "Prévoir les états formulaire",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "type": "design",
+    "blocking": true,
+    "description": "Prévoir les états formulaire pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_maquettes_ui_prevoir_les_cta",
+    "name": "Prévoir les CTA",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "type": "design",
+    "blocking": true,
+    "description": "Prévoir les CTA pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_maquettes_ui_verifier_la_lisibilite",
+    "name": "Vérifier la lisibilité",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "type": "design",
+    "blocking": true,
+    "description": "Vérifier la lisibilité pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_maquettes_ui_verifier_la_hierarchie_visuelle",
+    "name": "Vérifier la hiérarchie visuelle",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "type": "design",
+    "blocking": true,
+    "description": "Vérifier la hiérarchie visuelle pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_maquettes_ui_verifier_la_coherence_avec_les_contenus",
+    "name": "Vérifier la cohérence avec les contenus",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "type": "design",
+    "blocking": true,
+    "description": "Vérifier la cohérence avec les contenus pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_maquettes_ui_faire_valider_les_maquettes",
+    "name": "Faire valider les maquettes",
+    "lotId": "lot_site_vitrine_maquettes_ui",
+    "phaseId": "phase_site_vitrine_maquettes_ui",
+    "type": "client",
+    "blocking": true,
+    "description": "Faire valider les maquettes pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_setup_technique_creer_ou_verifier_le_repo",
+    "name": "Créer ou vérifier le repo",
+    "lotId": "lot_site_vitrine_setup_technique",
+    "phaseId": "phase_site_vitrine_setup_technique",
+    "type": "tech",
+    "blocking": true,
+    "description": "Créer ou vérifier le repo pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_setup_technique_creer_la_branche_projet",
+    "name": "Créer la branche projet",
+    "lotId": "lot_site_vitrine_setup_technique",
+    "phaseId": "phase_site_vitrine_setup_technique",
+    "type": "tech",
+    "blocking": true,
+    "description": "Créer la branche projet pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_setup_technique_verifier_la_stack",
+    "name": "Vérifier la stack",
+    "lotId": "lot_site_vitrine_setup_technique",
+    "phaseId": "phase_site_vitrine_setup_technique",
+    "type": "tech",
+    "blocking": true,
+    "description": "Vérifier la stack pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_setup_technique_preparer_les_variables_environnement",
+    "name": "Préparer les variables environnement",
+    "lotId": "lot_site_vitrine_setup_technique",
+    "phaseId": "phase_site_vitrine_setup_technique",
+    "type": "tech",
+    "blocking": true,
+    "description": "Préparer les variables environnement pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_setup_technique_preparer_l_hebergement",
+    "name": "Préparer l'hébergement",
+    "lotId": "lot_site_vitrine_setup_technique",
+    "phaseId": "phase_site_vitrine_setup_technique",
+    "type": "tech",
+    "blocking": true,
+    "description": "Préparer l'hébergement pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_setup_technique_preparer_le_domaine_si_connu",
+    "name": "Préparer le domaine si connu",
+    "lotId": "lot_site_vitrine_setup_technique",
+    "phaseId": "phase_site_vitrine_setup_technique",
+    "type": "tech",
+    "blocking": true,
+    "description": "Préparer le domaine si connu pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_setup_technique_preparer_la_structure_des_routes",
+    "name": "Préparer la structure des routes",
+    "lotId": "lot_site_vitrine_setup_technique",
+    "phaseId": "phase_site_vitrine_setup_technique",
+    "type": "tech",
+    "blocking": true,
+    "description": "Préparer la structure des routes pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_setup_technique_preparer_la_structure_des_contenus",
+    "name": "Préparer la structure des contenus",
+    "lotId": "lot_site_vitrine_setup_technique",
+    "phaseId": "phase_site_vitrine_setup_technique",
+    "type": "tech",
+    "blocking": true,
+    "description": "Préparer la structure des contenus pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_setup_technique_verifier_les_dependances",
+    "name": "Vérifier les dépendances",
+    "lotId": "lot_site_vitrine_setup_technique",
+    "phaseId": "phase_site_vitrine_setup_technique",
+    "type": "tech",
+    "blocking": true,
+    "description": "Vérifier les dépendances pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_setup_technique_creer_l_environnement_preview",
+    "name": "Créer l'environnement preview",
+    "lotId": "lot_site_vitrine_setup_technique",
+    "phaseId": "phase_site_vitrine_setup_technique",
+    "type": "tech",
+    "blocking": true,
+    "description": "Créer l'environnement preview pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_setup_technique_documenter_les_decisions_techniques",
+    "name": "Documenter les décisions techniques",
+    "lotId": "lot_site_vitrine_setup_technique",
+    "phaseId": "phase_site_vitrine_setup_technique",
+    "type": "tech",
+    "blocking": true,
+    "description": "Documenter les décisions techniques pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_developpement_developper_le_layout_global",
+    "name": "Développer le layout global",
+    "lotId": "lot_site_vitrine_developpement",
+    "phaseId": "phase_site_vitrine_developpement",
+    "type": "tech",
+    "blocking": true,
+    "description": "Développer le layout global pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_developpement_developper_le_header",
+    "name": "Développer le header",
+    "lotId": "lot_site_vitrine_developpement",
+    "phaseId": "phase_site_vitrine_developpement",
+    "type": "tech",
+    "blocking": true,
+    "description": "Développer le header pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_developpement_developper_le_footer",
+    "name": "Développer le footer",
+    "lotId": "lot_site_vitrine_developpement",
+    "phaseId": "phase_site_vitrine_developpement",
+    "type": "tech",
+    "blocking": true,
+    "description": "Développer le footer pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_developpement_developper_la_home",
+    "name": "Développer la home",
+    "lotId": "lot_site_vitrine_developpement",
+    "phaseId": "phase_site_vitrine_developpement",
+    "type": "tech",
+    "blocking": true,
+    "description": "Développer la home pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_developpement_developper_les_pages_interieures",
+    "name": "Développer les pages intérieures",
+    "lotId": "lot_site_vitrine_developpement",
+    "phaseId": "phase_site_vitrine_developpement",
+    "type": "tech",
+    "blocking": true,
+    "description": "Développer les pages intérieures pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_developpement_developper_la_page_contact",
+    "name": "Développer la page contact",
+    "lotId": "lot_site_vitrine_developpement",
+    "phaseId": "phase_site_vitrine_developpement",
+    "type": "tech",
+    "blocking": true,
+    "description": "Développer la page contact pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_developpement_integrer_les_composants_reutilisables",
+    "name": "Intégrer les composants réutilisables",
+    "lotId": "lot_site_vitrine_developpement",
+    "phaseId": "phase_site_vitrine_developpement",
+    "type": "tech",
+    "blocking": true,
+    "description": "Intégrer les composants réutilisables pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_developpement_integrer_le_responsive",
+    "name": "Intégrer le responsive",
+    "lotId": "lot_site_vitrine_developpement",
+    "phaseId": "phase_site_vitrine_developpement",
+    "type": "tech",
+    "blocking": true,
+    "description": "Intégrer le responsive pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_developpement_integrer_les_animations_sobres",
+    "name": "Intégrer les animations sobres",
+    "lotId": "lot_site_vitrine_developpement",
+    "phaseId": "phase_site_vitrine_developpement",
+    "type": "tech",
+    "blocking": true,
+    "description": "Intégrer les animations sobres pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_developpement_gerer_les_etats_ui_utiles",
+    "name": "Gérer les états UI utiles",
+    "lotId": "lot_site_vitrine_developpement",
+    "phaseId": "phase_site_vitrine_developpement",
+    "type": "tech",
+    "blocking": true,
+    "description": "Gérer les états UI utiles pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_developpement_connecter_le_formulaire_si_prevu",
+    "name": "Connecter le formulaire si prévu",
+    "lotId": "lot_site_vitrine_developpement",
+    "phaseId": "phase_site_vitrine_developpement",
+    "type": "tech",
+    "blocking": false,
+    "description": "Connecter le formulaire si prévu pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_developpement_verifier_l_accessibilite_de_base",
+    "name": "Vérifier l'accessibilité de base",
+    "lotId": "lot_site_vitrine_developpement",
+    "phaseId": "phase_site_vitrine_developpement",
+    "type": "tech",
+    "blocking": true,
+    "description": "Vérifier l'accessibilité de base pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_integration_contenus_integrer_les_textes_valides",
+    "name": "Intégrer les textes validés",
+    "lotId": "lot_site_vitrine_integration_contenus",
+    "phaseId": "phase_site_vitrine_integration_contenus",
+    "type": "content",
+    "blocking": true,
+    "description": "Intégrer les textes validés pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_integration_contenus_integrer_les_images",
+    "name": "Intégrer les images",
+    "lotId": "lot_site_vitrine_integration_contenus",
+    "phaseId": "phase_site_vitrine_integration_contenus",
+    "type": "content",
+    "blocking": true,
+    "description": "Intégrer les images pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_integration_contenus_renseigner_les_alt_images",
+    "name": "Renseigner les alt images",
+    "lotId": "lot_site_vitrine_integration_contenus",
+    "phaseId": "phase_site_vitrine_integration_contenus",
+    "type": "content",
+    "blocking": true,
+    "description": "Renseigner les alt images pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_integration_contenus_integrer_les_titres_seo",
+    "name": "Intégrer les titres SEO",
+    "lotId": "lot_site_vitrine_integration_contenus",
+    "phaseId": "phase_site_vitrine_integration_contenus",
+    "type": "content",
+    "blocking": true,
+    "description": "Intégrer les titres SEO pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_integration_contenus_integrer_les_descriptions_seo",
+    "name": "Intégrer les descriptions SEO",
+    "lotId": "lot_site_vitrine_integration_contenus",
+    "phaseId": "phase_site_vitrine_integration_contenus",
+    "type": "content",
+    "blocking": true,
+    "description": "Intégrer les descriptions SEO pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_integration_contenus_verifier_les_cta",
+    "name": "Vérifier les CTA",
+    "lotId": "lot_site_vitrine_integration_contenus",
+    "phaseId": "phase_site_vitrine_integration_contenus",
+    "type": "content",
+    "blocking": true,
+    "description": "Vérifier les CTA pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_integration_contenus_verifier_les_liens_internes",
+    "name": "Vérifier les liens internes",
+    "lotId": "lot_site_vitrine_integration_contenus",
+    "phaseId": "phase_site_vitrine_integration_contenus",
+    "type": "content",
+    "blocking": true,
+    "description": "Vérifier les liens internes pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_integration_contenus_verifier_la_coherence_mobile",
+    "name": "Vérifier la cohérence mobile",
+    "lotId": "lot_site_vitrine_integration_contenus",
+    "phaseId": "phase_site_vitrine_integration_contenus",
+    "type": "content",
+    "blocking": true,
+    "description": "Vérifier la cohérence mobile pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_integration_contenus_verifier_les_pages_legales",
+    "name": "Vérifier les pages légales",
+    "lotId": "lot_site_vitrine_integration_contenus",
+    "phaseId": "phase_site_vitrine_integration_contenus",
+    "type": "content",
+    "blocking": true,
+    "description": "Vérifier les pages légales pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_integration_contenus_verifier_le_contenu_manquant",
+    "name": "Vérifier le contenu manquant",
+    "lotId": "lot_site_vitrine_integration_contenus",
+    "phaseId": "phase_site_vitrine_integration_contenus",
+    "type": "content",
+    "blocking": true,
+    "description": "Vérifier le contenu manquant pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_integration_contenus_faire_completer_les_derniers_elements_client",
+    "name": "Faire compléter les derniers éléments client",
+    "lotId": "lot_site_vitrine_integration_contenus",
+    "phaseId": "phase_site_vitrine_integration_contenus",
+    "type": "client",
+    "blocking": true,
+    "description": "Faire compléter les derniers éléments client pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_fonctionnalites_tester_le_formulaire_contact",
+    "name": "Tester le formulaire contact",
+    "lotId": "lot_site_vitrine_fonctionnalites",
+    "phaseId": "phase_site_vitrine_fonctionnalites",
+    "type": "qa",
+    "blocking": true,
+    "description": "Tester le formulaire contact pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_fonctionnalites_tester_l_email_de_reception",
+    "name": "Tester l'email de réception",
+    "lotId": "lot_site_vitrine_fonctionnalites",
+    "phaseId": "phase_site_vitrine_fonctionnalites",
+    "type": "client",
+    "blocking": true,
+    "description": "Tester l'email de réception pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_fonctionnalites_tester_le_honeypot_ou_anti_spam",
+    "name": "Tester le honeypot ou anti-spam",
+    "lotId": "lot_site_vitrine_fonctionnalites",
+    "phaseId": "phase_site_vitrine_fonctionnalites",
+    "type": "qa",
+    "blocking": true,
+    "description": "Tester le honeypot ou anti-spam pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_fonctionnalites_tester_la_navigation",
+    "name": "Tester la navigation",
+    "lotId": "lot_site_vitrine_fonctionnalites",
+    "phaseId": "phase_site_vitrine_fonctionnalites",
+    "type": "qa",
+    "blocking": true,
+    "description": "Tester la navigation pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_fonctionnalites_tester_les_liens_cta",
+    "name": "Tester les liens CTA",
+    "lotId": "lot_site_vitrine_fonctionnalites",
+    "phaseId": "phase_site_vitrine_fonctionnalites",
+    "type": "qa",
+    "blocking": true,
+    "description": "Tester les liens CTA pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_fonctionnalites_tester_les_liens_reseaux_sociaux",
+    "name": "Tester les liens réseaux sociaux",
+    "lotId": "lot_site_vitrine_fonctionnalites",
+    "phaseId": "phase_site_vitrine_fonctionnalites",
+    "type": "qa",
+    "blocking": true,
+    "description": "Tester les liens réseaux sociaux pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_fonctionnalites_tester_le_tracking_si_prevu",
+    "name": "Tester le tracking si prévu",
+    "lotId": "lot_site_vitrine_fonctionnalites",
+    "phaseId": "phase_site_vitrine_fonctionnalites",
+    "type": "qa",
+    "blocking": false,
+    "description": "Tester le tracking si prévu pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_fonctionnalites_tester_les_telechargements_si_prevus",
+    "name": "Tester les téléchargements si prévus",
+    "lotId": "lot_site_vitrine_fonctionnalites",
+    "phaseId": "phase_site_vitrine_fonctionnalites",
+    "type": "qa",
+    "blocking": false,
+    "description": "Tester les téléchargements si prévus pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_fonctionnalites_tester_les_pages_legales",
+    "name": "Tester les pages légales",
+    "lotId": "lot_site_vitrine_fonctionnalites",
+    "phaseId": "phase_site_vitrine_fonctionnalites",
+    "type": "qa",
+    "blocking": true,
+    "description": "Tester les pages légales pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_fonctionnalites_corriger_les_erreurs_fonctionnelles",
+    "name": "Corriger les erreurs fonctionnelles",
+    "lotId": "lot_site_vitrine_fonctionnalites",
+    "phaseId": "phase_site_vitrine_fonctionnalites",
+    "type": "qa",
+    "blocking": true,
+    "description": "Corriger les erreurs fonctionnelles pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_qa_interne_tester_desktop",
+    "name": "Tester desktop",
+    "lotId": "lot_site_vitrine_qa_interne",
+    "phaseId": "phase_site_vitrine_qa_interne",
+    "type": "qa",
+    "blocking": true,
+    "description": "Tester desktop pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_qa_interne_tester_mobile",
+    "name": "Tester mobile",
+    "lotId": "lot_site_vitrine_qa_interne",
+    "phaseId": "phase_site_vitrine_qa_interne",
+    "type": "qa",
+    "blocking": true,
+    "description": "Tester mobile pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_qa_interne_tester_tablette_si_pertinent",
+    "name": "Tester tablette si pertinent",
+    "lotId": "lot_site_vitrine_qa_interne",
+    "phaseId": "phase_site_vitrine_qa_interne",
+    "type": "qa",
+    "blocking": false,
+    "description": "Tester tablette si pertinent pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_qa_interne_tester_chrome_safari_firefox_si_pertinent",
+    "name": "Tester Chrome Safari Firefox si pertinent",
+    "lotId": "lot_site_vitrine_qa_interne",
+    "phaseId": "phase_site_vitrine_qa_interne",
+    "type": "qa",
+    "blocking": false,
+    "description": "Tester Chrome Safari Firefox si pertinent pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_qa_interne_verifier_la_performance_raisonnable",
+    "name": "Vérifier la performance raisonnable",
+    "lotId": "lot_site_vitrine_qa_interne",
+    "phaseId": "phase_site_vitrine_qa_interne",
+    "type": "qa",
+    "blocking": true,
+    "description": "Vérifier la performance raisonnable pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_qa_interne_verifier_les_erreurs_console",
+    "name": "Vérifier les erreurs console",
+    "lotId": "lot_site_vitrine_qa_interne",
+    "phaseId": "phase_site_vitrine_qa_interne",
+    "type": "qa",
+    "blocking": true,
+    "description": "Vérifier les erreurs console pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_qa_interne_verifier_l_accessibilite_de_base",
+    "name": "Vérifier l'accessibilité de base",
+    "lotId": "lot_site_vitrine_qa_interne",
+    "phaseId": "phase_site_vitrine_qa_interne",
+    "type": "qa",
+    "blocking": true,
+    "description": "Vérifier l'accessibilité de base pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_qa_interne_verifier_le_seo_technique_de_base",
+    "name": "Vérifier le SEO technique de base",
+    "lotId": "lot_site_vitrine_qa_interne",
+    "phaseId": "phase_site_vitrine_qa_interne",
+    "type": "qa",
+    "blocking": true,
+    "description": "Vérifier le SEO technique de base pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_qa_interne_verifier_sitemap_et_robots_si_concernes",
+    "name": "Vérifier sitemap et robots si concernés",
+    "lotId": "lot_site_vitrine_qa_interne",
+    "phaseId": "phase_site_vitrine_qa_interne",
+    "type": "qa",
+    "blocking": true,
+    "description": "Vérifier sitemap et robots si concernés pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_qa_interne_verifier_la_404",
+    "name": "Vérifier la 404",
+    "lotId": "lot_site_vitrine_qa_interne",
+    "phaseId": "phase_site_vitrine_qa_interne",
+    "type": "qa",
+    "blocking": true,
+    "description": "Vérifier la 404 pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_qa_interne_verifier_les_formulaires",
+    "name": "Vérifier les formulaires",
+    "lotId": "lot_site_vitrine_qa_interne",
+    "phaseId": "phase_site_vitrine_qa_interne",
+    "type": "qa",
+    "blocking": true,
+    "description": "Vérifier les formulaires pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_qa_interne_verifier_les_liens_casses",
+    "name": "Vérifier les liens cassés",
+    "lotId": "lot_site_vitrine_qa_interne",
+    "phaseId": "phase_site_vitrine_qa_interne",
+    "type": "qa",
+    "blocking": true,
+    "description": "Vérifier les liens cassés pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_qa_interne_corriger_les_bugs",
+    "name": "Corriger les bugs",
+    "lotId": "lot_site_vitrine_qa_interne",
+    "phaseId": "phase_site_vitrine_qa_interne",
+    "type": "qa",
+    "blocking": true,
+    "description": "Corriger les bugs pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_recette_client_envoyer_le_lien_preview",
+    "name": "Envoyer le lien preview",
+    "lotId": "lot_site_vitrine_recette_client",
+    "phaseId": "phase_site_vitrine_recette_client",
+    "type": "qa",
+    "blocking": true,
+    "description": "Envoyer le lien preview pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_recette_client_expliquer_comment_faire_les_retours",
+    "name": "Expliquer comment faire les retours",
+    "lotId": "lot_site_vitrine_recette_client",
+    "phaseId": "phase_site_vitrine_recette_client",
+    "type": "qa",
+    "blocking": true,
+    "description": "Expliquer comment faire les retours pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_recette_client_collecter_les_retours",
+    "name": "Collecter les retours",
+    "lotId": "lot_site_vitrine_recette_client",
+    "phaseId": "phase_site_vitrine_recette_client",
+    "type": "qa",
+    "blocking": true,
+    "description": "Collecter les retours pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_recette_client_classer_retours_en_bug_ajustement_inclus_ou_hors_perimetre",
+    "name": "Classer retours en bug ajustement inclus ou hors périmètre",
+    "lotId": "lot_site_vitrine_recette_client",
+    "phaseId": "phase_site_vitrine_recette_client",
+    "type": "qa",
+    "blocking": true,
+    "description": "Classer retours en bug ajustement inclus ou hors périmètre pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_recette_client_corriger_les_retours_inclus",
+    "name": "Corriger les retours inclus",
+    "lotId": "lot_site_vitrine_recette_client",
+    "phaseId": "phase_site_vitrine_recette_client",
+    "type": "qa",
+    "blocking": true,
+    "description": "Corriger les retours inclus pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_recette_client_chiffrer_ou_reporter_le_hors_perimetre",
+    "name": "Chiffrer ou reporter le hors périmètre",
+    "lotId": "lot_site_vitrine_recette_client",
+    "phaseId": "phase_site_vitrine_recette_client",
+    "type": "qa",
+    "blocking": true,
+    "description": "Chiffrer ou reporter le hors périmètre pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_recette_client_renvoyer_la_version_corrigee",
+    "name": "Renvoyer la version corrigée",
+    "lotId": "lot_site_vitrine_recette_client",
+    "phaseId": "phase_site_vitrine_recette_client",
+    "type": "qa",
+    "blocking": true,
+    "description": "Renvoyer la version corrigée pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_recette_client_obtenir_la_validation_finale",
+    "name": "Obtenir la validation finale",
+    "lotId": "lot_site_vitrine_recette_client",
+    "phaseId": "phase_site_vitrine_recette_client",
+    "type": "qa",
+    "blocking": true,
+    "description": "Obtenir la validation finale pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_mise_en_ligne_verifier_le_domaine",
+    "name": "Vérifier le domaine",
+    "lotId": "lot_site_vitrine_mise_en_ligne",
+    "phaseId": "phase_site_vitrine_mise_en_ligne",
+    "type": "admin",
+    "blocking": true,
+    "description": "Vérifier le domaine pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_mise_en_ligne_configurer_dns",
+    "name": "Configurer DNS",
+    "lotId": "lot_site_vitrine_mise_en_ligne",
+    "phaseId": "phase_site_vitrine_mise_en_ligne",
+    "type": "admin",
+    "blocking": true,
+    "description": "Configurer DNS pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_mise_en_ligne_configurer_les_variables_production",
+    "name": "Configurer les variables production",
+    "lotId": "lot_site_vitrine_mise_en_ligne",
+    "phaseId": "phase_site_vitrine_mise_en_ligne",
+    "type": "admin",
+    "blocking": true,
+    "description": "Configurer les variables production pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_mise_en_ligne_lancer_le_build_production",
+    "name": "Lancer le build production",
+    "lotId": "lot_site_vitrine_mise_en_ligne",
+    "phaseId": "phase_site_vitrine_mise_en_ligne",
+    "type": "admin",
+    "blocking": true,
+    "description": "Lancer le build production pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_mise_en_ligne_deployer",
+    "name": "Déployer",
+    "lotId": "lot_site_vitrine_mise_en_ligne",
+    "phaseId": "phase_site_vitrine_mise_en_ligne",
+    "type": "admin",
+    "blocking": true,
+    "description": "Déployer pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_mise_en_ligne_verifier_ssl",
+    "name": "Vérifier SSL",
+    "lotId": "lot_site_vitrine_mise_en_ligne",
+    "phaseId": "phase_site_vitrine_mise_en_ligne",
+    "type": "admin",
+    "blocking": true,
+    "description": "Vérifier SSL pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_mise_en_ligne_verifier_les_pages_en_production",
+    "name": "Vérifier les pages en production",
+    "lotId": "lot_site_vitrine_mise_en_ligne",
+    "phaseId": "phase_site_vitrine_mise_en_ligne",
+    "type": "admin",
+    "blocking": true,
+    "description": "Vérifier les pages en production pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_mise_en_ligne_tester_le_formulaire_en_production",
+    "name": "Tester le formulaire en production",
+    "lotId": "lot_site_vitrine_mise_en_ligne",
+    "phaseId": "phase_site_vitrine_mise_en_ligne",
+    "type": "admin",
+    "blocking": true,
+    "description": "Tester le formulaire en production pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_mise_en_ligne_verifier_l_indexation",
+    "name": "Vérifier l'indexation",
+    "lotId": "lot_site_vitrine_mise_en_ligne",
+    "phaseId": "phase_site_vitrine_mise_en_ligne",
+    "type": "admin",
+    "blocking": true,
+    "description": "Vérifier l'indexation pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_mise_en_ligne_verifier_les_redirections_si_besoin",
+    "name": "Vérifier les redirections si besoin",
+    "lotId": "lot_site_vitrine_mise_en_ligne",
+    "phaseId": "phase_site_vitrine_mise_en_ligne",
+    "type": "admin",
+    "blocking": true,
+    "description": "Vérifier les redirections si besoin pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_mise_en_ligne_verifier_analytics_si_prevu",
+    "name": "Vérifier analytics si prévu",
+    "lotId": "lot_site_vitrine_mise_en_ligne",
+    "phaseId": "phase_site_vitrine_mise_en_ligne",
+    "type": "admin",
+    "blocking": false,
+    "description": "Vérifier analytics si prévu pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_mise_en_ligne_surveiller_les_premieres_erreurs",
+    "name": "Surveiller les premières erreurs",
+    "lotId": "lot_site_vitrine_mise_en_ligne",
+    "phaseId": "phase_site_vitrine_mise_en_ligne",
+    "type": "admin",
+    "blocking": true,
+    "description": "Surveiller les premières erreurs pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_livraison_passation_preparer_l_email_livraison",
+    "name": "Préparer l'email livraison",
+    "lotId": "lot_site_vitrine_livraison_passation",
+    "phaseId": "phase_site_vitrine_livraison_passation",
+    "type": "admin",
+    "blocking": true,
+    "description": "Préparer l'email livraison pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_livraison_passation_transmettre_les_liens_utiles",
+    "name": "Transmettre les liens utiles",
+    "lotId": "lot_site_vitrine_livraison_passation",
+    "phaseId": "phase_site_vitrine_livraison_passation",
+    "type": "admin",
+    "blocking": true,
+    "description": "Transmettre les liens utiles pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_livraison_passation_transmettre_les_acces_necessaires",
+    "name": "Transmettre les accès nécessaires",
+    "lotId": "lot_site_vitrine_livraison_passation",
+    "phaseId": "phase_site_vitrine_livraison_passation",
+    "type": "admin",
+    "blocking": true,
+    "description": "Transmettre les accès nécessaires pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_livraison_passation_preparer_le_guide_client",
+    "name": "Préparer le guide client",
+    "lotId": "lot_site_vitrine_livraison_passation",
+    "phaseId": "phase_site_vitrine_livraison_passation",
+    "type": "client",
+    "blocking": true,
+    "description": "Préparer le guide client pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_livraison_passation_expliquer_les_limites_d_intervention",
+    "name": "Expliquer les limites d'intervention",
+    "lotId": "lot_site_vitrine_livraison_passation",
+    "phaseId": "phase_site_vitrine_livraison_passation",
+    "type": "admin",
+    "blocking": true,
+    "description": "Expliquer les limites d'intervention pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_livraison_passation_expliquer_la_maintenance_si_proposee",
+    "name": "Expliquer la maintenance si proposée",
+    "lotId": "lot_site_vitrine_livraison_passation",
+    "phaseId": "phase_site_vitrine_livraison_passation",
+    "type": "admin",
+    "blocking": true,
+    "description": "Expliquer la maintenance si proposée pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_livraison_passation_organiser_la_mini_passation",
+    "name": "Organiser la mini-passation",
+    "lotId": "lot_site_vitrine_livraison_passation",
+    "phaseId": "phase_site_vitrine_livraison_passation",
+    "type": "admin",
+    "blocking": true,
+    "description": "Organiser la mini-passation pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_livraison_passation_archiver_les_livrables",
+    "name": "Archiver les livrables",
+    "lotId": "lot_site_vitrine_livraison_passation",
+    "phaseId": "phase_site_vitrine_livraison_passation",
+    "type": "admin",
+    "blocking": true,
+    "description": "Archiver les livrables pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_livraison_passation_fermer_les_taches_ouvertes",
+    "name": "Fermer les tâches ouvertes",
+    "lotId": "lot_site_vitrine_livraison_passation",
+    "phaseId": "phase_site_vitrine_livraison_passation",
+    "type": "admin",
+    "blocking": true,
+    "description": "Fermer les tâches ouvertes pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_livraison_passation_faire_confirmer_la_bonne_reception",
+    "name": "Faire confirmer la bonne réception",
+    "lotId": "lot_site_vitrine_livraison_passation",
+    "phaseId": "phase_site_vitrine_livraison_passation",
+    "type": "client",
+    "blocking": true,
+    "description": "Faire confirmer la bonne réception pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_stabilisation_retex_surveiller_les_erreurs_post_lancement",
+    "name": "Surveiller les erreurs post-lancement",
+    "lotId": "lot_site_vitrine_stabilisation_retex",
+    "phaseId": "phase_site_vitrine_stabilisation_retex",
+    "type": "admin",
+    "blocking": true,
+    "description": "Surveiller les erreurs post-lancement pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_stabilisation_retex_verifier_le_formulaire_apres_quelques_jours",
+    "name": "Vérifier le formulaire après quelques jours",
+    "lotId": "lot_site_vitrine_stabilisation_retex",
+    "phaseId": "phase_site_vitrine_stabilisation_retex",
+    "type": "admin",
+    "blocking": true,
+    "description": "Vérifier le formulaire après quelques jours pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_stabilisation_retex_noter_les_demandes_post_livraison",
+    "name": "Noter les demandes post-livraison",
+    "lotId": "lot_site_vitrine_stabilisation_retex",
+    "phaseId": "phase_site_vitrine_stabilisation_retex",
+    "type": "admin",
+    "blocking": true,
+    "description": "Noter les demandes post-livraison pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_stabilisation_retex_distinguer_bug_maintenance_et_evolution",
+    "name": "Distinguer bug maintenance et évolution",
+    "lotId": "lot_site_vitrine_stabilisation_retex",
+    "phaseId": "phase_site_vitrine_stabilisation_retex",
+    "type": "admin",
+    "blocking": true,
+    "description": "Distinguer bug maintenance et évolution pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_stabilisation_retex_faire_le_bilan_temps_passe",
+    "name": "Faire le bilan temps passé",
+    "lotId": "lot_site_vitrine_stabilisation_retex",
+    "phaseId": "phase_site_vitrine_stabilisation_retex",
+    "type": "client",
+    "blocking": true,
+    "description": "Faire le bilan temps passé pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_stabilisation_retex_noter_les_blocages_rencontres",
+    "name": "Noter les blocages rencontrés",
+    "lotId": "lot_site_vitrine_stabilisation_retex",
+    "phaseId": "phase_site_vitrine_stabilisation_retex",
+    "type": "admin",
+    "blocking": true,
+    "description": "Noter les blocages rencontrés pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_stabilisation_retex_noter_les_ameliorations_du_playbook",
+    "name": "Noter les améliorations du playbook",
+    "lotId": "lot_site_vitrine_stabilisation_retex",
+    "phaseId": "phase_site_vitrine_stabilisation_retex",
+    "type": "admin",
+    "blocking": true,
+    "description": "Noter les améliorations du playbook pour le workflow site vitrine, avec une trace claire dans le projet."
+  },
+  {
+    "id": "task_site_vitrine_stabilisation_retex_cloturer_le_projet",
+    "name": "Clôturer le projet",
+    "lotId": "lot_site_vitrine_stabilisation_retex",
+    "phaseId": "phase_site_vitrine_stabilisation_retex",
+    "type": "admin",
+    "blocking": true,
+    "description": "Clôturer le projet pour le workflow site vitrine, avec une trace claire dans le projet."
+  }
+]

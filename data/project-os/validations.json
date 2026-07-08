@@ -1,0 +1,645 @@
+[
+  {
+    "id": "validation_devis_client",
+    "name": "Validation devis client",
+    "type": "client",
+    "objectType": "quote",
+    "required": true,
+    "unblocks": [
+      "phase_kickoff"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_gate0_interne",
+    "name": "Gate 0 - Projet prêt à démarrer",
+    "type": "interne",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_cadrage"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_cadrage_client",
+    "name": "Validation cadrage client",
+    "type": "client",
+    "objectType": "document",
+    "required": true,
+    "unblocks": [
+      "phase_direction_artistique",
+      "phase_ux_structure"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_direction_artistique_client",
+    "name": "Validation direction artistique",
+    "type": "client",
+    "objectType": "deliverable",
+    "required": false,
+    "unblocks": [
+      "phase_ui_maquettes"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_structure_client",
+    "name": "Validation structure client",
+    "type": "client",
+    "objectType": "deliverable",
+    "required": true,
+    "unblocks": [
+      "phase_ui_maquettes",
+      "phase_developpement"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_maquette_client",
+    "name": "Validation maquette client",
+    "type": "client",
+    "objectType": "deliverable",
+    "required": true,
+    "unblocks": [
+      "phase_developpement"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_contenus_client",
+    "name": "Validation contenus client",
+    "type": "client",
+    "objectType": "deliverable",
+    "required": true,
+    "unblocks": [
+      "phase_developpement",
+      "phase_qa_interne"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_setup_interne",
+    "name": "Validation setup technique",
+    "type": "interne",
+    "objectType": "technical_setup",
+    "required": true,
+    "unblocks": [
+      "phase_developpement"
+    ],
+    "proofRequired": false
+  },
+  {
+    "id": "validation_pret_qa_interne",
+    "name": "Prêt pour QA interne",
+    "type": "interne",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_qa_interne"
+    ],
+    "proofRequired": false
+  },
+  {
+    "id": "validation_fonctionnalites_interne",
+    "name": "Validation fonctionnalites avancées",
+    "type": "interne",
+    "objectType": "feature",
+    "required": true,
+    "unblocks": [
+      "phase_qa_interne"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_qa_interne",
+    "name": "QA interne validée",
+    "type": "interne",
+    "objectType": "checklist",
+    "required": true,
+    "unblocks": [
+      "phase_recette_client"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_recette_client",
+    "name": "Recette client validée",
+    "type": "client",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_mise_en_ligne",
+      "phase_livraison"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_lancement_interne",
+    "name": "Validation lancement interne",
+    "type": "interne",
+    "objectType": "deployment",
+    "required": true,
+    "unblocks": [
+      "phase_livraison"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_livraison_client",
+    "name": "Validation livraison client",
+    "type": "client",
+    "objectType": "delivery",
+    "required": true,
+    "unblocks": [
+      "phase_passation",
+      "phase_maintenance"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_ticket_client",
+    "name": "Validation ticket client",
+    "type": "client",
+    "objectType": "maintenance_ticket",
+    "required": false,
+    "unblocks": [
+      "phase_maintenance"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_devis_diagnostic_client",
+    "name": "Validation devis diagnostic",
+    "type": "client",
+    "objectType": "quote",
+    "required": true,
+    "unblocks": [
+      "phase_kickoff"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_resolution_ticket_client",
+    "name": "Validation résolution ticket",
+    "type": "client",
+    "objectType": "maintenance_ticket",
+    "required": false,
+    "unblocks": [
+      "phase_livraison"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_sections_one_page_client",
+    "name": "Validation sections one-page",
+    "type": "client",
+    "objectType": "structure",
+    "required": true,
+    "unblocks": [
+      "phase_ui_maquettes"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_qa_one_page_interne",
+    "name": "QA one-page validée",
+    "type": "interne",
+    "objectType": "checklist",
+    "required": true,
+    "unblocks": [
+      "phase_mise_en_ligne"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_conversion_landing_client",
+    "name": "Validation conversion landing",
+    "type": "client",
+    "objectType": "conversion_goal",
+    "required": true,
+    "unblocks": [
+      "phase_ux_structure"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_structure_conversion_landing_client",
+    "name": "Validation structure conversion",
+    "type": "client",
+    "objectType": "structure",
+    "required": true,
+    "unblocks": [
+      "phase_contenus"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_message_landing_client",
+    "name": "Validation message landing",
+    "type": "client",
+    "objectType": "content",
+    "required": true,
+    "unblocks": [
+      "phase_ui_maquettes"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_maquette_landing_client",
+    "name": "Validation maquette landing",
+    "type": "client",
+    "objectType": "design",
+    "required": true,
+    "unblocks": [
+      "phase_developpement"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_qa_landing_interne",
+    "name": "Tests conversion validés",
+    "type": "interne",
+    "objectType": "checklist",
+    "required": true,
+    "unblocks": [
+      "phase_mise_en_ligne"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_audit_refonte_client",
+    "name": "Validation audit refonte",
+    "type": "client",
+    "objectType": "audit",
+    "required": true,
+    "unblocks": [
+      "phase_cadrage"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_tri_contenus_refonte_client",
+    "name": "Validation tri contenus refonte",
+    "type": "client",
+    "objectType": "content_inventory",
+    "required": true,
+    "unblocks": [
+      "phase_ux_structure"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_mapping_refonte_interne",
+    "name": "Validation mapping refonte",
+    "type": "interne",
+    "objectType": "seo_mapping",
+    "required": true,
+    "unblocks": [
+      "phase_livraison"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_catalogue_ecommerce_client",
+    "name": "Validation catalogue e-commerce",
+    "type": "client",
+    "objectType": "catalog",
+    "required": true,
+    "unblocks": [
+      "phase_ui_maquettes"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_fiche_produit_client",
+    "name": "Validation fiche produit type",
+    "type": "client",
+    "objectType": "product_page",
+    "required": true,
+    "unblocks": [
+      "phase_fonctionnalites_avancees"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_paiement_livraison_client",
+    "name": "Validation paiement livraison",
+    "type": "client",
+    "objectType": "checkout_scope",
+    "required": true,
+    "unblocks": [
+      "phase_developpement"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_commande_test_interne",
+    "name": "Commande test validée",
+    "type": "interne",
+    "objectType": "checkout_test",
+    "required": true,
+    "unblocks": [
+      "phase_recette_client"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_pedagogie_client",
+    "name": "Validation cadrage pédagogique",
+    "type": "client",
+    "objectType": "learning_scope",
+    "required": true,
+    "unblocks": [
+      "phase_ux_structure"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_modules_lecons_client",
+    "name": "Validation modules et leçons",
+    "type": "client",
+    "objectType": "learning_structure",
+    "required": true,
+    "unblocks": [
+      "phase_fonctionnalites_avancees"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_acces_apprenant_client",
+    "name": "Validation accès apprenant",
+    "type": "client",
+    "objectType": "learning_access",
+    "required": true,
+    "unblocks": [
+      "phase_developpement"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_tests_apprenant_interne",
+    "name": "Tests apprenant validés",
+    "type": "interne",
+    "objectType": "learning_test",
+    "required": true,
+    "unblocks": [
+      "phase_recette_client"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_discovery_avancee_client",
+    "name": "Validation discovery avancée",
+    "type": "client",
+    "objectType": "product_discovery",
+    "required": true,
+    "unblocks": [
+      "phase_ux_structure"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_roles_permissions_client",
+    "name": "Validation rôles permissions",
+    "type": "client",
+    "objectType": "permissions",
+    "required": true,
+    "unblocks": [
+      "phase_architecture_technique"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_modele_donnees_interne",
+    "name": "Validation modèle de données",
+    "type": "interne",
+    "objectType": "data_model",
+    "required": true,
+    "unblocks": [
+      "phase_setup_repo"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_backlog_mvp_client",
+    "name": "Validation backlog MVP",
+    "type": "client",
+    "objectType": "mvp_backlog",
+    "required": true,
+    "unblocks": [
+      "phase_developpement"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_mvp_lot1_client",
+    "name": "Validation MVP lot 1",
+    "type": "client",
+    "objectType": "mvp_delivery",
+    "required": true,
+    "unblocks": [
+      "phase_qa_interne"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_site_vitrine_passation_commerciale_projet_pret_a_lancer",
+    "name": "Projet prêt à lancer",
+    "type": "interne",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_site_vitrine_kickoff"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_site_vitrine_kickoff_kickoff_pret",
+    "name": "Kickoff prêt",
+    "type": "interne",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_site_vitrine_cadrage_strategique"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_site_vitrine_kickoff_informations_de_depart_confirmees",
+    "name": "Informations de départ confirmées",
+    "type": "client",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_site_vitrine_cadrage_strategique"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_site_vitrine_cadrage_strategique_cadrage_valide",
+    "name": "Cadrage validé",
+    "type": "client",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_site_vitrine_architecture_site"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_site_vitrine_architecture_site_structure_du_site_validee",
+    "name": "Structure du site validée",
+    "type": "client",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_site_vitrine_contenus_seo"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_site_vitrine_contenus_seo_contenus_et_seo_valides",
+    "name": "Contenus et SEO validés",
+    "type": "client",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_site_vitrine_direction_artistique"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_site_vitrine_direction_artistique_direction_artistique_validee",
+    "name": "Direction artistique validée",
+    "type": "client",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_site_vitrine_maquettes_ui"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_site_vitrine_maquettes_ui_maquettes_validees",
+    "name": "Maquettes validées",
+    "type": "client",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_site_vitrine_setup_technique"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_site_vitrine_setup_technique_setup_technique_valide",
+    "name": "Setup technique validé",
+    "type": "interne",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_site_vitrine_developpement"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_site_vitrine_developpement_developpement_pret_pour_integration_contenus",
+    "name": "Développement prêt pour intégration contenus",
+    "type": "interne",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_site_vitrine_integration_contenus"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_site_vitrine_integration_contenus_contenus_integres_valides",
+    "name": "Contenus intégrés validés",
+    "type": "interne",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_site_vitrine_fonctionnalites"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_site_vitrine_fonctionnalites_fonctionnalites_validees",
+    "name": "Fonctionnalités validées",
+    "type": "interne",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_site_vitrine_qa_interne"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_site_vitrine_qa_interne_qa_interne_validee",
+    "name": "QA interne validée",
+    "type": "interne",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_site_vitrine_recette_client"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_site_vitrine_recette_client_recette_client_validee",
+    "name": "Recette client validée",
+    "type": "client",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_site_vitrine_mise_en_ligne"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_site_vitrine_mise_en_ligne_production_verifiee",
+    "name": "Production vérifiée",
+    "type": "interne",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_site_vitrine_livraison_passation"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_site_vitrine_mise_en_ligne_site_en_ligne_confirme",
+    "name": "Site en ligne confirmé",
+    "type": "client",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_site_vitrine_livraison_passation"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_site_vitrine_livraison_passation_livraison_validee",
+    "name": "Livraison validée",
+    "type": "client",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_site_vitrine_stabilisation_retex"
+    ],
+    "proofRequired": true
+  },
+  {
+    "id": "validation_site_vitrine_stabilisation_retex_projet_cloture",
+    "name": "Projet clôturé",
+    "type": "interne",
+    "objectType": "project",
+    "required": true,
+    "unblocks": [
+      "phase_site_vitrine_stabilisation_retex"
+    ],
+    "proofRequired": true
+  }
+]

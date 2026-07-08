@@ -1,0 +1,219 @@
+[
+  {
+    "id": "checklist_cadrage",
+    "name": "Checklist cadrage",
+    "category": "cadrage",
+    "lotId": "lot_cadrage",
+    "phaseIds": [
+      "phase_kickoff",
+      "phase_cadrage"
+    ],
+    "items": [
+      "Client relié",
+      "Offre vendue reliée",
+      "Objectif écrit",
+      "Périmètre écrit",
+      "Hors périmètre écrit",
+      "Prochaine action claire"
+    ]
+  },
+  {
+    "id": "checklist_contenus",
+    "name": "Checklist contenus",
+    "category": "contenu",
+    "lotId": "lot_contenus_seo",
+    "phaseIds": [
+      "phase_contenus"
+    ],
+    "items": [
+      "Textes reçus",
+      "Images reçues",
+      "Droits d'usage confirmés",
+      "Manques listés",
+      "Contenus validés ou arbitrés"
+    ]
+  },
+  {
+    "id": "checklist_design",
+    "name": "Checklist design",
+    "category": "design",
+    "lotId": "lot_ux_ui",
+    "phaseIds": [
+      "phase_direction_artistique",
+      "phase_ux_structure",
+      "phase_ui_maquettes"
+    ],
+    "items": [
+      "DA exploitable",
+      "Structure validée",
+      "Responsive anticipé",
+      "Maquette lisible",
+      "Retours tracés"
+    ]
+  },
+  {
+    "id": "checklist_setup_tech",
+    "name": "Checklist setup technique",
+    "category": "technique",
+    "lotId": "lot_architecture_technique",
+    "phaseIds": [
+      "phase_architecture_technique",
+      "phase_setup_repo"
+    ],
+    "items": [
+      "Starter choisi",
+      "Repo créé",
+      "README présent",
+      "Env example présent",
+      "Scripts build/lint/test vérifiés",
+      "Lien Notion ajoute"
+    ]
+  },
+  {
+    "id": "checklist_seo_base",
+    "name": "Checklist SEO de base",
+    "category": "seo",
+    "lotId": "lot_contenus_seo",
+    "phaseIds": [
+      "phase_seo",
+      "phase_mise_en_ligne"
+    ],
+    "items": [
+      "Titles",
+      "Descriptions",
+      "Slugs",
+      "OpenGraph",
+      "Sitemap",
+      "Robots",
+      "Redirections si refonte"
+    ]
+  },
+  {
+    "id": "checklist_qa_web",
+    "name": "Checklist QA web",
+    "category": "qa",
+    "lotId": "lot_qa_recette",
+    "phaseIds": [
+      "phase_qa_interne"
+    ],
+    "items": [
+      "Mobile",
+      "Desktop",
+      "Navigation",
+      "Formulaires",
+      "Liens",
+      "Accessibilite de base",
+      "Performance de base",
+      "SEO technique"
+    ]
+  },
+  {
+    "id": "checklist_ecommerce",
+    "name": "Checklist e-commerce",
+    "category": "qa",
+    "lotId": "lot_fonctionnalites_avancees",
+    "phaseIds": [
+      "phase_fonctionnalites_avancees",
+      "phase_qa_interne"
+    ],
+    "items": [
+      "Catalogue",
+      "Produit",
+      "Panier",
+      "Checkout",
+      "Paiement test",
+      "Emails",
+      "Livraison",
+      "CGV"
+    ]
+  },
+  {
+    "id": "checklist_formation",
+    "name": "Checklist formation en ligne",
+    "category": "qa",
+    "lotId": "lot_fonctionnalites_avancees",
+    "phaseIds": [
+      "phase_fonctionnalites_avancees"
+    ],
+    "items": [
+      "Modules",
+      "Leçons",
+      "Accès protégé",
+      "Progression",
+      "Video",
+      "Support",
+      "Email accès"
+    ]
+  },
+  {
+    "id": "checklist_saas",
+    "name": "Checklist SaaS",
+    "category": "technique",
+    "lotId": "lot_fonctionnalites_avancees",
+    "phaseIds": [
+      "phase_fonctionnalites_avancees"
+    ],
+    "items": [
+      "Rôles",
+      "Permissions",
+      "Modèle données",
+      "CRUD critique",
+      "Audit droits",
+      "Erreurs",
+      "Backlog MVP"
+    ]
+  },
+  {
+    "id": "checklist_lancement",
+    "name": "Checklist lancement",
+    "category": "livraison",
+    "lotId": "lot_mise_en_ligne",
+    "phaseIds": [
+      "phase_mise_en_ligne"
+    ],
+    "items": [
+      "Build OK",
+      "Domaine OK",
+      "SSL OK",
+      "Env OK",
+      "Formulaire OK",
+      "Analytics OK",
+      "Indexation décidée"
+    ]
+  },
+  {
+    "id": "checklist_livraison",
+    "name": "Checklist livraison",
+    "category": "livraison",
+    "lotId": "lot_livraison_formation",
+    "phaseIds": [
+      "phase_livraison",
+      "phase_passation"
+    ],
+    "items": [
+      "Livrables ranges",
+      "Email prêt",
+      "Guide prêt si prevu",
+      "Accès transmis",
+      "Validation tracée",
+      "RETEX planifie"
+    ]
+  },
+  {
+    "id": "checklist_maintenance",
+    "name": "Checklist maintenance",
+    "category": "maintenance",
+    "lotId": "lot_maintenance_evolution",
+    "phaseIds": [
+      "phase_maintenance"
+    ],
+    "items": [
+      "Ticket qualifié",
+      "Priorité posée",
+      "Périmètre vérifié",
+      "Résolution testée",
+      "Client informé",
+      "Historique mis à jour"
+    ]
+  }
+]

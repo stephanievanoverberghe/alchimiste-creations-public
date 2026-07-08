@@ -1,0 +1,34 @@
+/*
+ * Motion (sprint F2, phase 6) — durées et easings standard.
+ * Le mouvement est un vernis : 150-300 ms maximum, jamais un obstacle.
+ * Easings exposés en utilitaires (ease-standard, ease-enter, ease-exit) ;
+ * durées en variables (duration-[var(--motion-duration-*)] ou CSS).
+ */
+
+@theme static {
+    --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+    --ease-enter: cubic-bezier(0, 0, 0.2, 1);
+    --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+}
+
+:root {
+    --motion-duration-fast: 150ms;
+    --motion-duration-base: 200ms;
+    --motion-duration-slow: 300ms;
+}
+
+/* Accessibilité : neutralise animations et transitions quand le système
+   demande moins de mouvement (règle opposable du plan phase 6 §1).
+   Règle canonique, volontairement hors @layer pour primer sur les
+   utilitaires — l'ancien double de utilities/accessibility.css est retiré. */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-delay: 0ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,609 @@
+[
+  {
+    "id": "arch_next_site_vitrine",
+    "name": "Next.js site vitrine",
+    "projectTypeIds": [
+      "site_vitrine"
+    ],
+    "recommendedStarter": "starter-next-vitrine",
+    "stack": [
+      "Next.js App Router",
+      "TypeScript",
+      "Tailwind CSS",
+      "MDX ou data locale",
+      "Vercel"
+    ],
+    "expectedRoutes": [
+      "/",
+      "/services",
+      "/portfolio",
+      "/portfolio/[slug]",
+      "/a-propos",
+      "/contact",
+      "/mentions-legales",
+      "/politique-confidentialite"
+    ],
+    "expectedFolders": [
+      "app/(marketing)",
+      "components/layout",
+      "components/sections",
+      "components/ui",
+      "components/forms",
+      "content",
+      "lib/seo",
+      "public"
+    ],
+    "expectedComponents": [
+      "Header",
+      "Footer",
+      "Hero",
+      "ServiceCard",
+      "ProjectCard",
+      "ContactForm",
+      "SeoJsonLd"
+    ],
+    "includedFeatures": [
+      "Pages marketing",
+      "Portfolio",
+      "Formulaire contact",
+      "SEO de base",
+      "Pages légales"
+    ],
+    "excludedFeatures": [
+      "Paiement",
+      "Auth",
+      "CMS complet",
+      "Dashboard"
+    ],
+    "technicalDocs": [
+      "README.md",
+      "ARCHITECTURE.md",
+      "CHECKLIST_QA.md",
+      "CHECKLIST_LAUNCH.md"
+    ],
+    "setupChecklistId": "checklist_setup_tech",
+    "qaChecklistId": "checklist_qa_web",
+    "choiceCriteria": [
+      "Site multi-pages",
+      "Besoin de crédibilité",
+      "Portfolio ou services"
+    ]
+  },
+  {
+    "id": "arch_next_landing_page",
+    "name": "Next.js landing page",
+    "projectTypeIds": [
+      "landing_page"
+    ],
+    "recommendedStarter": "starter-next-landing",
+    "stack": [
+      "Next.js App Router",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vercel Analytics optionnel"
+    ],
+    "expectedRoutes": [
+      "/",
+      "/merci",
+      "/mentions-legales",
+      "/politique-confidentialite"
+    ],
+    "expectedFolders": [
+      "app/(landing)",
+      "components/sections",
+      "components/forms",
+      "lib/analytics",
+      "lib/seo"
+    ],
+    "expectedComponents": [
+      "LandingHero",
+      "OfferSection",
+      "Benefits",
+      "Proof",
+      "FAQ",
+      "LeadForm"
+    ],
+    "includedFeatures": [
+      "Page conversion",
+      "CTA",
+      "Formulaire lead",
+      "Tracking de base"
+    ],
+    "excludedFeatures": [
+      "Portfolio complet",
+      "Espace membre",
+      "E-commerce"
+    ],
+    "technicalDocs": [
+      "README.md",
+      "CONVERSION_NOTES.md",
+      "CHECKLIST_LAUNCH.md"
+    ],
+    "setupChecklistId": "checklist_setup_tech",
+    "qaChecklistId": "checklist_qa_web",
+    "choiceCriteria": [
+      "Objectif conversion unique",
+      "Campagne ou offre précise",
+      "Delai court"
+    ]
+  },
+  {
+    "id": "arch_next_one_page",
+    "name": "Next.js one page",
+    "projectTypeIds": [
+      "one_page"
+    ],
+    "recommendedStarter": "starter-next-one-page",
+    "stack": [
+      "Next.js App Router",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    "expectedRoutes": [
+      "/",
+      "/mentions-legales",
+      "/politique-confidentialite"
+    ],
+    "expectedFolders": [
+      "app",
+      "components/sections",
+      "components/layout",
+      "components/forms",
+      "lib/seo"
+    ],
+    "expectedComponents": [
+      "OnePageNav",
+      "Hero",
+      "Section",
+      "CTA",
+      "ContactForm"
+    ],
+    "includedFeatures": [
+      "Navigation ancres",
+      "Sections compactes",
+      "Formulaire simple",
+      "SEO de base"
+    ],
+    "excludedFeatures": [
+      "Pages profondes",
+      "Blog",
+      "CMS",
+      "Paiement"
+    ],
+    "technicalDocs": [
+      "README.md",
+      "CHECKLIST_QA.md",
+      "CHECKLIST_LAUNCH.md"
+    ],
+    "setupChecklistId": "checklist_setup_tech",
+    "qaChecklistId": "checklist_qa_web",
+    "choiceCriteria": [
+      "Presence web compacte",
+      "Budget limite",
+      "Peu de contenus"
+    ]
+  },
+  {
+    "id": "arch_next_ecommerce",
+    "name": "Next.js e-commerce",
+    "projectTypeIds": [
+      "boutique_en_ligne"
+    ],
+    "recommendedStarter": "starter-next-ecommerce",
+    "stack": [
+      "Next.js App Router",
+      "TypeScript",
+      "Tailwind CSS",
+      "Stripe ou Shopify",
+      "Vercel"
+    ],
+    "expectedRoutes": [
+      "/",
+      "/boutique",
+      "/produits/[slug]",
+      "/panier",
+      "/checkout",
+      "/merci",
+      "/cgv",
+      "/contact"
+    ],
+    "expectedFolders": [
+      "app/(shop)",
+      "components/product",
+      "components/cart",
+      "lib/payments",
+      "lib/products",
+      "lib/seo"
+    ],
+    "expectedComponents": [
+      "ProductGrid",
+      "ProductCard",
+      "CartDrawer",
+      "CheckoutButton",
+      "OrderSummary"
+    ],
+    "includedFeatures": [
+      "Catalogue",
+      "Panier",
+      "Checkout",
+      "Emails transactionnels selon solution",
+      "Pages légales commerce"
+    ],
+    "excludedFeatures": [
+      "ERP",
+      "Marketplace",
+      "Gestion stock avancée par défaut"
+    ],
+    "technicalDocs": [
+      "README.md",
+      "PAYMENTS.md",
+      "CHECKLIST_ECOMMERCE.md",
+      "CHECKLIST_LAUNCH.md"
+    ],
+    "setupChecklistId": "checklist_setup_tech",
+    "qaChecklistId": "checklist_ecommerce",
+    "choiceCriteria": [
+      "Vente en ligne",
+      "Paiement requis",
+      "Catalogue produits"
+    ]
+  },
+  {
+    "id": "arch_next_formation",
+    "name": "Next.js formation en ligne",
+    "projectTypeIds": [
+      "formation_en_ligne"
+    ],
+    "recommendedStarter": "starter-next-formation",
+    "stack": [
+      "Next.js App Router",
+      "TypeScript",
+      "Auth",
+      "Database",
+      "Video provider"
+    ],
+    "expectedRoutes": [
+      "/",
+      "/formations",
+      "/formations/[slug]",
+      "/espace",
+      "/espace/cours/[courseId]",
+      "/login"
+    ],
+    "expectedFolders": [
+      "app/(marketing)",
+      "app/(member)",
+      "components/course",
+      "lib/auth",
+      "lib/progress",
+      "lib/video"
+    ],
+    "expectedComponents": [
+      "CourseCard",
+      "LessonPlayer",
+      "ProgressBar",
+      "MemberNav",
+      "AccessGate"
+    ],
+    "includedFeatures": [
+      "Accès protégé",
+      "Modules/leçons",
+      "Progression",
+      "Support ressources"
+    ],
+    "excludedFeatures": [
+      "Marketplace formation",
+      "Certificats avancés",
+      "Communaute par défaut"
+    ],
+    "technicalDocs": [
+      "README.md",
+      "AUTH.md",
+      "COURSE_MODEL.md",
+      "CHECKLIST_FORMATION.md"
+    ],
+    "setupChecklistId": "checklist_setup_tech",
+    "qaChecklistId": "checklist_formation",
+    "choiceCriteria": [
+      "Contenu pédagogique",
+      "Accès protégé",
+      "Suivi apprenant"
+    ]
+  },
+  {
+    "id": "arch_next_member_space",
+    "name": "Next.js espace membre",
+    "projectTypeIds": [
+      "formation_en_ligne",
+      "projet_avance_saas"
+    ],
+    "recommendedStarter": "starter-next-member-space",
+    "stack": [
+      "Next.js App Router",
+      "TypeScript",
+      "Auth",
+      "Database",
+      "Storage"
+    ],
+    "expectedRoutes": [
+      "/login",
+      "/espace",
+      "/espace/documents",
+      "/espace/profil"
+    ],
+    "expectedFolders": [
+      "app/(auth)",
+      "app/(member)",
+      "components/member",
+      "lib/auth",
+      "lib/permissions"
+    ],
+    "expectedComponents": [
+      "LoginForm",
+      "MemberDashboard",
+      "DocumentList",
+      "ProfileForm"
+    ],
+    "includedFeatures": [
+      "Connexion",
+      "Dashboard membre",
+      "Documents visibles",
+      "Profil"
+    ],
+    "excludedFeatures": [
+      "CRM admin complet",
+      "Billing avancé"
+    ],
+    "technicalDocs": [
+      "README.md",
+      "AUTH.md",
+      "PERMISSIONS.md"
+    ],
+    "setupChecklistId": "checklist_setup_tech",
+    "qaChecklistId": "checklist_saas",
+    "choiceCriteria": [
+      "Accès privé simple",
+      "Documents ou ressources client"
+    ]
+  },
+  {
+    "id": "arch_next_admin_dashboard",
+    "name": "Next.js admin dashboard",
+    "projectTypeIds": [
+      "projet_avance_saas"
+    ],
+    "recommendedStarter": "starter-next-admin-dashboard",
+    "stack": [
+      "Next.js App Router",
+      "TypeScript",
+      "Auth",
+      "Database",
+      "Table components"
+    ],
+    "expectedRoutes": [
+      "/admin",
+      "/admin/clients",
+      "/admin/projets",
+      "/admin/taches",
+      "/admin/validations"
+    ],
+    "expectedFolders": [
+      "app/(admin)",
+      "components/admin",
+      "components/tables",
+      "lib/db",
+      "lib/auth"
+    ],
+    "expectedComponents": [
+      "AdminShell",
+      "DataTable",
+      "StatusBadge",
+      "ActionBar",
+      "DetailPanel"
+    ],
+    "includedFeatures": [
+      "Listes filtrees",
+      "Fiches detail",
+      "Actions admin",
+      "Statuts"
+    ],
+    "excludedFeatures": [
+      "Espace client complet par défaut",
+      "Automatisations avancées"
+    ],
+    "technicalDocs": [
+      "README.md",
+      "DATA_MODEL.md",
+      "PERMISSIONS.md",
+      "ADMIN_UX.md"
+    ],
+    "setupChecklistId": "checklist_setup_tech",
+    "qaChecklistId": "checklist_saas",
+    "choiceCriteria": [
+      "Pilotage interne",
+      "CRUD métier",
+      "Besoin de dashboard"
+    ]
+  },
+  {
+    "id": "arch_next_blog_content",
+    "name": "Next.js blog / contenu",
+    "projectTypeIds": [
+      "site_vitrine",
+      "refonte"
+    ],
+    "recommendedStarter": "starter-next-blog-content",
+    "stack": [
+      "Next.js App Router",
+      "TypeScript",
+      "MDX ou CMS",
+      "SEO"
+    ],
+    "expectedRoutes": [
+      "/blog",
+      "/blog/[slug]",
+      "/categories/[slug]"
+    ],
+    "expectedFolders": [
+      "app/(content)",
+      "content/blog",
+      "components/content",
+      "lib/mdx",
+      "lib/seo"
+    ],
+    "expectedComponents": [
+      "ArticleCard",
+      "ArticleLayout",
+      "CategoryNav",
+      "AuthorBox"
+    ],
+    "includedFeatures": [
+      "Articles",
+      "Categories",
+      "SEO contenu",
+      "MDX/CMS"
+    ],
+    "excludedFeatures": [
+      "Paywall",
+      "Newsletter avancée"
+    ],
+    "technicalDocs": [
+      "README.md",
+      "CONTENT_MODEL.md",
+      "SEO_CONTENT.md"
+    ],
+    "setupChecklistId": "checklist_setup_tech",
+    "qaChecklistId": "checklist_seo_base",
+    "choiceCriteria": [
+      "Stratégie contenu",
+      "SEO editorial",
+      "Ressources"
+    ]
+  },
+  {
+    "id": "arch_next_refonte",
+    "name": "Next.js refonte",
+    "projectTypeIds": [
+      "refonte"
+    ],
+    "recommendedStarter": "starter-next-refonte",
+    "stack": [
+      "Next.js App Router",
+      "TypeScript",
+      "Tailwind CSS",
+      "Redirects",
+      "SEO migration"
+    ],
+    "expectedRoutes": [
+      "/",
+      "/[...legacy] selon besoin"
+    ],
+    "expectedFolders": [
+      "app",
+      "components",
+      "content",
+      "lib/redirects",
+      "lib/seo",
+      "docs/migration"
+    ],
+    "expectedComponents": [
+      "LegacyRedirectMap",
+      "SeoAuditTable",
+      "MigrationChecklist"
+    ],
+    "includedFeatures": [
+      "Audit existant",
+      "Migration contenus",
+      "Redirects",
+      "SEO preservation"
+    ],
+    "excludedFeatures": [
+      "Refonte marque complète par défaut",
+      "CMS avancé par défaut"
+    ],
+    "technicalDocs": [
+      "README.md",
+      "MIGRATION.md",
+      "REDIRECTS.md",
+      "CHECKLIST_REFONTE.md"
+    ],
+    "setupChecklistId": "checklist_setup_tech",
+    "qaChecklistId": "checklist_seo_base",
+    "choiceCriteria": [
+      "Site existant",
+      "URLs à conserver",
+      "Risque SEO"
+    ]
+  },
+  {
+    "id": "arch_next_saas",
+    "name": "Next.js SaaS",
+    "projectTypeIds": [
+      "projet_avance_saas"
+    ],
+    "recommendedStarter": "starter-next-saas",
+    "stack": [
+      "Next.js App Router",
+      "TypeScript",
+      "Auth",
+      "Postgres",
+      "ORM",
+      "Storage",
+      "Billing optionnel"
+    ],
+    "expectedRoutes": [
+      "/",
+      "/login",
+      "/app",
+      "/app/settings",
+      "/admin",
+      "/api/*"
+    ],
+    "expectedFolders": [
+      "app/(marketing)",
+      "app/(auth)",
+      "app/(app)",
+      "app/api",
+      "components/app",
+      "lib/db",
+      "lib/auth",
+      "lib/permissions"
+    ],
+    "expectedComponents": [
+      "AppShell",
+      "Dashboard",
+      "EntityList",
+      "EntityForm",
+      "PermissionGate",
+      "StatusTimeline"
+    ],
+    "includedFeatures": [
+      "Auth",
+      "Rôles",
+      "Dashboard",
+      "CRUD",
+      "Modèles de données",
+      "Audit de base"
+    ],
+    "excludedFeatures": [
+      "Mobile app native",
+      "Multi-tenant complexe sans cadrage",
+      "Billing si non vendu"
+    ],
+    "technicalDocs": [
+      "README.md",
+      "DATA_MODEL.md",
+      "PERMISSIONS.md",
+      "WORKFLOWS.md",
+      "SECURITY.md"
+    ],
+    "setupChecklistId": "checklist_setup_tech",
+    "qaChecklistId": "checklist_saas",
+    "choiceCriteria": [
+      "Produit métier",
+      "Données relationnelles",
+      "Rôles",
+      "Workflows"
+    ]
+  }
+]

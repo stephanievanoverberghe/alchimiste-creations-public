@@ -1,0 +1,61 @@
+/*
+ * Animations d'entrée sobres (phase 6 §1 : le motion est un vernis).
+ * .anim-rise fait émerger un élément (opacité + 16 px) ; les variantes
+ * -2/-3/-4 décalent l'entrée pour un effet de vague discret.
+ * Neutralisées globalement par prefers-reduced-motion (tokens/motion.css).
+ */
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim-rise,
+.anim-rise-2,
+.anim-rise-3,
+.anim-rise-4 {
+  animation: rise-in var(--motion-duration-slow) var(--ease-enter) both;
+}
+
+.anim-rise-2 {
+  animation-delay: 120ms;
+}
+
+.anim-rise-3 {
+  animation-delay: 240ms;
+}
+
+.anim-rise-4 {
+  animation-delay: 360ms;
+}
+
+/* Entrée cinématique des images de héros : dé-zoom lent vers le repos. */
+@keyframes hero-zoom {
+  from {
+    transform: scale(1.06);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Indice de scroll : pastille qui descend le long d'un rail. */
+@keyframes cue-drop {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}

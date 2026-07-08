@@ -1,0 +1,127 @@
+[
+    {
+        "key": "cadrage-commercial",
+        "name": "Cadrage commercial",
+        "category": "commercial",
+        "realDocumentType": "BRIEF",
+        "sortOrder": 1,
+        "description": "Formalise le besoin, le périmètre pressenti et les conditions avant devis.",
+        "sections": [
+            { "key": "contexte", "title": "Contexte et besoin exprimé", "prefill": "needSummary", "helpText": "Ce que le client a exprimé, reformulé simplement." },
+            { "key": "objectif", "title": "Objectif business", "prefill": "objectiveSummary", "helpText": "Ce que le site doit produire pour le client." },
+            { "key": "perimetre", "title": "Périmètre pressenti", "prefill": "scopeSummary", "helpText": "Offre, type de projet et options envisagées." },
+            { "key": "hors-perimetre", "title": "Hors périmètre", "helpText": "Ce qui n'est PAS inclus, écrit noir sur blanc." },
+            { "key": "budget-delai", "title": "Budget et délai", "prefill": "budgetSummary" },
+            { "key": "suite", "title": "Prochaine étape", "helpText": "Ce qui se passe après validation de ce cadrage." }
+        ]
+    },
+    {
+        "key": "proposition-commerciale",
+        "name": "Proposition commerciale",
+        "category": "commercial",
+        "realDocumentType": "PROPOSAL",
+        "sortOrder": 2,
+        "description": "La proposition envoyée au client : compréhension, démarche, périmètre, investissement.",
+        "sections": [
+            { "key": "comprehension", "title": "Ce que nous avons compris", "prefill": "needSummary" },
+            { "key": "demarche", "title": "La démarche proposée", "prefill": "phasesList", "helpText": "Les grandes étapes du playbook, en langage client." },
+            { "key": "perimetre", "title": "Périmètre inclus", "prefill": "scopeSummary" },
+            { "key": "options", "title": "Options possibles", "prefill": "modulesList" },
+            { "key": "investissement", "title": "Investissement et conditions", "prefill": "budgetSummary", "helpText": "Prix, acompte, modalités — cohérent avec le devis officiel." },
+            { "key": "engagements", "title": "Nos engagements réciproques", "helpText": "Ce que je m'engage à livrer, ce dont j'ai besoin de la part du client." }
+        ]
+    },
+    {
+        "key": "cahier-des-charges",
+        "name": "Cahier des charges",
+        "category": "cadrage",
+        "realDocumentType": "BRIEF",
+        "sortOrder": 3,
+        "description": "LE document de référence du projet : contexte, objectifs, périmètre, pages, contraintes, planning.",
+        "sections": [
+            { "key": "contexte", "title": "Contexte du projet", "prefill": "projectSummary" },
+            { "key": "objectifs", "title": "Objectifs", "prefill": "objectiveSummary", "helpText": "Objectifs mesurables du site." },
+            { "key": "cibles", "title": "Cibles et parcours visés", "helpText": "À qui s'adresse le site et ce que chaque visiteur doit accomplir." },
+            { "key": "perimetre", "title": "Périmètre fonctionnel", "prefill": "scopeSummary", "helpText": "Pages, fonctionnalités et modules retenus." },
+            { "key": "hors-perimetre", "title": "Hors périmètre", "helpText": "Explicite pour éviter les dérives." },
+            { "key": "contenus", "title": "Contenus et responsabilités", "helpText": "Qui fournit quoi (textes, photos, logo) et pour quand." },
+            { "key": "contraintes", "title": "Contraintes techniques et légales", "helpText": "Hébergement, nom de domaine, RGPD, accessibilité." },
+            { "key": "planning", "title": "Planning et jalons de validation", "prefill": "phasesList" }
+        ]
+    },
+    {
+        "key": "specifications",
+        "name": "Spécifications",
+        "category": "technique",
+        "realDocumentType": "REPORT",
+        "sortOrder": 4,
+        "description": "Traduction technique du cahier des charges : arborescence, gabarits, stack, SEO.",
+        "sections": [
+            { "key": "arborescence", "title": "Arborescence du site", "helpText": "Liste des pages et leur hiérarchie." },
+            { "key": "gabarits", "title": "Gabarits et composants", "helpText": "Les types de pages et leurs sections." },
+            { "key": "fonctionnalites", "title": "Fonctionnalités détaillées", "prefill": "scopeSummary" },
+            { "key": "stack", "title": "Stack et architecture technique", "prefill": "architectureSummary" },
+            { "key": "seo", "title": "SEO et performances", "helpText": "Balises, vitesse, indexation, redirections éventuelles." },
+            { "key": "criteres", "title": "Critères de recette", "helpText": "Ce qui sera vérifié avant livraison." }
+        ]
+    },
+    {
+        "key": "cr-kickoff",
+        "name": "Compte rendu de kickoff",
+        "category": "cadrage",
+        "realDocumentType": "REPORT",
+        "sortOrder": 5,
+        "description": "Trace courte du lancement : décisions, responsabilités, calendrier.",
+        "sections": [
+            { "key": "participants", "title": "Participants et date", "prefill": "clientContext" },
+            { "key": "decisions", "title": "Décisions prises" },
+            { "key": "responsabilites", "title": "Qui fait quoi", "helpText": "Côté studio et côté client, avec les échéances." },
+            { "key": "calendrier", "title": "Calendrier validé", "prefill": "phasesList" },
+            { "key": "points-ouverts", "title": "Points ouverts", "helpText": "Questions à trancher et par qui." }
+        ]
+    },
+    {
+        "key": "guide-client",
+        "name": "Guide client",
+        "category": "livraison",
+        "realDocumentType": "HANDOVER",
+        "sortOrder": 6,
+        "description": "Remis à la livraison : accès, gestes courants, bonnes pratiques, suite.",
+        "sections": [
+            { "key": "acces", "title": "Vos accès", "helpText": "Où se connecter, avec quels comptes (jamais de mot de passe en clair ici)." },
+            { "key": "gestes", "title": "Les gestes courants", "helpText": "Modifier un texte, une image, publier une page…" },
+            { "key": "bonnes-pratiques", "title": "Bonnes pratiques", "helpText": "Ce qu'il vaut mieux éviter pour garder un site sain." },
+            { "key": "maintenance", "title": "Maintenance et sauvegardes", "helpText": "Ce qui est couvert, ce qui ne l'est pas." },
+            { "key": "suite", "title": "Et après ?", "helpText": "Évolutions recommandées, comment me solliciter, avis Google." }
+        ]
+    },
+    {
+        "key": "retex",
+        "name": "RETEX de fin de projet",
+        "category": "interne",
+        "realDocumentType": "REPORT",
+        "sortOrder": 8,
+        "description": "Rétrospective interne : ce qui a marché, ce qui a coincé, et les leçons à reporter dans le playbook. Jamais partagé au client.",
+        "sections": [
+            { "key": "deroule", "title": "Déroulé réel du projet", "prefill": "phasesList", "helpText": "Comparer au playbook : où le déroulé a-t-il divergé ?" },
+            { "key": "reussites", "title": "Ce qui a bien fonctionné", "helpText": "À conserver et systématiser." },
+            { "key": "frictions", "title": "Ce qui a coincé", "prefill": "validationsHistory", "helpText": "Retouches, retards, incompréhensions — avec les retours client en mémoire." },
+            { "key": "lecons-playbook", "title": "Leçons pour le playbook", "helpText": "Concrètement : quelles phases, tâches, gates ou gabarits modifier dans /admin/playbooks ?" },
+            { "key": "suite-client", "title": "Suite recommandée pour ce client", "helpText": "Maintenance, SEO, évolutions — la matière du prochain contact." }
+        ]
+    },
+    {
+        "key": "pv-recette",
+        "name": "PV de recette",
+        "category": "qa",
+        "realDocumentType": "REPORT",
+        "sortOrder": 7,
+        "description": "Procès-verbal de recette : ce qui a été vérifié et validé, par qui, quand. Sera pré-rempli automatiquement depuis l'historique des validations.",
+        "sections": [
+            { "key": "perimetre-teste", "title": "Périmètre testé", "prefill": "scopeSummary" },
+            { "key": "validations", "title": "Validations obtenues", "prefill": "validationsHistory", "helpText": "Rempli automatiquement depuis les validations du projet." },
+            { "key": "reserves", "title": "Réserves éventuelles", "helpText": "Points acceptés avec correction à venir, et leur échéance." },
+            { "key": "decision", "title": "Décision", "helpText": "Recette prononcée / prononcée avec réserves / refusée." }
+        ]
+    }
+]
