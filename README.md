@@ -2,6 +2,8 @@
 
 Site freelance de création de sites web, **CRM interne** et **espace client**, réunis dans un seul dépôt. L'application pilote les projets clients de bout en bout — demande entrante → qualification → devis → conversion → production → livraison → feedback — en suivant un fil rouge par offre.
 
+> Ce dépôt est la copie publique d'un dépôt privé (plus de 900 commits), publiée pour montrer le code.
+
 Trois territoires, une même identité :
 
 - **Public (marketing)** — le site vitrine qui vend : home, méthode, offres, réalisations, à-propos, contact, demande de projet, pages légales.
